@@ -1,0 +1,838 @@
+<USER_REQUEST>
+You are a senior Next.js developer, sports analytics portfolio designer, and personal branding specialist.
+
+IMPORTANT:
+I already have an existing portfolio project named `krishna-portfolio`.
+
+DO NOT create a new project.
+DO NOT create a demo.
+DO NOT rebuild the application from scratch.
+
+First inspect the COMPLETE existing project and then modify the ACTUAL existing files directly.
+
+==================================================
+OBJECTIVE
+==================================================
+
+Transform my existing portfolio into a premium professional portfolio for:
+
+KRISHNA NAND YADAV
+Cricket & Sports Data Analyst
+
+The portfolio should position me around:
+
+- Cricket Analytics
+- Sports Data Analysis
+- Player Performance Analysis
+- Match Analysis
+- Ball-by-Ball Data
+- Data Visualization
+- Sports Technology
+- Cricket Operations
+- Performance Insights
+- Analytics Dashboards
+
+The portfolio should feel like a combination of:
+
+Professional Analyst Portfolio
++
+Sports Analytics Platform
++
+Personal Brand
+
+==================================================
+PROFILE INFORMATION
+==================================================
+
+Name:
+Krishna Nand Yadav
+
+Title:
+Cricket & Sports Data Analyst
+
+Email:
+krishnanandcricketanalyst@gmail.com
+
+Phone:
+7607711590
+
+LinkedIn:
+https://www.linkedin.com/in/krishna-nand-yadav-43493b28a/
+
+GitHub:
+https://github.com/thekngroup7622-creator
+
+==================================================
+PROFILE PHOTO
+==================================================
+
+Use the uploaded/reference profile picture of Krishna Nand Yadav.
+
+Do NOT generate a different person.
+Do NOT use a stock image.
+Do NOT use a random internet image.
+
+Use the actual uploaded reference image.
+
+Store/use it through the existing project's public assets structure, preferably:
+
+public/profile/krishna-nand-yadav.jpg
+
+Use Next.js Image where appropriate.
+
+Alt text:
+
+"Krishna Nand Yadav - Cricket & Sports Data Analyst"
+
+Use the profile picture in:
+
+1. Hero
+2. About section, if visually appropriate
+
+Maintain correct aspect ratio and professional cropping.
+
+==================================================
+HOMEPAGE STRUCTURE
+==================================================
+
+The homepage should follow this flow:
+
+1. Hero
+2. Professional Introduction
+3. Featured Analytics
+4. Core Expertise
+5. Selected Projects
+6. Analytics Methodology
+7. Experience
+8. Contact
+
+==================================================
+HERO
+==================================================
+
+Display:
+
+Krishna Nand Yadav
+
+Cricket & Sports Data Analyst
+
+Supporting statement:
+
+"Turning cricket data into actionable performance insights."
+
+Additional description:
+
+"Working across ball-by-ball data, player and match performance analysis, data visualization, dashboards, and sports technology."
+
+Primary CTA:
+
+View My Work
+
+Secondary CTA:
+
+Contact Me
+
+Social links:
+
+LinkedIn
+GitHub
+Email
+
+Display the actual profile picture prominently.
+
+==================================================
+FEATURED ANALYTICS
+==================================================
+
+Create a premium section immediately below the Hero:
+
+TITLE:
+
+Featured Cricket Analytics
+
+SUBTITLE:
+
+Selected examples of cricket data analysis, performance visualization, and statistical storytelling.
+
+IMPORTANT:
+
+Do NOT show all analytics images on the homepage.
+
+Show exactly THREE featured analytics cards.
+
+These three should be the strongest examples:
+
+--------------------------------------------------
+FEATURED #1
+--------------------------------------------------
+
+Title:
+
+Rohit Sharma & Shubman Gill — 255-Run Opening Partnership
+
+Category:
+
+Partnership Analytics
+
+Description:
+
+"Phase-wise analysis of a 255-run opening partnership, highlighting scoring patterns, momentum, contribution, and partnership progression."
+
+Analysis Type:
+
+Partnership Analysis
+
+Visualization:
+
+Phase-wise trend + KPI analysis
+
+Image:
+
+Use the uploaded/reference visual showing the Rohit Sharma & Shubman Gill 255-run partnership.
+
+--------------------------------------------------
+FEATURED #2
+--------------------------------------------------
+
+Title:
+
+Pakistan Batters — Dismissal Analysis
+
+Category:
+
+Advanced Cricket Analytics
+
+Description:
+
+"Visual analysis of Pakistan batters' dismissal patterns, showing how wickets were distributed across different scoring and match situations."
+
+Analysis Type:
+
+Dismissal / Performance Analysis
+
+Visualization:
+
+Radial / categorical dismissal visualization
+
+Image:
+
+Use the uploaded/reference visual showing Pakistan batters' dismissal analysis.
+
+--------------------------------------------------
+FEATURED #3
+--------------------------------------------------
+
+Title:
+
+Mitchell Starc — Spell-wise Bowling Analysis
+
+Category:
+
+Bowling Analytics
+
+Description:
+
+"Spell-level bowling analysis examining performance across different stages of the innings and key bowling metrics."
+
+Analysis Type:
+
+Bowling Performance Analysis
+
+Visualization:
+
+Spell-wise performance visualization
+
+Image:
+
+Use the uploaded/reference Mitchell Starc bowling performance visual.
+
+==================================================
+FEATURED CARD DESIGN
+==================================================
+
+Each card should contain:
+
+Image
+
+Category badge
+
+Title
+
+Short description
+
+Analysis Type
+
+"View Analysis" button
+
+The cards should have:
+
+- Clean premium design
+- Subtle hover effect
+- Consistent image ratio
+- No excessive animation
+- No unnecessary gradients
+- Responsive layout
+
+Desktop:
+
+3-column layout
+
+Tablet:
+
+2-column layout
+
+Mobile:
+
+1-column layout
+
+Add a button below the cards:
+
+"View All Analytics"
+
+Link:
+
+/analytics
+
+==================================================
+ANALYTICS GALLERY
+==================================================
+
+The complete Analytics page should contain a curated gallery.
+
+DO NOT simply dump all LinkedIn images into one grid.
+
+Create categories.
+
+--------------------------------------------------
+CATEGORY 1
+--------------------------------------------------
+
+PLAYER PERFORMANCE
+
+Recommended visuals:
+
+1. Abhishek Sharma — Six-Hitting / Pitch Analysis
+2. Heinrich Klaasen — Performance Analysis
+3. Ravindra Jadeja — Performance Analysis
+4. Ford — Bowling Performance
+5. Charith Asalanka — Bowling Performance
+
+--------------------------------------------------
+CATEGORY 2
+--------------------------------------------------
+
+PARTNERSHIP ANALYTICS
+
+Recommended visuals:
+
+1. Rohit Sharma & Shubman Gill — 255-Run Partnership
+2. England vs Sri Lanka Partnership Analysis
+
+--------------------------------------------------
+CATEGORY 3
+--------------------------------------------------
+
+BOWLING ANALYTICS
+
+Recommended visuals:
+
+1. Mitchell Starc — Spell-wise Bowling Analysis
+2. Sri Lanka Bowling Leaderboard
+3. Asia Cup Women's Bowling Analysis
+4. Bangladesh vs Australia Bowling Performance
+
+--------------------------------------------------
+CATEGORY 4
+--------------------------------------------------
+
+MATCH & TEAM ANALYTICS
+
+Recommended visuals:
+
+1. India vs Zimbabwe Performance Analysis
+2. India vs Sri Lanka Bowling Analysis
+3. The Hundred 2026 Final
+4. Sri Lanka vs India Test Series Analysis
+
+--------------------------------------------------
+CATEGORY 5
+--------------------------------------------------
+
+ADVANCED CRICKET ANALYTICS
+
+Recommended visuals:
+
+1. Pakistan Batters — Dismissal Analysis
+2. India vs Sri Lanka — Dismissal / Wagon-style Analysis
+3. Joe Root vs Sachin Tendulkar — Comparative Analysis
+
+--------------------------------------------------
+CATEGORY 6
+--------------------------------------------------
+
+TOURNAMENT ANALYTICS
+
+Recommended visuals:
+
+1. Caribbean Premier League Overview
+2. Asia Cup 2026 Women's Bowling Analysis
+3. The Hundred 2026
+
+==================================================
+CASE STUDY FORMAT
+==================================================
+
+When a user clicks "View Analysis", do not simply open the image.
+
+Create a professional analysis detail/case-study view.
+
+Each analysis should contain:
+
+TITLE
+
+CATEGORY
+
+OVERVIEW
+
+DATA USED
+
+ANALYSIS OBJECTIVE
+
+KEY METRICS
+
+VISUALIZATION METHOD
+
+KEY INSIGHTS
+
+TOOLS / TECHNOLOGY
+
+VISUAL
+
+==================================================
+CASE STUDY EXAMPLE
+==================================================
+
+For:
+
+Rohit Sharma & Shubman Gill — 255-Run Opening Partnership
+
+Display:
+
+Analysis Type:
+Partnership Analysis
+
+Objective:
+Understand how the partnership progressed across phases and identify contribution and scoring patterns.
+
+Data:
+Ball-by-ball cricket data
+
+Metrics:
+- Runs
+- Strike Rate
+- Balls
+- Boundaries
+- Phase-wise scoring
+- Partnership progression
+
+Visualization:
+Phase-wise performance visualization
+
+Then show the actual image.
+
+IMPORTANT:
+
+Do not invent numerical values.
+
+If exact data is available in the existing project, use it.
+
+If exact data is not available, do not fabricate it.
+
+==================================================
+CRICKET ANALYTICS METHODOLOGY
+==================================================
+
+Create a visual workflow:
+
+01
+DATA COLLECTION
+
+Ball-by-ball cricket data and match datasets.
+
+↓
+
+02
+DATA CLEANING
+
+Validation, normalization, and quality checks.
+
+↓
+
+03
+ANALYSIS
+
+Batting, bowling, partnerships, phases, pitch length, shots, dismissals, and performance metrics.
+
+↓
+
+04
+VISUALIZATION
+
+Charts, dashboards, pitch maps, wagon wheels, radar charts, and broadcast-style graphics.
+
+↓
+
+05
+INSIGHT
+
+Convert raw cricket data into understandable performance insights.
+
+↓
+
+06
+DELIVERY
+
+Reports, dashboards, visualizations, and analytics applications.
+
+==================================================
+PERSONAL BRANDING
+==================================================
+
+Throughout the portfolio, consistently use:
+
+Krishna Nand Yadav
+
+Cricket & Sports Data Analyst
+
+Do not repeatedly use generic phrases such as:
+
+"Passionate developer"
+"Tech enthusiast"
+"Full stack developer"
+
+The primary professional identity must remain:
+
+CRICKET & SPORTS DATA ANALYST
+
+==================================================
+SKILLS
+==================================================
+
+Organize skills into:
+
+CRICKET & SPORTS ANALYTICS
+
+- Cricket Analytics
+- Player Performance Analysis
+- Match Analysis
+- Ball-by-Ball Analysis
+- Partnership Analysis
+- Bowling Analysis
+- Batting Analysis
+- Data Quality / QA
+
+DATA & PROGRAMMING
+
+- Python
+- SQL
+- Pandas
+- Data Processing
+- Data Analysis
+
+BUSINESS INTELLIGENCE
+
+- Power BI
+- Tableau
+- Dashboard Development
+- Data Visualization
+
+SPORTS TECHNOLOGY
+
+- Streamlit
+- Sports Analytics Applications
+- Cricket Data Systems
+- Sports Visualization
+
+Only include technologies already supported by the existing project/content.
+
+Do not exaggerate expertise.
+
+==================================================
+PROJECTS
+==================================================
+
+Inspect the existing project data.
+
+Do not invent projects.
+
+If existing projects include:
+
+CricVision Analytics
+
+CRICINTEL 3D Vision
+
+Ball-by-Ball Cricket Analytics
+
+Cricket Data Visualization
+
+Sports Analytics Dashboards
+
+present them as professional case studies.
+
+Each project should communicate:
+
+Problem
+
+Objective
+
+Approach
+
+Technology
+
+Analytics
+
+Visualization
+
+Outcome / Purpose
+
+==================================================
+EXPERIENCE
+==================================================
+
+Preserve the existing accurate professional experience.
+
+Current positioning:
+
+Principal Cricket Analyst
+Lifease Solutions LLP
+Nov 2023 – Present
+
+Present responsibilities professionally around:
+
+- Cricket data analysis
+- Live match coding/scoring
+- Ball-by-ball data operations
+- Match assignment
+- Data quality
+- Analyst coordination
+- Performance monitoring
+- Player statistics
+- Data visualization
+- Dashboard development
+- Operations reporting
+- Development team coordination
+
+Do not invent achievements or numerical results.
+
+==================================================
+CONTACT
+==================================================
+
+Display:
+
+Krishna Nand Yadav
+
+Cricket & Sports Data Analyst
+
+Email:
+krishnanandcricketanalyst@gmail.com
+
+Phone:
+7607711590
+
+LinkedIn:
+https://www.linkedin.com/in/krishna-nand-yadav-43493b28a/
+
+GitHub:
+https://github.com/thekngroup7622-creator
+
+Use clickable:
+
+mailto:
+tel:
+
+==================================================
+NAVIGATION
+==================================================
+
+Navigation should include:
+
+Home
+About
+Experience
+Skills
+Analytics
+Projects
+Contact
+
+Make sure every route works.
+
+==================================================
+DESIGN
+==================================================
+
+Use a premium sports analytics visual language.
+
+Design should be:
+
+Professional
+Minimal
+Data-driven
+Modern
+Cricket-inspired
+Recruiter-friendly
+Sports-tech focused
+
+Avoid:
+
+- Excessive gradients
+- Excessive animation
+- Gaming UI
+- Too many cards
+- Fake statistics
+- Generic AI copy
+- Visual clutter
+
+==================================================
+RESPONSIVE DESIGN
+==================================================
+
+Test:
+
+Desktop
+Laptop
+Tablet
+Mobile
+
+Ensure:
+
+- No horizontal scrolling
+- No overlapping content
+- No broken images
+- No clipped text
+- No broken navigation
+- Proper card sizing
+- Proper image cropping
+- Proper typography
+
+==================================================
+SEO
+==================================================
+
+Update metadata.
+
+Title:
+
+Krishna Nand Yadav | Cricket & Sports Data Analyst
+
+Description:
+
+"Portfolio of Krishna Nand Yadav — Cricket & Sports Data Analyst specializing in cricket analytics, ball-by-ball data, performance analysis, data visualization, dashboards, and sports technology."
+
+==================================================
+IMPORTANT DATA RULE
+==================================================
+
+NEVER fabricate:
+
+- Cricket statistics
+- Player statistics
+- Clients
+- Employers
+- Awards
+- Certifications
+- Revenue
+- Users
+- Project results
+- Professional achievements
+- Experience dates
+
+Use only information available in the existing project or explicitly provided.
+
+==================================================
+IMPLEMENTATION WORKFLOW
+==================================================
+
+STEP 1:
+Inspect the entire existing project.
+
+STEP 2:
+Find the current Hero component.
+
+STEP 3:
+Find the current Analytics data/components.
+
+STEP 4:
+Find the current visualization assets.
+
+STEP 5:
+Map the selected visuals to the appropriate analytics records.
+
+STEP 6:
+Add the uploaded profile picture.
+
+STEP 7:
+Update the homepage with exactly THREE Featured Analytics cards.
+
+STEP 8:
+Update the Analytics page with categorized galleries.
+
+STEP 9:
+Create/update analytics detail/case-study pages using the existing routing architecture.
+
+STEP 10:
+Update personal branding.
+
+STEP 11:
+Update LinkedIn, GitHub, email and phone links.
+
+STEP 12:
+Improve responsive behavior.
+
+STEP 13:
+Run:
+
+- TypeScript check
+- ESLint
+- Production build
+
+STEP 14:
+Fix all errors.
+
+STEP 15:
+Check all routes and images.
+
+==================================================
+FINAL REPORT
+==================================================
+
+After completing the implementation, report:
+
+1. Files modified
+2. Components modified
+3. New files created
+4. Profile image location
+5. Featured analytics added
+6. Analytics categories created
+7. Case-study pages created/updated
+8. Links added
+9. TypeScript status
+10. ESLint status
+11. Production build status
+12. Any remaining issue requiring my input
+
+MOST IMPORTANT:
+
+MODIFY THE EXISTING `krishna-portfolio` PROJECT DIRECTLY.
+
+DO NOT CREATE A SEPARATE DEMO PROJECT.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-02T02:11:34+05:30.
+
+The user's current state is as follows:
+Active Document: c:\Users\ajeet\OneDrive\Desktop\krishna-portfolio\.env.local (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- c:\Users\ajeet\OneDrive\Desktop\krishna-portfolio\.env.local (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>

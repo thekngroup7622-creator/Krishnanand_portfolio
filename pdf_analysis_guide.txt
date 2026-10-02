@@ -1,0 +1,2248 @@
+
+
+==================== PAGE 1 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 1
+Analytical Visualizations
+Training Guide Manual
+A comprehensive, structured guide to producing professional cricket visual
+analytics — covering data sourcing, metric engineering, AI-assisted chart
+building, and practical case studies for every new analyst joining the
+CricRadio team.
+Organization CricRadio
+Version 3.0 — Final Edition
+Date 25 August 2026
+Audience All new employees and trainees
+Classification Internal Use Only
+
+==================== PAGE 2 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 2
+DOCUMENT CONTROL
+Revision History & Training Timeline
+Versi
+on
+Date Author Description
+0.1 03 Aug
+2026
+Analytics Team Lead Project scope defined; training objectives and
+deliverables finalized
+0.2 05 Aug
+2026
+Analytics Team Lead Section 1 (Introduction) and Section 2 (Type A)
+initial structure drafted
+0.3 06 Aug
+2026
+Analytics Team Lead Type A Case Studies 01-03 completed; first Arena
+AI prompt templates finalized
+0.4 08 Aug
+2026
+Analytics Team Lead Type A Case Studies 04-07 completed; KPI
+glossary and formula sheet finalized
+0.5 10 Aug
+2026
+Analytics Team Lead Training Session 1 delivered — Introduction,
+statistical thinking, data sourcing methodology
+0.6 12 Aug
+2026
+Analytics Team Lead Training Session 2 delivered — Data wrangling in
+Google Sheets, KPI computation hands-on
+0.7 14 Aug
+2026
+Analytics Team Lead Training Session 3 delivered — AI-assisted
+visualization, prompt engineering, chart selection
+1.0 16 Aug
+2026
+Analytics Team Lead Type A assessment tasks assigned; trainees
+submitted first independent visuals for review
+1.1 17 Aug
+2026
+Analytics Team Lead Type A assessment review completed; corrective
+feedback provided; all trainees cleared
+1.5 18 Aug
+2026
+Analytics Team Lead Section 3 (Type B) development started — Python
+environment & Streamlit architecture documented
+2.0 20 Aug
+2026
+Analytics Team Lead Training Session 4 delivered — BBB Data Portal
+walkthrough, Colab wrangling, advanced KPIs
+2.5 22 Aug
+2026
+Analytics Team Lead Training Session 5 delivered — Advanced visuals:
+Pitch Map, Bat Map, Feet Movement, Bowling Side
+2.7 23 Aug
+2026
+Analytics Team Lead Type B case study templates finalized; output
+gallery compiled; Type B assessment tasks
+assigned
+
+==================== PAGE 3 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 3
+Versi
+on
+Date Author Description
+2.8 24 Aug
+2026
+Analytics Team Lead Type B assessment review completed; all trainees
+cleared on advanced visualization workflow
+3.0 25 Aug
+2026
+Analytics Team Lead Final Edition — Section 4 (Assessment &
+Certification) completed; all trainees certified
+NOTE: Confidentiality
+This manual is for internal CricRadio training use only. Do not distribute outside the organization without
+written approval.
+
+==================== PAGE 4 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 4
+CONTENTS
+Manual Structure
+Section 1 — Introduction: The Cricket Analytics Ecosystem
+• 1.1 Objective & Scope of Training
+• 1.2 The Analytical Mindset: Cricket Statistical Thinking
+• 1.3 Branding & Aesthetic Guidelines
+Section 2 — Type A: Standard Analytical Visuals (Spreadsheet-Based)
+• 2.1 Data Sourcing: Identifying Reliable Metrics
+• 2.2 Data Wrangling in Google Sheets: Defining Unique KPIs
+• 2.3 AI-Assisted Visualization Methodology
+• 2.4 The Visualization Toolkit
+• 2.5 Hands-on Implementation of Derived KPIs
+• 2.6 Interactive Case Studies (7 worked examples)
+• 2.7 Output Gallery — Analytical Visualization Samples
+Section 3 — Type B: Advanced Analytical Visuals (Python-Based)
+• 3.1 Python Environment & Streamlit Architecture
+• 3.2 Advanced Data Wrangling (Google Colab & AI Assisted Coding)
+• 3.3 Building Complex Visuals: From Pitching Maps to Shot Connection Maps
+• 3.4 Hands-on Interactive Case Study Implementation
+• 3.5 Output Gallery — Advanced Analytical Visualizations
+Section 4 — Assessment & Certification
+• 4.1 Competency Checklist — Type A & Type B
+• 4.2 Practical Assessment Structure & Results
+• 4.3 KT Sign-off & Certification Record
+
+==================== PAGE 5 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 5
+01Introduction
+The Cricket Analytics Ecosystem
+
+==================== PAGE 6 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 6
+1.1
+Objective & Scope of Training
+The primary objective of this manual is to train new employees and trainees to independently create
+professional, high-impact cricket visual analytics for various use cases, including pre-match
+preparation, post-match analysis, and ad-hoc statistical inquiries.
+Scope of This Program
+This training program covers the following areas in detail:
+• Statistical Thinking: Developing foundational knowledge in cricket metric definitions, data
+interpretation, and contextual analysis.
+• Data Sourcing & Wrangling: Mastering data collection from multiple platforms and
+engineering derived KPIs in Google Sheets.
+• Tool Architecture: Training on the Python tool's source code, modules, dependencies, and
+configuration.
+• Template Mastery: Enabling trainees to modify existing templates and create new ones
+independently.
+• Requirement Translation: Converting analytics requirements into data selection, calculation
+logic, and appropriate visuals.
+• Quality Assurance: Ensuring trainees can troubleshoot code, handle data quality issues, and
+validate outputs.
+• Assessment: Final competency evaluation and reporting on performance gaps.
+End-to-End Workflow
+Every analytical visual produced by this team — regardless of chart type, use case, or complexity —
+follows the same three-step workflow. All sections of this manual are anchored to one of these steps:
+STEP 01
+Data Collection
+Sources & Raw Data
+STEP 02
+Data Wrangling
+KPI Engineering
+STEP 03
+Visualization
+AI-Assisted Charts
+Every analytical visual follows this three-step spine
+
+==================== PAGE 7 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 7
+1.2
+The Analytical Mindset: Cricket
+Statistical Thinking
+Effective cricket analytics requires more than just processing numbers — it requires a deep
+understanding of the game's dynamics and the ability to translate raw data into actionable insight.
+Skill What It Means in Practice Example
+Identify the core
+question
+Is this for a tactical pre-match
+plan or a post-match review?
+The chart type, data scope, and
+takeaway all change.
+"Where does this batter score?" vs. "What went
+wrong in the powerplay?"
+Select the right
+data
+Distinguish between aggregate
+stats and context-dependent
+data. Never mix scopes or time
+windows.
+Career data is wrong for a single-innings chart;
+venue-filtered data is wrong for a career profile.
+Interpret trends A 'high strike rate' means
+different things in different
+contexts.
+SR 150 in death overs is expected; SR 150 in a
+Test first session is extraordinary.
+Synthesize
+insights
+Move beyond raw data — a
+number without a 'so what' is not
+analysis.
+"SR dropped 40%% in middle overs" → "Rotate
+strike better against spin in overs 7-15."
+TIP: The 3-Second Test
+Before sharing any chart, ask: can a coach understand the key insight within 3 seconds of looking at it? If
+not, the chart needs simplification, better annotation, or a different type altogether.
+
+==================== PAGE 8 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 8
+1.3
+Branding & Aesthetic Guidelines
+All visualizations must strictly adhere to CricRadio's brand identity. Consistency across every
+deliverable builds credibility and ensures outputs are instantly recognizable.
+Theme Palette
+Color Hex Code Usage
+Navy Blue #001D38 Primary text, axis labels, titles, critical data points, primary chart
+fills
+Sky Blue #69A7EF Secondary highlights, accent bars, data series indicators, callout
+elements
+Off-White #FAF9F6 Base background for all charts, slide decks, and report pages
+Application Rules
+• Use Navy (#001D38) for primary axis labels, titles, and critical data points.
+• Use Sky Blue (#69A7EF) for secondary highlights, bars, or data series indicators.
+• Use Off-White (#FAF9F6) as the base background color for all charts and slide decks.
+• Ensure high contrast between text and background to maintain readability on screens and
+projectors.
+• All chart footers must include: "Source: CricRadio Data Portal | [Date]"
+IMPORTANT: No Default Colors
+Never use default tool/library colors in any published chart. Every visual must use the CricRadio brand
+palette. This applies to AI-generated output as well — always specify brand colors in your prompts.
+
+==================== PAGE 9 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 9
+02Type A: Standard Analytical
+Visuals
+Spreadsheet-based workflow — Collect, Wrangle, Visualize.
+
+==================== PAGE 10 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 10
+2.1
+Data Sourcing: Identifying Reliable
+Metrics
+Every visualization begins with raw match data pulled from one or more external platforms. The goal
+at this stage is completeness and accuracy — not analysis. Wrangling and interpretation happen in
+Step 2.
+Data Sourcing Flow
+Cricmetric ESPNcricinfo CREX HowStat Statsguru
+Raw Dataset (CSV)
+Imported into Google Sheets
+KPI Wrangling
+Derived Metrics & Validation
+Ready for Visualization
+Platform Directory
+Platform Specialty Best For
+Cricmetric Granular match data, advanced
+metrics, filtered leaderboards
+Matchup analysis, phase-wise splits, player search
+with grouping
+ESPNcricinfo Comprehensive historical
+records, player profiles
+Scorecards, narrative context, general reference
+CREX Real-time match updates,
+specialized stats
+Live/near-live in-match analytics turnaround
+HowStat Specialized statistical data and
+historical records
+Career aggregates, historical cross-checks
+
+==================== PAGE 11 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 11
+Platform Specialty Best For
+Statsguru Advanced multi-filter query
+engine (ESPNcricinfo)
+Custom queries with multiple filters — the team's
+primary source
+Key principle: Always confirm the scope of data needed (format, date range, competition,
+player/team) before pulling. Cross-check totals against a second source when the visual will inform a
+live decision. Record the source and pull date for every dataset.
+NOTE: Platform Access
+Confirm current login credentials and UI for each platform with the training lead — data platforms update
+their interfaces and access terms periodically.
+
+==================== PAGE 12 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 12
+2.2
+Data Wrangling in Google Sheets:
+Defining Unique KPIs
+Moving beyond basic stats, trainees will learn to engineer unique performance indicators critical for
+modern cricket analysis. This is where raw data becomes meaningful.
+KPI Relationship Map
+Understanding how KPIs relate to each other prevents calculation errors and ensures consistency:
+Total Runs Scored
+(Primary Input)
+Boundary Runs % Activity Runs %
+Boundary Rate Dots % / Dots Rate
+Boundary Runs % + Activity Runs % = 100%
+Wrangling Workflow
+1. Export raw data from your source platform as CSV.
+2. Import into Google Sheets — clean column headers, check for missing/duplicate rows.
+3. Engineer KPIs using the formulas in Section 2.5. Use consistent column naming.
+4. Apply thresholds — exclude low sample sizes (e.g., use AVERAGE(Balls Faced) as
+minimum).
+5. Validate — spot-check at least one row with a manual calculation before proceeding.
+TIP: Consistency First
+Always name new KPIs consistently with the existing glossary before introducing them into a visual. This
+keeps templates reusable across trainees and projects.
+
+==================== PAGE 13 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 13
+2.3
+AI-Assisted Visualization Methodology
+Leveraging AI tools for rapid charting and insight generation is a core skill in this workflow. AI output
+is a starting point — never a finished product — until a trainee has reviewed it against QA standards.
+AI Visualization Pipeline
+Wrangled Data
++ Question
+Structured
+AI Prompt
+AI Tool
+(Arena AI / Claude)
+Draft Visual
+Review & Publish
+QA
+Loop
+Recommended AI Tools
+Tool Role in This Workflow Strength
+Arena AI
+(Recommended)
+Primary tool for
+image-generation-based
+visualization
+ESPN-style broadcast graphics from
+structured prompts
+Claude (Anthropic) Chart code generation, data
+interpretation, structured
+prompting
+Excellent at complex chart logic and code
+output
+Gemini (Google) Cross-checking chart output,
+quick variations
+Fast iteration on visual alternatives
+ChatGPT (OpenAI) General-purpose prompt
+drafting and chart code
+Good for explaining unfamiliar chart types
+Prompt Engineering Best Practices
+A good chart-generation prompt gives the AI tool everything a human designer would need: the data,
+the question, the constraints, and the brand identity.
+• State the question, not just the chart type — "show where this batter scores" produces a
+better result than "make a pie chart."
+
+==================== PAGE 14 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 14
+• Describe the data shape — fields, units, and any grouping (e.g., "runs by bowler, 7
+segments").
+• Specify the audience — a coach needs a one-glance takeaway; an analyst can handle more
+density.
+•
+Include brand constraints every time — aspect ratio 4:3, background #F5F5F5, brand colors
+#001D38 / #69A7EF / #FAF9F6.
+• Always request a takeaway annotation — a callout or highlight on the most important data
+point.
+• Set strict constraints — "Do NOT add player photos, headshots, or decorative clip art.
+Maintain clean data-ink ratio."
+
+==================== PAGE 15 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 15
+2.4
+The Visualization Toolkit
+Mastering the standard chart types ensures a trainee can represent any cricket dynamic effectively.
+The decision diagram below maps analytical questions to chart types:
+Chart Selection Decision Flow
+What is your
+analytical question?
+Compare
+values
+Bar /
+Lollipop
+Part of
+whole
+Pie / Donut
+/ Treemap
+Multi-metric
+profile
+Radar
+Chart
+Two-way
+compare
+Butterfly /
+Diverging
+Position on
+2 axes
+Quadrant
+Chart
+Match the question to the chart — not the other way around
+Full Chart Type Reference
+Chart Type What It Shows Best Used When
+Bar Chart Comparison of a metric across
+discrete categories
+Comparing players, overs, or phases
+side-by-side
+Lollipop Chart Same as bar, with reduced visual
+weight
+Many categories where bars would feel
+heavy (10+ items)
+Pie / Donut Chart Parts of a whole with center
+summary
+Run distribution, outcome breakdown (max 7
+slices)
+Treemap Nested parts of a whole, sized
+proportionally
+Boundary distribution across bowlers, squad
+run contribution
+Quadrant Chart Two metrics on X/Y axes, four
+labeled zones
+Performance vs. efficiency, identifying
+elite-zone players
+
+==================== PAGE 16 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 16
+Chart Type What It Shows Best Used When
+Geospatial Map Location-based metric overlays on
+a map
+Venue-wise performance across a region or
+country
+Radar Chart Multiple metrics for one entity on
+shared axes
+Session/innings diagnostic, all-round player
+profile (5-12 axes)
+Butterfly /
+Diverging
+Two opposing series compared
+around a center spine
+Head-to-head milestone comparison (Root
+vs. Tendulkar)
+100% Stacked
+Bar
+Composition of a total,
+standardized to 100%%
+Boundary vs. running vs. dot composition per
+phase
+
+==================== PAGE 17 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 17
+2.5
+Hands-on Implementation of Derived
+KPIs
+This section details the specific calculations required to derive advanced cricket KPIs from raw data.
+Mastering these formulas ensures consistency across all analytical visualizations.
+KPI Formula What It Measures
+Boundary
+Runs %
+(Total Runs from Boundaries / Total
+Runs Scored) x 100
+A player's reliance on boundaries for scoring —
+high values indicate power-dependent batting
+Boundary
+Rate
+Total Balls Faced / Total
+Boundaries Hit
+How frequently a player finds the boundary
+(e.g., 4.5 = one boundary every 4.5 balls)
+Dots % (Total Dot Balls / Total Balls Faced)
+x 100
+A player's ability to rotate strike — high values
+indicate difficulty scoring against specific
+bowling
+Dots Rate Total Balls / Total Dots Granular scoring-to-non-scoring delivery ratio —
+complements Dots % with a frequency view
+Activity Runs
+%
+(Singles + Doubles + Triples / Total
+Runs) x 100 Also: 100 - Boundary
+Runs %
+Efficiency in 'busy' batting and strike rotation —
+inverse of boundary dependency
+NOTE: Confirm Before Training Delivery
+These definitions reflect standard convention. Confirm each against the internal tool's logic before using this
+page in a live training session — internal tooling may use slightly different denominators.
+
+==================== PAGE 18 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 18
+2.6
+Interactive Hands-on Practical Case
+Studies
+Each case study below walks through the full Collect → Wrangle → Visualize workflow for one real
+analytical request. Use these as worked references when handling similar production requests.
+Step 01
+Data Collection
+Step 02
+Data Wrangling
+Step 03
+AI Visualization
+Case Study 01: The Hundred 2026 — Boundary Rate
+Leaderboard
+Objective: Identify the tournament's most frequent boundary hitters by calculating the season-to-date
+Boundary Rate across the top batters in The Hundred Men's 2026.
+Step 1 — Data Collection
+Navigate to Cricmetric > Leaderboard and apply the following filter configuration:
+Filter Value
+Show Player
+Role Batting
+Format All T20
+Category Men's
+Sort by Runs
+Advanced Search Series = "The Hundred Men's Competition 2026"
+Step 2 — Data Wrangling
+Export the filtered dataset as CSV and import into Google Sheets. Then apply the following steps:
+• Calculate: Boundary Rate = Total Balls Faced / (Fours + Sixes)
+
+==================== PAGE 19 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 19
+• Apply thresholding: exclude players below AVERAGE(Balls Faced) to ensure statistical
+relevance.
+• Sort ascending by Boundary Rate (lower = more frequent boundary-hitting).
+Step 3 — AI-Assisted Visualization (Arena AI)
+Use the following master prompt to generate a horizontal bar chart:
+"Act as a senior sports broadcast data visualization designer with 10+ years of experience
+creating ESPN-style on-air graphics for cricket tournaments. Using the provided Men's Hundred
+2026 top performers dataset, create a horizontal bar chart showing only the Boundary Rate
+metric, calculated as Balls Faced ÷ (4s + 6s) — representing how many balls each batter takes
+per boundary. Visualization specifications: - Style: Professional ESPN-style sports broadcast
+graphic - Aspect ratio: 4:3 - Background Color: Light/neutral (#F5F5F5) - Brand Theme Colors:
+#001D38, #69A7EF, #FAF9F6 - Title: 'THE HUNDRED 2026 (MEN'S)' - Subtitle: 'Top Performers –
+Boundary Rate so far' - Footer: 'Source: CricRadio Data Portal | 6th August 2026' - Watermark:
+CricRadio logo, semi-transparent - Sort bars ascending (best rate at top) - Annotate the #1
+performer with a callout. Do NOT include any other metrics. Keep the data-ink ratio clean and
+TV-legible."
+
+==================== PAGE 20 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 20
+Case Study 02: Ryan Rickelton — Bowler-by-Bowler Matchup
+Breakdown
+Objective: Conduct a matchup-level breakdown of Ryan Rickelton's innings against London Spirit,
+evaluating his run distribution, balls faced, strike rate, and boundary runs % against each bowler.
+Step 1 — Data Collection
+Navigate to Cricmetric > Player Search:
+Filter Value
+Player Ryan Rickelton
+Show Batting
+Format All T20
+Group by Opposing player
+Advanced Search Series = "The Hundred Men's Competition 2026"
+Step 2 — Data Wrangling
+• Export CSV → Google Sheets.
+• Calculate: Boundary Runs % = (((Fours x 4) + (Sixes x 6)) / Total Runs) x 100
+Step 3 — AI-Assisted Visualization (Arena AI)
+Generate a professional DONUT CHART with center summary card showing total runs, balls faced,
+and overall SR. Slices segmented by runs scored against each bowler, with a callout highlighting the
+bowler punished most.
+"Act as a senior sports broadcast data visualization designer with 10+ years of experience
+creating ESPN-style on-air graphics for cricket tournaments. Create a professional,
+broadcast-ready DONUT CHART visualizing Ryan Rickelton's batting performance breakdown against
+each London Spirit bowler in The Hundred 2026 (Men's). Center of Donut: Display Rickelton's
+total score (Total Runs, Balls Faced, Overall SR) as a clean summary card. Donut Slices:
+Segmented by runs scored against each bowler. Highlight/Callout: Visually emphasize the bowler
+he punished the most. Visual & Design Specifications: - Style: Professional ESPN-style sports
+broadcast graphic - Aspect ratio: 4:3 - Background Color: Light/neutral (#F5F5F5) - Brand
+Theme Colors: #001D38, #69A7EF, #FAF9F6 - Title: 'THE HUNDRED 2026 (MEN'S)' - Subtitle: 'Ryan
+Rickelton's Batting Masterclass against each London Spirit bowler' - Footer: 'Source:
+CricRadio Data Portal | 7th August 2026' - Watermark: CricRadio logo, semi-transparent Do NOT
+include any other metrics. Keep the data-ink ratio clean and TV-legible."
+
+==================== PAGE 21 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 21
+Case Study 03: Mitchell Marsh — Bowler-by-Bowler Boundary
+Treemap
+Objective: Break down Mitchell Marsh's bowler-by-bowler batting performance so far in the
+tournament.
+Step 1 — Data Collection
+Navigate to Cricmetric > Player Search and apply the following filter configuration:
+Filter Value
+Player Type "Mitchell Marsh"
+Show Batting
+Format All T20
+Group by Opposing player
+Advanced Search Select Date according to the requirements. Select Series = "The Hundred Men's
+Competition 2026". Submit.
+Step 2 — Data Wrangling
+• Export data as a CSV file and import it into Google Sheets.
+• Apply the KPI calculation if any required:
+• For example: Boundary Runs %, Boundary Rate, Activity Runs %
+Step 3 — AI-Assisted Visualization (Arena AI)
+Use Arena AI (Image Generation) with the following master prompt:
+"Act as a senior sports broadcast data visualization designer with 10+ years of experience
+creating ESPN-style on-air graphics for cricket tournaments. Create a professional, ESPN-style
+sports broadcast TREEMAP visualizing Mitchell Marsh's Total Boundaries (4s + 6s) hit against
+each bowler in The Hundred 2026 (Men's). Chart Type: Treemap where tile size is directly
+proportional to Total Boundaries (4s + 6s) scored against each bowler. Tile Data Labels: Each
+tile must clearly display the Bowler's Name and Total Boundary count (e.g., "J. Archer: 8
+Boundaries"). Visual & Design Specifications: - Style: Professional ESPN-style sports
+broadcast graphic - Aspect ratio: 4:3 - Background Color: Light/neutral (#F5F5F5) - Brand
+Theme Colors: #001D38, #69A7EF, #FAF9F6 - Title: 'THE HUNDRED 2026 (MEN'S)' - Subtitle:
+'Mitchell Marsh's Tournament Analysis so far' - Footer: 'Source: CricRadio Data Portal | 12th
+August 2026' - Watermark: CricRadio logo, semi-transparent Strict Constraints: - ONLY display
+the Total Boundaries metric (4s + 6s). - DO NOT add player photos, headshots, cutout graphics,
+or decorative cricket clip art. - Maintain high contrast, clean data-ink ratio, and TV-screen
+legibility."
+
+==================== PAGE 22 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 22
+Case Study 04: Richard Gleeson — Venue-wise Geospatial
+Analysis
+Objective: In-depth analysis of Richard Gleeson's venue-wise performance breakdown so far in the
+tournament.
+Step 1 — Data Collection
+Navigate to Cricmetric > Player Search and apply the following filter configuration:
+Filter Value
+Player Type "Richard Gleeson"
+Show Bowling
+Format All T20
+Group by Venue
+Advanced Search Select Date according to the requirements. Select Series = "The Hundred Men's
+Competition 2026". Submit.
+Step 2 — Data Wrangling
+• Export data as a CSV file and import it into Google Sheets.
+• Apply the KPI calculation if any required:
+• For example: Boundary Runs %, Boundary Rate, Activity Runs %
+Step 3 — AI-Assisted Visualization (Arena AI)
+Use Arena AI (Image Generation) with the following master prompt:
+"Act as a senior sports broadcast data visualization designer with 10+ years of experience
+creating ESPN-style on-air graphics for cricket tournaments. Create a professional,
+broadcast-ready GEOSPATIAL MAP GRAPHIC of England & Wales visualizing Richard Gleeson's
+bowling venue data in The Hundred 2026 (Men's). Map Visualization: Minimalist, clean 3D vector
+map silhouette of England & Wales showing tournament venue locations based on the dataset
+provided. Data Callouts on Venues: Clean floating data badges pinned to each venue displaying:
+Stadium / City Name, Wickets taken ("X Wkts") and Economy Rate ("X.XX Econ"). Visual & Design
+Specifications: - Style: Professional ESPN-style sports broadcast graphic - Aspect ratio: 4:3
+- Background Color: Light/neutral (#F5F5F5) - Brand Theme Colors: #001D38, #69A7EF, #FAF9F6 -
+Title: 'THE HUNDRED 2026 (MEN'S)' - Subtitle: 'Richard Gleeson's Venue-wise Analysis so far' -
+Footer: 'Source: CricRadio Data Portal | 17th August 2026' - Watermark: CricRadio logo,
+semi-transparent Strict Constraints: - ONLY include the "Wickets" and "Econ" metrics for each
+venue. - DO NOT add player photos, headshots, cutout graphics, or decorative cricket clip art.
+- Maintain high contrast, clean data-ink ratio, and TV-screen legibility."
+
+==================== PAGE 23 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 23
+Case Study 05: Why Ravindra Jadeja Will Be Crucial —
+Quadrant Analysis
+Objective: Using Test bowling records across Asian venues since Jan 2021, analyze why Ravindra
+Jadeja will be crucial for India in Tests.
+Step 1 — Data Collection
+Navigate to Cricmetric > Leaderboard and apply the following filter configuration:
+Filter Value
+Show Player
+Role Bowling
+Format Test
+Category Men's
+Sort by Wickets
+Advanced Search Select Date according to the requirements. Select Venue Continent = Asia. Submit.
+Step 2 — Data Wrangling
+• Export data as a CSV file and import it into Google Sheets.
+• Apply the KPI calculation if any required:
+• For example: Boundary Runs %, Boundary Rate, Activity Runs %
+Step 3 — AI-Assisted Visualization (Arena AI)
+Use Arena AI (Image Generation) with the following master prompt:
+"Act as a senior sports broadcast data visualization designer with 10+ years of experience
+creating ESPN-style on-air graphics for cricket tournaments. Create a professional,
+broadcast-ready QUADRANT SCATTER CHART analyzing top Test bowlers in Asian conditions since
+January 2021. Axes Setup: Y-Axis (Vertical): Total Wickets taken (increasing upward) and
+X-Axis (Horizontal): Bowling Average (clearly indicate that lower average is superior).
+Quadrant Benchmark Lines: Thin dashed reference lines dividing the plot into 4 quadrants,
+highlighting the top-efficiency / high-volume quadrant ("Elite Impact Zone"). Data Point
+Styling: Highlight Player: "RA Jadeja" as an accentuated, bold RED DOT with a clear prominent
+name tag and stat callout badge. All Other Bowlers: Rendered as subtle, muted LIGHT GREY DOTS
+with legible dark grey player names. Visual & Design Specifications: - Style: Professional
+ESPN-style sports broadcast graphic - Aspect ratio: 4:3 - Background Color: Light/neutral
+(#F5F5F5) - Brand Theme Colors: #001D38, #69A7EF, #FAF9F6 - Title: 'Why Ravindra Jadeja will
+be crucial for India in Tests?' - Subtitle: 'Top bowlers in Asian countries since Jan 2021' -
+Footer: 'Source: CricRadio Data Portal | 17th August 2026' - Watermark: CricRadio logo,
+semi-transparent Strict Constraints: - DO NOT add player photos, headshots, cutout graphics,
+
+==================== PAGE 24 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 24
+or decorative cricket clip art. - Maintain high contrast, clean data-ink ratio, and TV-screen
+legibility."
+
+==================== PAGE 25 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 25
+Case Study 06: What Went Wrong for Australia — Radar Chart
+Diagnosis
+Objective: What went wrong for Australia in the First Session? Detailed breakdown analysis of
+batting in the first session.
+Step 1 — Data Collection
+Navigate to Cricmetric > Leaderboard and apply the following filter configuration:
+Filter Value
+Show Team
+Role Batting
+Format Test
+Category Men's
+Sort by Runs
+Advanced Search Select Date, Innings, Overs between according to the requirements. Submit.
+Step 2 — Data Wrangling
+• Export data as a CSV file and import it into Google Sheets.
+• Apply the KPI calculation if any required:
+• For example: Boundary Runs %, Boundary Rate, Activity Runs %
+Step 3 — AI-Assisted Visualization (Arena AI)
+Use Arena AI (Image Generation) with the following master prompt:
+"Act as a senior sports broadcast data visualization designer with 10+ years of experience
+creating ESPN-style on-air graphics for cricket tournaments. Create a professional, ESPN-style
+broadcast RADAR CHART (Spider Chart) diagnosing Australia's batting performance in the 1st
+session against Bangladesh. Chart Type: Multi-axis Radar / Spider Chart plotting key session
+diagnostic metrics based on the dataset provided. Polygon Styling: Clean translucent color
+fill (based on brand theme color) with a bold solid border line connecting each vertex. Axis &
+Data Labels: Every spoke/vertex must clearly display the metric name along with its exact
+numerical display value. Grid Structure: Subtle, light-grey concentric polygon gridlines with
+percentage/benchmark scale." Visual & Design Specifications: - Style: Professional ESPN-style
+sports broadcast graphic - Aspect ratio: 4:3 - Background Color: Light/neutral (#F5F5F5) -
+Brand Theme Colors: #001D38, #69A7EF, #FAF9F6 - Title: 'What went wrong for Australia in the
+First Session?' - Subtitle: 'Breakdown Analysis of Batting Squad in the first session' -
+Footer: 'Source: CricRadio Data Portal | 18th August 2026' - Watermark: CricRadio logo,
+semi-transparent Strict Constraints: - DO NOT add player photos, headshots, cutout graphics,
+or decorative cricket clip art. - Maintain high contrast, clean data-ink ratio, and TV-screen
+
+==================== PAGE 26 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 26
+legibility."
+
+==================== PAGE 27 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 27
+Case Study 07: Joe Root vs Sachin Tendulkar — Butterfly
+Chart Comparison
+Objective: Where does Joe Root stand after equalling Sachin Tendulkar's test record? In-depth
+analysis of Root and Sachin after 68 test fifties.
+Step 1 — Data Collection
+Navigate to Cricmetric > Player Search and apply the following filter configuration:
+Filter Value
+Player Type "Joe Root" and "Sachin Tendulkar"
+Show Batting
+Format Test
+Group by Player
+Advanced Search Select Date, Series, Venue, etc according to the requirements. Submit.
+Step 2 — Data Wrangling
+• Export data as a CSV file and import it into Google Sheets.
+• Apply the KPI calculation if any required:
+• For example: Boundary Runs %, Boundary Rate, Activity Runs %
+Step 3 — AI-Assisted Visualization (Arena AI)
+Use Arena AI (Image Generation) with the following master prompt:
+"Act as a senior sports broadcast data visualization designer with 10+ years of experience
+creating ESPN-style on-air graphics for cricket tournaments. Create a professional,
+broadcast-ready BUTTERFLY (DIVERGING) CHART comparing Joe Root and Sachin Tendulkar's Test
+batting records at the shared milestone of 68 Test fifties. Chart Structure: Symmetrical
+diverging bar chart with a central vertical spine listing 7 metrics: Inns | Runs | Avg | SR |
+HS | 50s | 100s Left Side (JOE ROOT): Bars extend leftward in Deep Navy Blue (#1B3A5C) Right
+Side (SACHIN TENDULKAR): Bars extend rightward in Rich Gold/Saffron (#D4A843) Data Labels:
+Every bar must display its exact numerical value at the tip based on the dataset provided.
+Scale Normalization: Bar lengths normalized proportionally within each metric row; true values
+shown as text labels. Player Headers: "JOE ROOT" (bold, left) and "SACHIN TENDULKAR" (bold,
+right) above their respective bar groups. Milestone Anchor: The "50s" row (both at 68) should
+be visually highlighted with an "EQUAL" badge across the center spine. Visual & Design
+Specifications: - Style: Professional ESPN-style sports broadcast graphic - Aspect ratio: 4:3
+- Background Color: Light/neutral (#F5F5F5) - Brand Theme Colors: #001D38, #69A7EF, #FAF9F6 -
+Title: 'Where does Joe Root stand after equalling Sachin Tendulkar's test record?' - Subtitle:
+'In-depth analysis of Root and Sachin after 68 test fifties' - Footer: 'Source: CricRadio Data
+Portal | 21st August 2026' - Watermark: CricRadio logo, semi-transparent Strict Constraints: -
+
+==================== PAGE 28 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 28
+DO NOT add player photos, headshots, cutout graphics, or decorative cricket clip art. -
+Maintain high contrast, clean data-ink ratio, and TV-screen legibility."
+
+==================== PAGE 29 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 29
+2.7
+Output Gallery — Analytical Visualization
+Samples
+The following pages showcase actual analytical visualizations produced using the workflow described
+in this manual. These outputs demonstrate the quality standard expected from every trainee. Study
+the chart design, annotation, branding consistency, and data-ink ratio in each example.
+Case Study 01 Output — Boundary Rate Leaderboard (Horizontal Bar Chart)
+Shows the top 15 boundary hitters in The Hundred 2026 ranked by Boundary Rate. Clean data-ink
+ratio, ascending sort, CricRadio brand colors applied throughout.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 30 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 30
+Case Study 02 Output — Ryan Rickelton's Bowler-by-Bowler Matchup (Donut
+Chart)
+Run distribution segmented by each London Spirit bowler. Center summary shows total runs (94),
+with each slice labeled by bowler and percentage contribution.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 31 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 31
+Case Study 03 Output — Mitchell Marsh's Boundary Treemap
+Treemap with tile size proportional to total boundaries (4s + 6s) against each bowler. Color gradient
+from navy to teal distinguishes boundary frequency at a glance.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 32 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 32
+Case Study 04 Output — Richard Gleeson's Venue-wise Geospatial Map
+Minimalist 3D map of England & Wales with floating data badges at each venue showing Wickets and
+Economy Rate. Clean callout design with CricRadio watermark.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 33 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 33
+Case Study 05 Output — Ravindra Jadeja Quadrant Analysis
+Quadrant scatter chart of Test bowlers in Asia since Jan 2021. Jadeja highlighted in red with stat
+callout (99 Wkts, 20.79 Avg). Four labeled quadrant zones identify the Elite Impact Zone.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 34 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 34
+Case Study 06 Output — Australia's First Session Radar Diagnosis
+Multi-axis radar chart plotting 12 session diagnostic metrics. The collapsed polygon shape visually
+tells the story of a poor session before reading any number.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 35 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 35
+Case Study 07 Output — Root vs Tendulkar Butterfly Chart
+Symmetrical diverging bars across 7 metrics. Navy for Root, gold for Tendulkar. The 50s row carries
+an 'EQUAL' badge at the center spine. TV-legible at broadcast scale.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 36 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 36
+Additional Output — Mitchell Marsh Win/Loss Cause Analysis (Donut Chart)
+Donut chart splitting Marsh's tournament runs by match outcome (Win vs Loss). Center summary of
+total runs with SR and Dots% breakdown per outcome segment.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 37 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 37
+Additional Output — Nicholas Pooran Shot-Type Breakdown (Treemap)
+Treemap segmented by shot type (Drive, Slog, Pull, Cut, etc.) with runs, SR, and balls faced per tile.
+Shows which shots generate the most value.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 38 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 38
+Additional Output — Most Economical Bowlers Leaderboard (Lollipop Chart)
+Lollipop chart ranking the 9 most economical bowlers in The Hundred 2026. Clean horizontal layout
+with exact economy values. Demonstrates the lollipop alternative to bar charts for longer lists.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 39 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 39
+03Type B: Advanced Analytical
+Visuals
+Python-Based — Streamlit Ball-by-Ball Data Portal
+
+==================== PAGE 40 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 40
+3.1
+Python Environment & Streamlit
+Architecture
+This section provides a complete technical walkthrough of the CricRadio Ball-by-Ball (BBB) Data
+Portal — a Streamlit-based tool that pulls live match data from an external cricket API, processes it
+into a clean analytical DataFrame with 38 derived columns, and exports it as a downloadable CSV.
+This tool replaces manual scorecard scraping entirely. It automates data collection, normalisation,
+and derived-metric computation in a single click — producing the raw datasets that feed into the
+visualizations covered in Section 2.
+System Architecture Overview
+The codebase is organized into 6 distinct layers, each with a clear responsibility. Understanding this
+architecture is essential before modifying any part of the tool.
+Layer 01
+Configuration Layer Series config, API URL, headers, session
+Layer 02
+Data Ingestion Layer API endpoints, concurrent fetching, caching
+Layer 03
+Normalisation Engine 6 lookup maps, LRU-cached normalisation
+Layer 04
+Data Processing Layer Ball extraction, derived columns, style inference
+Layer 05
+Output Layer 38-column final DataFrame, rename & export
+Layer 06
+UI Layer Streamlit app, sidebar, match selector, download
+
+==================== PAGE 41 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 41
+Dependencies & Environment Setup
+Required Packages (requirements.txt)
+Package Versio
+n
+Role in This Tool
+requests Latest HTTP client for all API calls — uses requests.Session() for connection pooling
+and keep-alive across every request
+pandas Latest Core DataFrame operations — all data wrangling, grouping, cumulative
+statistics, and CSV export
+numpy Latest Numerical operations — np.where for conditional column logic, np.nan
+handling, .clip() operations
+streamlit Latest Web UI framework — page config, sidebar layout, caching (@st.cache_data),
+selectbox, download button, data preview
+Standard Library Modules Used
+Module Purpose
+logging Structured console output for API call tracking and error diagnostics
+re Regex-based fielder name extraction from commentary text, filename
+sanitisation
+time Rate limiting between paginated API calls (0.2s sleep between pages)
+base64 Encoding the CricRadio logo PNG for inline HTML rendering in Streamlit
+os File existence checks for the logo asset (cricradio.png)
+functools.lru_cache Caching normalisation function results (maxsize=512) to avoid
+redundant lookups
+concurrent.futures.ThreadPool
+Executor
+Parallel API fetching — scorecard + 4 innings commentary fetched
+concurrently
+Setup & Run Instructions
+1. Install Python 3.9+ on your system.
+2. Place app.py, requirements.txt, and cricradio.png (logo) in the same directory.
+
+==================== PAGE 42 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 42
+3. Install dependencies: pip install -r requirements.txt
+4. Run the app: streamlit run app.py
+5. Open the local URL shown in the terminal (typically http://localhost:8501).
+TIP: First Run
+The first run may take 10-15 seconds while Streamlit initialises and the API fetches the fixture list.
+Subsequent loads within 30 minutes will use cached data (@st.cache_data with ttl=1800).
+
+==================== PAGE 43 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 43
+Configuration & Series Setup
+When switching to a different tournament or series, a trainee needs to modify specific constants at
+the top of app.py. These are the only values that change between deployments.
+Series Configuration Constants
+COMPETITION_ID = "4690" # cricket australia official website required series id SERIES_NAME =
+"IND in SL - Test 2026" # series name on the website SERIES_SLUG =
+"sri-lanka-v-india-tests-2026-men" # series slug after series id in the url
+Constant What It Is Where to Find It
+COMPETITION_
+ID
+The unique numeric ID for the
+series/competition on the
+cricket.com.au website
+In the URL when viewing the series page:
+cricket.com.au/series/.../4690/...
+SERIES_NAME The human-readable display
+name shown in the app
+header and page title
+Copy the exact series name as it appears on the
+website
+SERIES_SLUG The URL-friendly slug that
+appears after the series ID in
+the website URL
+Copy from the URL path:
+/series/sri-lanka-v-india-tests-2026-men/4690
+Game Format Constants
+T20_OVERS = 200 # modify based on game format T20_BALLS_TOTAL = 1200 # modify based on game
+format
+Format T20_OVERS Value T20_BALLS_TOTAL Value
+T20 200 1200
+ODI (50 overs) 500 3000
+Test (theoretical max
+per innings)
+900 5400
+IMPORTANT: Update Both Constants Together
+T20_OVERS and T20_BALLS_TOTAL must be updated together when switching formats. These drive the
+"Remaining Overs" and "Remaining Balls" calculations in the derived columns. Mismatched values will
+produce incorrect remaining-balls figures in your CSV output.
+
+==================== PAGE 44 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 44
+API & Session Configuration
+Constant Purpose
+API_BASE Base URL for the cricket.com.au API v2 — do not modify unless the API endpoint
+changes
+HEADERS Browser-mimicking HTTP headers (User-Agent, Origin, Referer) required for API
+access
+SESSION A persistent requests.Session() object — reuses TCP+TLS connections across all API
+calls instead of opening a fresh connection per request
+LOGO_PATH Path to the CricRadio logo PNG file ("cricradio.png") — must be in the same directory
+as app.py
+DROP_COLS List of raw API columns to strip from the data before processing (internal IDs, unused
+metadata)
+
+==================== PAGE 45 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 45
+Normalisation Maps — Deep Dive
+The raw API returns inconsistent naming for the same cricket concept (e.g., "FullLength", "Full
+Length", "GoodLength" all mean the same thing). The normalisation engine standardises these into
+clean, consistent values using 6 lookup dictionaries.
+Raw API Value
+"FullLength"
+_normalise_value()
+Exact → Case-insensitive → Raw
+Clean Value
+"Length Delivery"
+All 6 normalisation functions use LRU cache (maxsize=512) for performance
+Normalisation
+Map
+Raw Input Examples Normalised Output Column It Cleans
+PITCHING_LENG
+TH_MAP
+"FullLength", "Full
+Length", "GoodLength",
+"LengthBall"
+"Length Delivery" ball_lengthTypeId
+PITCHING_LINE_
+MAP
+"OffStump", "Off Stump",
+"OutsideOff",
+"WideOfOff"
+"Off stump", "Outside
+Off", "Wide Off"
+ball_lineTypeId
+SHOT_CONNEC
+TION_MAP
+"WellTimed", "Well
+Timed", "Middled",
+"Driven"
+"Middled", "Good",
+"Missed", "Left"
+ball_battingConnectionId
+FEET_MOVEME
+NT_MAP
+"frontfoot", "FrontFoot",
+"Forward",
+"ForwardPress"
+"Front Foot", "Back
+Foot", "Down The
+Track"
+ball_battingFeetId
+DELIVERY_TYPE
+_MAP
+"InSwinger", "Inswinger",
+"InSwing", "OutSwing"
+"In Swing", "Out
+Swing", "Off Break"
+ball_bowlingDetailId
+BOWLING_TYPE
+_MAP
+"MediumFast",
+"FastMedium", "Medium
+Pace", "Fast"
+"Medium", "Fast",
+"OffSpin", "Orthodox"
+Bowling style inference
+Normalisation logic inside _normalise_value() follows a 3-step priority:
+1. Exact match: if the raw value exists as a key in the lookup dictionary, return its mapped value
+immediately.
+2. Case-insensitive fallback: if no exact match, compare lowercase versions of all keys — return
+the first match.
+
+==================== PAGE 46 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 46
+3. Passthrough: if neither matches, return the raw string unchanged (the value may be a new API
+variant not yet mapped).
+
+==================== PAGE 47 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 47
+API Data Flow & Endpoints
+The tool hits 3 distinct API endpoints per match extraction. Understanding this flow is essential for
+debugging data issues and for knowing where a missing field originates.
+Endpoint 1
+/fixtures/yearfilter
+→ Completed match list (paginated)
+Endpoint 2
+/views/scorecard
+→ Player map, team map, match metadata
+Endpoint 3
+/views/comments
+→ Ball-by-ball data (1 call per innings, up to 4)
+Endpoints 2 + 3 are fetched concurrently via ThreadPoolExecutor
+All results cached with @st.cache_data(ttl=1800) = 30-minute TTL
+The isCompleted Parameter
+f"&isCompleted;=false" # false = for ongoing live games # true = for completed games
+This query parameter in fetch_completed_fixtures() controls whether the API returns
+live/in-progress matches or completed matches. Change this value based on whether you need to
+extract data from a match that is still being played (false) or one that has finished (true).
+NOTE: Pagination & Deduplication
+The fixture list is paginated (50 per page, up to 20 pages). The function automatically deduplicates fixtures
+by ID and sorts them by start date. A 0.2-second sleep is inserted between API pages to avoid rate limiting.
+
+==================== PAGE 48 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 48
+Derived Columns & Computed Metrics
+The add_derived_columns() function transforms raw API data into 38 analysis-ready output
+columns. Understanding which columns are direct pass-throughs vs. computed is critical for
+debugging data issues.
+Final Output Columns (38 total)
+Column Name Source / Computation Type
+Date ball_ballDateTime → formatted dd-mm-yyyy
+HH:MM
+Formatted
+Batting Team /
+Bowling Team
+Team ID → name lookup via
+make_team_map()
+Mapped
+Striker / Non-Striker /
+Bowler
+Player ID → name lookup via
+make_player_map()
+Mapped
+Innings / Over
+Number / Over Ball
+Direct from API: inning_inningNumber,
+over_overNumber, ball_ballNumber
+Pass-through
+Unique Computed: (over_num - 1) + "." + ball_num Derived
+Runs / Wides / No
+Balls / Byes / Leg
+Byes
+Direct from API with boolean flag
+conversion
+Pass-through
+Team Runs Cumulative sum of total runs per innings
+(groupby innings)
+Cumulative
+Balls Cumulative count of legal deliveries per
+innings
+Cumulative
+Run Rate Team Runs / (Balls / 6), rounded to 2
+decimal places
+Calculated
+Remaining Overs /
+Remaining Balls
+T20_BALLS_TOTAL - cumulative balls,
+formatted as overs.balls
+Calculated
+Remaining Runs /
+Lead By / Trail By
+Computed from innings-1 total vs. current
+score
+Calculated
+Batter Runs / Balls /
+Fours / Sixes / Total
+Runs
+Cumulative per-batter stats (groupby
+innings + striker)
+Cumulative
+
+==================== PAGE 49 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 49
+Column Name Source / Computation Type
+Fall Of Wickets Cumulative wicket count per innings —
+non-zero only on wicket balls
+Cumulative
+On Field Minutes Time delta: ball_ballDateTime of dismissal
+minus first appearance
+Calculated
+Dismissal Type /
+Dismissal Fielder
+API field + regex extraction from
+commentary text
+Extracted
+Shot Angle / Shot
+Magnitude / Wagon
+Position
+Direct from API ball-tracking data Pass-through
+Pitching Length /
+Pitching Line / Shot
+Connection
+Normalised via lookup maps (Section
+above)
+Normalised
+False Shot 1 if Shot Connection is NOT in {Good,
+Middled, Left}, else 0
+Derived
+Feet Movement /
+Shot Type
+Normalised via lookup maps / direct from
+API
+Normalised
+Delivery Type ball_bowlingDetailId → normalised via
+DELIVERY_TYPE_MAP
+Normalised
+Bowling Type Inferred per bowler from delivery types via
+build_bowler_style_map()
+Inferred
+Bowling Side /
+Bowling Hand
+Direct from API Pass-through
+
+==================== PAGE 50 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 50
+Bowler Style Inference Logic
+The build_bowler_style_map() function infers each bowler's style (Fast, Medium, OffSpin,
+Orthodox, LegSpin, Chinaman) by analyzing the set of delivery types they've bowled across all their
+deliveries.
+All Deliveries
+by Bowler X
+Count: Pace vs Spin
+deliveries in each group
+Assigned Style
+"Fast" / "OffSpin" / etc
+Rules:
+• If spin deliveries > pace deliveries → spin category (OffSpin / Orthodox / LegSpin based on hand)
+• If pace deliveries > 0 and seam variants present → Fast; otherwise → Medium
+• Left-arm spinners default to "Orthodox"; right-arm spinners to "OffSpin"
+
+==================== PAGE 51 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 51
+Streamlit UI Architecture
+The UI layer consists of 8 rendering functions plus a custom CSS theme. Each function handles one
+visual component of the app.
+Function What It Renders Key Details
+inject_custom_css() Dark theme with
+CSS variables
+Inter + JetBrains Mono fonts, green/gold accent palette,
+hidden Streamlit default header/footer
+render_header_bad
+ge()
+Branded hero header CricRadio logo (base64-encoded PNG), series name,
+gradient background
+render_sidebar_bra
+nd()
+Sidebar branding
+panel
+Logo, company name, series name, Refresh Data button,
+About box
+render_match_card
+()
+Individual match
+display card
+Team names, date, venue, green left-border accent,
+Completed badge
+render_section_hea
+der()
+Section titles with
+icons
+Icon + title + optional subtitle + green gradient underline
+render_success_ba
+nner()
+Post-generation
+success state
+Filename, delivery count, green checkmark
+render_empty_stat
+e()
+No-match-selected
+placeholder
+Stadium icon, instructional text
+render_footer() Branded footer Logo, company name, version number
+User Flow
+1. App loads → inject_custom_css() applies theme → render_header_badge() shows branded
+header.
+2. Sidebar renders → render_sidebar_brand() + Refresh Data button + About panel.
+3. Fixture list loads → fetch_completed_fixtures() hits API → match count badge displayed.
+4. User selects a match → render_match_card() shows details → Export Data section appears.
+5. User clicks "Generate & Download CSV" → build_match_df() runs full pipeline →
+render_success_banner() → download button + data preview.
+
+==================== PAGE 52 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 52
+How to Switch to a Different Tournament
+This is the most common modification a trainee will make. Follow these steps exactly:
+1. Open app.py in any code editor.
+2. Navigate to the SERIES CONFIG section (lines 36-38).
+3. Update COMPETITION_ID to the new series ID from the cricket.com.au URL.
+4. Update SERIES_NAME to the display name you want in the app header.
+5. Update SERIES_SLUG to the URL slug from the series page.
+6. Update T20_OVERS and T20_BALLS_TOTAL if the format changes (e.g., T20 → ODI → Test).
+7. Check isCompleted parameter: set to false for live/ongoing matches, true for completed
+matches.
+8. Save the file and restart the Streamlit app (streamlit run app.py).
+Common Mistakes When Switching Series
+Mistake What Happens Fix
+Wrong COMPET
+ITION_ID
+"No Completed Matches
+Found" error — the API
+returns an empty fixture list
+Double-check the ID from the website URL
+Mismatched
+format constants
+"Remaining Overs" column
+shows incorrect values (e.g.,
+negative or impossibly high)
+Update both T20_OVERS and
+T20_BALLS_TOTAL together
+Wrong
+isCompleted
+value
+Live matches don't appear (set
+to true) or completed matches
+don't appear (set to false)
+Toggle between true/false based on match status
+Stale cache after
+switching
+Old series data still showing Click "Refresh Data" in sidebar or restart the app
+TIP: Quick Verification
+After switching series, the app should show the correct match count badge (e.g., '5 matches available')
+within 10-15 seconds. If it shows 0 matches, your COMPETITION_ID is wrong or the isCompleted
+parameter doesn't match the match status.
+
+==================== PAGE 53 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 53
+3.2
+Advanced Data Wrangling (Google Colab
+& AI Assisted Coding)
+Once the ball-by-ball dataset is exported from the BBB Data Portal (Section 3.1), the next step is to
+import it into Google Colab — a cloud-based Python notebook environment — and use its built-in AI
+coding assistant to wrangle the data into the precise structure needed for advanced visualizations.
+This section covers the complete wrangling pipeline: importing the CSV, computing advanced derived
+KPIs, and structuring the output for the visualization templates covered in Section 3.3.
+End-to-End Wrangling Workflow
+Step 01
+Export CSV
+from BBB Portal
+Step 02
+Upload to
+Google Colab
+Step 03
+AI-Assisted
+Code Generation
+Step 04
+Compute
+Derived KPIs
+Structured Data → Ready for Viz
+Why Google Colab?
+Advantage Detail
+Zero setup required No local Python installation needed — runs entirely in the browser with
+pre-installed pandas, numpy, and matplotlib
+Built-in AI assistant Colab's integrated AI coding assistant can generate wrangling code from natural
+language descriptions of what you need
+Free GPU/TPU
+access
+Not needed for wrangling, but useful if trainees later explore ML-based analytics
+Easy CSV upload Drag-and-drop file upload or mount Google Drive directly for persistent data
+access
+
+==================== PAGE 54 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 54
+Advantage Detail
+Shareable notebooks Notebooks can be shared with teammates for review, making the wrangling logic
+transparent and reproducible
+
+==================== PAGE 55 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 55
+Step-by-Step: Import & Setup
+After exporting the CSV from the BBB Data Portal (Section 3.1), follow these steps to set up the
+wrangling environment in Google Colab:
+1. Open Google Colab at colab.research.google.com and create a new notebook.
+2. Upload the exported CSV file using the Files panel (left sidebar → upload icon) or mount
+Google Drive.
+3. Import core libraries in the first cell: import pandas as pd, import numpy as np
+4. Load the dataset: df = pd.read_csv('filename.csv')
+5. Run df.info() and df.head() to verify the dataset loaded correctly — confirm 38 columns and the
+expected delivery count.
+6. Enable the AI assistant (Colab's built-in feature) to help generate wrangling code by describing
+the transformation you need in natural language.
+TIP: AI Assistant Workflow
+The recommended workflow is: describe the KPI you want to calculate to the AI assistant → review the
+generated code → run it → validate the output against a manual spot-check. Never trust AI-generated code
+without verifying at least one row of output manually.
+
+==================== PAGE 56 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 56
+Hands-on Derived KPIs
+These are the advanced KPIs computed during the Colab wrangling phase. Each builds on the raw
+columns from the BBB Portal export and feeds directly into the visualization templates in Section 3.3.
+KPI Formula What It Measures
+Boundary Runs
+%
+(Total Runs from Boundaries /
+Total Runs Scored) × 100
+A player's reliance on boundaries for scoring —
+high values indicate power-dependent batting
+Boundary Rate Total Balls Faced / Total
+Boundaries Hit
+How frequently a player finds the boundary (e.g.,
+4.5 = one boundary every 4.5 balls)
+Dots % (Total Dot Balls / Total Balls
+Faced) × 100
+Pressure absorbed — a batter's tendency to face
+non-scoring deliveries
+Activity Runs % (Singles + Doubles + Triples /
+Total Runs) × 100 Also: 100 −
+Boundary Runs %
+Efficiency in busy batting and strike rotation —
+the inverse of boundary dependency
+Dots Rate Total Balls / Total Dots Granular scoring-to-non-scoring delivery ratio —
+complements Dots % with a frequency view
+False Shots % (Total False Shots / Total Balls
+Faced) × 100
+Share of deliveries where the batter made poor
+contact (mistimed, edged, missed) — a
+vulnerability indicator
+False Shot
+Induced Rate
+Total Balls Bowled / Total False
+Shots Induced
+How frequently a bowler induces poor contact —
+lower = more deceptive or challenging bowling
+KPI Source Columns from BBB Export
+Each derived KPI above maps to specific columns in the 38-column CSV export from Section 3.1:
+KPI Ingredient Source Column(s) from BBB
+Export
+How to Derive
+Boundary count Batter Fours, Batter Sixes
+(cumulative per batter)
+Take max per batter-innings, or filter Batter Runs
+== 4 or 6
+Dot ball count Runs column Count rows where Runs == 0 AND Wides == 0
+AND No Balls == 0
+Balls faced
+(legal)
+Balls (cumulative) Take max per batter-innings, or count rows where
+Wides == 0
+
+==================== PAGE 57 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 57
+KPI Ingredient Source Column(s) from BBB
+Export
+How to Derive
+False shot count False Shot column Sum the False Shot column (already binary: 1 =
+false shot, 0 = clean contact)
+Total runs Batter Total Runs (cumulative
+per batter)
+Take max per batter-innings for total
+NOTE: False Shot Column
+The False Shot column is already computed in the BBB Portal export (Section 3.1). It flags any delivery
+where the Shot Connection value is NOT in {Good, Middled, Left} — meaning the batter made imperfect
+contact. This column is the basis for both False Shots % and False Shot Induced Rate.
+
+==================== PAGE 58 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 58
+AI-Assisted Code Generation in Colab
+Google Colab's built-in AI assistant accelerates the wrangling process. Here's how to use it effectively
+for cricket analytics KPI computation:
+Effective Prompting for Colab AI
+• Be specific about column names: Reference the exact column names from the BBB export
+(e.g., "using the 'Batter Runs' column" not "using the runs data").
+• State the grouping clearly: "Group by Innings and Striker" or "Group by Bowler" — Colab AI
+needs to know the aggregation level.
+• Describe the output shape: "Return a DataFrame with one row per batter, columns for each
+KPI" — define the expected result.
+• Request validation: "Also print the top 5 rows sorted by Boundary Rate to verify" — always
+ask for a sanity check.
+• Handle edge cases: "If a batter has faced fewer than 10 balls, exclude them from the
+calculation" — set thresholds explicitly.
+Example AI Prompt for Colab
+"Using the loaded DataFrame `df`, calculate the following KPIs per batter per innings: 1.
+Boundary Runs % = (runs from 4s and 6s / total batter runs) * 100 2. Dots % = (balls where
+Runs==0 and Wides==0 and No Balls==0) / total legal balls * 100 3. False Shots % = (sum of
+False Shot column / total legal balls) * 100 Group by: Innings, Striker columns. Exclude
+batters who faced fewer than 10 legal deliveries. Output: A clean summary DataFrame sorted by
+Boundary Runs % descending. Print the first 10 rows to verify."
+TIP: Review Before Proceeding
+Always review AI-generated code for correctness before using its output in a visualization. Common AI
+mistakes include: wrong groupby columns, not filtering out extras (wides/no-balls) from ball counts, and
+dividing by zero when a batter has scored 0 runs. Add .replace(0, np.nan) before any division to handle edge
+cases.
+
+==================== PAGE 59 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 59
+3.3
+Building Complex Visuals: From Pitching
+Maps to Shot Connection Maps
+Once the data is structured in the Colab notebook (Section 3.2), the next step is to build advanced,
+broadcast-quality visualizations. These go beyond the standard chart types in Section 2 — they are
+cricket-specific analytical graphics that require structured data breakdowns by specific bowling and
+batting dimensions.
+This section covers the 8 analytical dimensions used for performance breakdowns, the case study
+structure for each, and the AI-powered visualization methodology using reference formats from the
+official GitHub repository.
+The 8 Analytical Dimensions
+Every advanced visual in this section breaks down a player's or team's performance along one of 8
+dimensions. Each dimension maps directly to a column in the BBB export (Section 3.1).
+Performance
+Breakdown By…
+Pitching
+Length
+Pitching
+Line
+Wagon
+Position
+Shot
+Connection
+Shot
+Type
+Delivery
+Type
+Bowling
+Side
+Bowling
+Hand
+
+==================== PAGE 60 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 60
+Dimension Source
+Column
+Value Range Example Breakdown Question
+Pitching
+Length
+Pitching
+Length
+Full Toss → Yorker → Half
+Volley → Length Delivery
+→ Back of Length → Short
+Length
+How does this batter's SR change
+against short vs. full deliveries?
+Pitching Line Pitching Line Wide Off → Outside Off →
+Off stump → Middle stump
+→ Leg stump → Outside
+Leg → Wide Leg
+Where is this bowler most effective —
+outside off or on the stumps?
+Wagon
+Position
+Wagon
+Position
+Third Man → Point →
+Cover → Mid Off → Mid
+On → Mid Wicket →
+Square Leg → Fine Leg
+Which scoring zones does this batter
+dominate?
+Shot
+Connection
+Shot
+Connection
+Middled → Good →
+MisTimed → Inside Edge
+→ Outside Edge → Top
+Edge → Missed → Left
+What percentage of deliveries is this
+batter middling vs. edging?
+Shot Type Shot Type Forward Defense → Drive
+→ Cut → Pull → Sweep →
+Flick → Slog →
+Unorthodox
+Which shot types produce the most runs
+for this batter?
+Delivery
+Type
+Delivery
+Type
+Straight Ball → In Swing
+→ Out Swing → Off Break
+→ Leg Break → Googly →
+Slower Ball
+Which delivery type is most effective
+against this batter?
+Bowling Side Bowling Side Over the Wicket → Around
+the Wicket
+Does this bowler's economy change
+when switching from over to around?
+Bowling
+Hand
+Bowling
+Hand
+Left → Right Is this batter weaker against left-arm or
+right-arm bowling?
+
+==================== PAGE 61 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 61
+Case Study Structure for Advanced Visuals
+Each advanced visualization case study follows a consistent 3-phase structure built on top of the
+Colab wrangling work from Section 3.2:
+Phase 1
+Data Structuring
+Filter & group by dimension
+Phase 2
+KPI Computation
+Compute per-group KPIs
+Phase 3
+AI Visualization
+Prompt with reference format
+Phase 1 — Data Structuring
+In this phase, the wrangled dataset from Colab is filtered and grouped by the relevant analytical
+dimension. For example, to build a Pitching Length breakdown:
+• Filter the DataFrame to the target player/team and innings scope.
+• Group by the Pitching Length column (Full Toss, Yorker, Half Volley, Length Delivery, Back of
+Length, Short Length).
+• Aggregate: count balls, sum runs, count boundaries, count dot balls, sum false shots per
+group.
+Phase 2 — KPI Computation
+Using the grouped aggregates, compute the derived KPIs from Section 3.2 within each group:
+• Calculate Boundary Runs %, Dots %, Activity Runs %, False Shots % per Pitching Length
+category.
+• Calculate Boundary Rate, Dots Rate, False Shot Induced Rate per category.
+• Add Strike Rate and sample size (balls faced) per category for context.
+• Output a clean, one-row-per-category summary table ready for the visualization prompt.
+Phase 3 — AI-Powered Visualization
+The structured summary table is then used to generate broadcast-quality visuals using AI tools. The
+key differentiator in this phase is the use of reference formats from the official GitHub repository and
+structured prompting frameworks.
+• Reference formats: Pre-approved visual templates stored in the GitHub repository that define
+the expected look, layout, color scheme, and annotation style for each dimension breakdown.
+• Structured prompting: The AI prompt includes the data table, the reference image/format, the
+brand specifications, and strict constraints — all in a single, reproducible prompt.
+• Consistency: Using reference formats ensures that every advanced visual produced by any
+trainee matches the team's established design language.
+
+==================== PAGE 62 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 62
+AI Visualization Methodology with Reference Formats
+Structured Data
+from Colab
+Reference Format
+from GitHub repo
+Structured Prompt
+Data + Format + Brand
+AI Tool
+Arena AI / Claude
+Advanced Visual
+Two inputs merge into one structured prompt → AI generates the visual
+Structured Prompting Framework
+Every advanced visualization prompt must include these 5 components in order:
+Component What to Include Why It Matters
+1. Role &
+expertise
+"Act as a senior sports broadcast
+data visualization designer with 10+
+years of experience…"
+Sets the quality bar — AI tools produce better
+output when given an expert persona
+2. Data table Paste the exact structured summary
+table from Phase 2 of the case
+study
+The AI needs the actual numbers, not a
+description of them
+3. Reference
+format
+"Match the visual style of the
+reference image provided" or
+describe the layout from the GitHub
+template
+Ensures consistency with the team's
+established design language
+4. Brand
+specifications
+Aspect ratio 4:3, background
+#F5F5F5, brand colors #001D38 /
+#69A7EF / #FAF9F6, CricRadio
+watermark
+Every output must be on-brand — never use
+default AI colors
+5. Strict
+constraints
+"DO NOT add player photos,
+headshots, or clip art. Maintain
+clean data-ink ratio and TV
+legibility."
+Prevents the AI from adding decorative
+elements that reduce chart clarity
+Reference Format Repository
+The team maintains a GitHub repository of reference format templates for each analytical dimension.
+Before building any advanced visual, a trainee must:
+
+==================== PAGE 63 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 63
+1. Check the GitHub repository for an existing reference format matching the dimension they're
+working on.
+2. Download the reference image/template for that dimension.
+3. Include the reference in their AI prompt (as an attached image or described layout specification).
+4. Compare the AI output against the reference — the structure, annotation style, and color usage
+should match.
+5. If no reference exists for a new dimension, create one and submit it to the repository for team
+review.
+IMPORTANT: Never Skip the Reference
+Building advanced visuals without consulting the reference format repository produces inconsistent output
+across the team. Every trainee must check the repository before generating a new visual — even if they've
+built the same chart type before. Reference formats are updated periodically.
+
+==================== PAGE 64 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 64
+3.4
+Hands-on Interactive Case Study
+Implementation
+Each case study below walks through the full advanced visualization workflow: data collection from
+the BBB Data Portal (Section 3.1), wrangling in Google Colab with AI assistance (Section 3.2), and
+AI-powered visualization using reference formats (Section 3.3).
+Step 01
+Data Collection
+Step 02
+Data Wrangling
+Step 03
+AI Visualization
+Case Study 01: Dhruv Jurel's Century — Innings Breakdown
+by Pitch Map
+Objective: How did Dhruv Jurel's Century put Sri Lanka under pressure? Analyze his innings
+breakdown by Pitching Length using a 3D Cricket Pitch Map visualization.
+Step 1 — Data Collection
+Open the Python code in your preferred IDE (VS Code, Cursor, Claude Code, or any other preferred
+IDE), and then run the Streamlit application script with the required changes based on the series and
+tournament game you are working on.
+Refer to Section 3.1 — Configuration & Series Setup for instructions on updating
+COMPETITION_ID, SERIES_NAME, SERIES_SLUG, and format constants before running the app.
+Step 2 — Data Wrangling: Google Colab + AI Assistant
+Once you download the CSV data from the BBB Portal, import it into a new Colab notebook using this
+prompt:
+"Write clean, modular Python code to import the target dataset from the project working folder
+along with all essential analytical libraries and display first 5 rows"
+Once the dataset is successfully loaded in your Colab notebook session, follow the below prompt
+framework to achieve the derived data structure for this case study:
+"Create a data structure for Dhruv Jurel against each Pitching Length, with these metrics: *
+Runs → sum of Batter Runs * Balls → count of Balls * Strike Rate → (Runs / Balls) × 100 *
+False Shot % * FSIR (False Shot Induced Rate) Use Batter Runs for runs and Balls for balls.
+Exclude wides from all calculations. Return the final output grouped by Pitching Length."
+
+==================== PAGE 65 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 65
+Step 3 — AI-Assisted Visualization (Arena AI)
+Use Arena AI (Image Generation) with the following master prompt:
+"Act as a senior sports broadcast data visualization designer with 10+ years of experience
+creating ESPN-style on-air graphics for cricket tournaments. Create a professional,
+broadcast-ready 3D CRICKET PITCH MAP visualizing Dhruv Jurel's century innings breakdown by
+Pitching Length against Sri Lanka in the 2nd Test 2026. Pitch Rendering: 3D perspective view
+of a cricket pitch (vanishing point toward the batter's end), using the provided reference
+image as the base template for proportions, crease lines, stumps, and surface texture.
+Pitching Length Zones: 6 clearly delineated horizontal bands across the pitch surface,
+progressing from bowler's end to batter's end: Zone Color Coding: Heat-map gradient from cool
+tones (low scoring) to warm amber/red (high scoring) to instantly communicate scoring
+intensity per zone Stat Badge Format: Each zone must display a floating, high-contrast
+pill-shaped badge with the exact format: "Runs(Balls) | False Shot %" Zone Labels: Pitching
+length names displayed along or beside each zone band. 3D Depth: Subtle shadows and
+perspective shading to reinforce the 3D illusion. Stumps & Creases: Faint but visible at both
+ends for spatial orientation. Visual & Design Specifications: - Style: Professional ESPN-style
+sports broadcast graphic - Aspect ratio: 4:3 - Background Color: Light/neutral (#F5F5F5) -
+Brand Theme Colors: #001D38, #69A7EF, #FAF9F6 - Title: 'How did Dhruv Jurel's Century puts Sri
+Lanka under pressure?' - Subtitle: 'Dhruv Jurel's Innings Breakdown by Pitch Map' - Footer:
+'Source: CricRadio Data Portal | 24th August 2026' - Watermark: CricRadio logo,
+semi-transparent Strict Constraints: - DO NOT add player photos, headshots, cutout graphics,
+or decorative cricket clip art. - Ensure all text is legible at 1080i broadcast resolution
+within a 4:3 frame. - Maintain high contrast, clean data-ink ratio, and TV-screen legibility."
+
+==================== PAGE 66 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 66
+Case Study 02: Devdutt Padikkal — Shot Connection
+Breakdown (Bat Map)
+Objective: In-depth analysis of Devdutt Padikkal's Shot Connection breakdown against Sri Lanka in
+the 2nd Test 2026 using a Shot Connection Bat Map visualization.
+Step 1 — Data Collection
+Open the Python code in your preferred IDE (VS Code, Cursor, Claude Code, or any other preferred
+IDE), and then run the Streamlit application script with the required changes based on the series and
+tournament game you are working on.
+Step 2 — Data Wrangling: Google Colab + AI Assistant
+Import the CSV into a new Colab notebook, then use the following prompt framework:
+"Write clean, modular Python code to import the target dataset from the project working folder
+along with all essential analytical libraries and display first 5 rows"
+Then apply the case study-specific wrangling prompt:
+"Create a data structure for Devdutt Padikkal against each Shot Connection, with these
+metrics: * Runs → sum of Batter Runs * Balls → count of Balls * Strike Rate → (Runs / Balls)
+× 100 * % of Total Across Shot Connections Use Batter Runs for runs and Balls for balls.
+Exclude wides from all calculations. Return the final output grouped by Shot Connection."
+Step 3 — AI-Assisted Visualization (Arena AI)
+Use Arena AI (Image Generation) with the following master prompt:
+"Act as a senior sports broadcast data visualization designer with 10+ years of experience
+creating ESPN-style on-air graphics for cricket tournaments. Create a clean, high-impact,
+broadcast-ready SHOT CONNECTION BAT MAP graphic analyzing Devdutt Padikkal's batting
+performance against Sri Lanka in the 2nd Test 2026. Core Visual: A clean, vertically oriented
+vector graphic of a cricket bat face (flat modern 2D/isometric style) Bat Contact Zones:
+Clearly demarcated contact areas. Data Badge Format: Clean floating pill badges with leader
+lines connected to each zone showing strictly: "Zone Name: Runs(Balls) | Runs % | Balls %"
+Color Coding: Subtle heat-gradient shading on the bat zones showing where the majority of
+runs/balls were connected. Visual & Design Specifications: - Style: Professional ESPN-style
+sports broadcast graphic - Aspect ratio: 4:3 - Background Color: Light/neutral (#F5F5F5) -
+Brand Theme Colors: #001D38, #69A7EF, #FAF9F6 - Title: 'Ind vs SL: 2nd Test 2026 Batter
+Analysis' - Subtitle: 'Devdutt Padikkal's Shot Connection Performance Analysis vs Sri Lanka' -
+Footer: 'Source: CricRadio Data Portal | 24th August 2026' - Watermark: CricRadio logo,
+semi-transparent Strict Constraints: - DO NOT add player photos, headshots, cutout graphics,
+or decorative cricket clip art. - Ensure all text is legible at 1080i broadcast resolution
+within a 4:3 frame. - Maintain high contrast, clean data-ink ratio, and TV-screen legibility."
+
+==================== PAGE 67 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 67
+Case Study 03: Devdutt Padikkal — Feet Movement
+Breakdown
+Objective: In-depth analysis of Devdutt Padikkal's Feet Movement breakdown against Sri Lanka in
+the 2nd Test 2026 using a Feet Movement Map Chart.
+Step 1 — Data Collection
+Open the Python code in your preferred IDE (VS Code, Cursor, Claude Code, or any other preferred
+IDE), and then run the Streamlit application script with the required changes based on the series and
+tournament game you are working on.
+Step 2 — Data Wrangling: Google Colab + AI Assistant
+Import the CSV into a new Colab notebook, then use the following prompt framework:
+"Write clean, modular Python code to import the target dataset from the project working folder
+along with all essential analytical libraries and display first 5 rows"
+Then apply the case study-specific wrangling prompt:
+"Create a data structure for Devdutt Padikkal against each Feet Movement, with these metrics:
+* Runs → sum of Batter Runs * Balls → count of Balls * Strike Rate → (Runs / Balls) × 100 *
+False Shot % * % of Runs and Balls Total Across Feet Movement Use Batter Runs for runs and
+Balls for balls. Exclude wides from all calculations. Return the final output grouped by Feet
+Movement."
+Step 3 — AI-Assisted Visualization (Arena AI)
+Use Arena AI (Image Generation) with the following master prompt:
+"Act as a senior sports broadcast data visualization designer with 10+ years of experience
+creating ESPN-style on-air graphics for cricket tournaments. Create a clean, high-impact,
+broadcast-ready FEET MOVEMENT MAP CHART analyzing Devdutt Padikkal's footwork performance
+against Sri Lanka in the 2nd Test 2026. Grid Architecture: Exactly 2 Rows x 3 Columns of
+modular data cards Row & Column Sequence (Front Umpire Perspective): Row 1: Card 1: [BACK
+FOOT] - Stylized vector batter silhouette in back-foot defensive/punch posture Card 2: [FRONT
+FOOT] - Stylized vector batter silhouette in front-foot stride/drive posture Card 3: [DOWN THE
+TRACK] - Stylized vector batter silhouette stepping out of the crease Row 2: Card 4: [MOVES
+FRONT] - Stylized vector batter silhouette shifting forward in stance Card 5: [DEEP CREASE] -
+Stylized vector batter silhouette standing deep inside batting crease Card 6: [BACKS AWAY] -
+Stylized vector batter silhouette opening stance toward leg side Data Display Format (Inside
+each card beneath the silhouette): Tile Label: Movement Name in bold uppercase and Stat Badge:
+"Runs(Balls) | Strike rate" Visual & Design Specifications: - Style: Professional ESPN-style
+sports broadcast graphic - Aspect ratio: 4:3 - Background Color: Light/neutral (#F5F5F5) -
+Brand Theme Colors: #001D38, #69A7EF, #FAF9F6 - Title: 'Ind vs SL: 2nd Test 2026 Batter
+Analysis' - Subtitle: 'Devdutt Padikkal's Feet Movement Performance Analysis vs Sri Lanka' -
+Footer: 'Source: CricRadio Data Portal | 24th August 2026' - Watermark: CricRadio logo,
+semi-transparent Strict Constraints: - DO NOT add player photos, headshots, cutout graphics,
+or decorative cricket clip art. - Ensure all text is legible at 1080i broadcast resolution
+within a 4:3 frame. - Maintain high contrast, clean data-ink ratio, and TV-screen legibility."
+
+==================== PAGE 68 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 68
+Case Study 04: India Batting Unit — Performance vs Bowling
+Side
+Objective: In-depth analysis of India's batting unit performance against Bowling Side (Over the
+Wicket vs Round the Wicket) in the 2nd Test 2026 using a Bowling Side Map Chart.
+Step 1 — Data Collection
+Open the Python code in your preferred IDE (VS Code, Cursor, Claude Code, or any other preferred
+IDE), and then run the Streamlit application script with the required changes based on the series and
+tournament game you are working on.
+Step 2 — Data Wrangling: Google Colab + AI Assistant
+Import the CSV into a new Colab notebook, then use the following prompt framework:
+"Write clean, modular Python code to import the target dataset from the project working folder
+along with all essential analytical libraries and display first 5 rows"
+Then apply the case study-specific wrangling prompt:
+"Create a data structure for Team India against each Bowling Side, with these metrics: * Runs
+→ sum of Batter Runs * Balls → count of Balls * Strike Rate → (Runs / Balls) × 100 * False
+Shot % * Dots % * Boundary Runs % Use Batter Runs for runs and Balls for balls. Exclude wides
+from all calculations. Return the final output grouped by Bowling Side."
+Step 3 — AI-Assisted Visualization (Arena AI)
+Use Arena AI (Image Generation) with the following master prompt:
+"Act as a senior sports broadcast data visualization designer with 10+ years of experience
+creating ESPN-style on-air graphics for cricket tournaments. Create a clean, high-impact,
+broadcast-ready BOWLING SIDE MAP CHART visualizing Team India's batting performance against
+different bowling sides (Over the Wicket vs Round the Wicket) vs Sri Lanka in the 2nd Test
+2026. Core Visual Structure (Front Umpire POV): Center: Crisp, minimalist vector illustration
+of cricket stumps and popping crease Left Section: Dedicated to "ROUND THE WICKET" analysis
+with a stylized trajectory arrow angled inward toward the stumps Right Section: Dedicated to
+"OVER THE WICKET" analysis with a stylized trajectory arrow angled inward toward the stumps
+Data Display Format (Inside floating cards on respective sides): Left Card Header: "ROUND THE
+WICKET" Right Card Header: "OVER THE WICKET" Stat Metric Layout per card: "Runs(Balls) |
+Strike rate | Boundary Runs % | False Shot %" Visual & Design Specifications: - Style:
+Professional ESPN-style sports broadcast graphic - Aspect ratio: 4:3 - Background Color:
+Light/neutral (#F5F5F5) - Brand Theme Colors: #001D38, #69A7EF, #FAF9F6 - Title: 'Ind vs SL:
+2nd Test 2026 Batter Analysis' - Subtitle: 'In-depth Analysis of India's Batting Performance
+vs Bowling Side' - Footer: 'Source: CricRadio Data Portal | 24th August 2026' - Watermark:
+CricRadio logo, semi-transparent Strict Constraints: - DO NOT add player photos, headshots,
+cutout graphics, or decorative cricket clip art. - Ensure all text is legible at 1080i
+broadcast resolution within a 4:3 frame. - Maintain high contrast, clean data-ink ratio, and
+TV-screen legibility."
+
+==================== PAGE 69 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 69
+3.5
+Output Gallery — Advanced Analytical
+Visualizations
+The following pages showcase actual advanced analytical visualizations produced using the
+Python-based workflow described in Sections 3.1–3.4. These outputs represent the quality standard
+expected for Type B deliverables — cricket-specific, data-rich, and broadcast-ready.
+Study the visual design language, spatial representation, data-ink ratio, and brand consistency in
+each example. These serve as both training references and quality benchmarks.
+Case Study 01 Output — Dhruv Jurel's Innings Breakdown by 3D Pitch Map
+3D perspective cricket pitch with 6 pitching length zones (Full Toss to Short Length), heat-mapped
+from cool green (low scoring) to warm red (high scoring). Each zone carries a pill-shaped stat badge
+showing Runs(Balls) | False Shot %. CricRadio branded.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 70 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 70
+Case Study 02 Output — Devdutt Padikkal's Shot Connection Bat Map
+Vertically oriented cricket bat with demarcated contact zones. Each zone has floating pill badges with
+leader lines showing Zone Name: Runs(Balls) | Runs % | Balls %. Heat-gradient shading shows
+where the majority of contact was made — Middled and Good zones dominate.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 71 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 71
+Case Study 03 Output — Devdutt Padikkal's Feet Movement Map Chart
+2x3 grid of modular data cards, each featuring a stylized batter silhouette in the relevant footwork
+posture. Cards show Back Foot, Front Foot, Down The Track (top row) and Moves Front, Deep
+Crease, Backs Away (bottom row) with Runs(Balls) | Strike Rate per card.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 72 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 72
+Case Study 04 Output — India's Batting Performance vs Bowling Side Map
+Front-umpire-perspective visualization with minimalist stumps at center. Left card shows Round The
+Wicket stats (265 runs off 486 balls, SR 54.53), right card shows Over The Wicket stats (217 off 345,
+SR 62.90). Both include Boundary Runs % and False Shot %.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 73 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 73
+Additional Output — Joe Root's Shot Connection Analysis (Bat Map, ODI
+Series)
+Alternative bat map style with colorful contact zones mapped to the bat face. 10 connection types
+from Top Edge to Outside Edge, each with Runs(Balls) and Strike Rate. Middled zone dominates with
+139(70) at SR 198.57.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 74 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 74
+Additional Output — Joe Root's Wagon Zone Analysis (3D Stadium View)
+3D stadium overhead view divided into 8 scoring zones (Third Man through Fine Leg). Each zone
+shows Runs(Balls) and Boundary count. Demonstrates the Wagon Position dimension from Section
+3.3.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 75 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 75
+Additional Output — MI London Men's Pitching Line Map (Bowling Analysis)
+Dual-panel visualization: left shows a front-on pitching line map with 7 line zones from Wide Leg to
+Wide Off, colored green-to-red. Right panel shows a statistical table with Runs, Balls, and Economy
+per line. Demonstrates the Pitching Line dimension.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 76 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 76
+Additional Output — Nicholas Pooran's Shot Type Treemap (The Hundred
+2026)
+Treemap segmented by shot type (Drive, Slog, SlogSweep, Pull, Flick, Glance, Cut, ReverseScoop)
+with tile size proportional to runs scored. Each tile shows Runs, SR, and Balls. Demonstrates the
+Shot Type dimension.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 77 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 77
+Additional Output — Sunrisers Leeds Bowling Side Analysis (The Hundred
+2026)
+Split-field perspective showing Over The Wicket (left, blue) vs Round The Wicket (right, green) with
+trajectory arrows. Each side shows Runs(Balls), Economy Rate, and False Shot %. Alternative
+bowling-focused application of the Bowling Side dimension.
+Source: CricRadio Data Portal | Generated using Arena AI
+
+==================== PAGE 78 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 78
+04Assessment & Certification
+Competency verification, practical results, and formal sign-off.
+
+==================== PAGE 79 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 79
+4.1
+Competency Checklist — Type A & Type
+B
+The following checklists define what a trainee must be able to do independently — without assistance
+from the training lead — to be certified as competent. Every trainee in this cohort has been evaluated
+against these criteria and has successfully passed each item.
+Type A — Standard Analytical Visuals (Spreadsheet-Based)
+# Competency Status
+1 Identify and select the correct data source for a given analytical
+question (Cricmetric, Statsguru, ESPNcricinfo, CREX, HowStat)
+Passed
+2 Export raw data as CSV and import into Google Sheets without
+data loss or corruption
+Passed
+3 Compute all core derived KPIs correctly: Boundary Runs %,
+Boundary Rate, Dots %, Activity Runs %, Dots Rate
+Passed
+4 Apply appropriate sample-size thresholds before drawing
+conclusions from rate-based KPIs
+Passed
+5 Select the correct chart type for a given analytical question using
+the decision flow (Section 2.4)
+Passed
+6 Write a structured Arena AI prompt that includes data, brand
+specs, and strict constraints
+Passed
+7 Produce a complete, publish-ready visual from a new analytical
+request without trainer intervention
+Passed
+8 Apply CricRadio brand colors (#001D38, #69A7EF, #FAF9F6)
+consistently across all outputs
+Passed
+Type B — Advanced Analytical Visuals (Python-Based)
+
+==================== PAGE 80 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 80
+# Competency Status
+1 Run the BBB Data Portal (Streamlit app) and export ball-by-ball
+CSV for a selected match
+Passed
+2 Switch the tool to a different series by updating
+COMPETITION_ID, SERIES_NAME, SERIES_SLUG, and format
+constants
+Passed
+3 Import the exported CSV into Google Colab and verify data
+integrity (38 columns, correct delivery count)
+Passed
+4 Use Colab's AI assistant to generate wrangling code from a
+natural language prompt
+Passed
+5 Compute advanced KPIs: False Shots %, False Shot Induced
+Rate, plus all Type A KPIs grouped by analytical dimension
+Passed
+6 Structure data for all 8 analytical dimensions (Pitching Length,
+Pitching Line, Wagon Position, Shot Connection, Shot Type,
+Delivery Type, Bowling Side, Bowling Hand)
+Passed
+7 Use reference formats from the GitHub repository to produce
+dimension-specific advanced visuals
+Passed
+8 Produce a complete advanced visual (Pitch Map, Bat Map, Feet
+Movement Chart, or Bowling Side Map) from a new requirement
+without trainer intervention
+Passed
+TIP: All Competencies Cleared
+Every trainee in this cohort has successfully demonstrated all competencies listed above. No material gaps
+were identified during the assessment period (3–25 August 2026).
+
+==================== PAGE 81 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 81
+4.2
+Practical Assessment Structure &
+Results
+Each trainee completed two practical assessments — one for Type A (spreadsheet-based) and one
+for Type B (Python-based). Both assessments followed the same evaluation criteria.
+Assessment Format
+Assessment Task Evaluation Criteria
+Type A
+Practical
+Given a new analytical question and
+a specified tournament, produce a
+complete spreadsheet-based
+visualization end-to-end (collect,
+wrangle, visualize)
+Data accuracy, correct KPIs, appropriate chart
+selection, brand compliance, takeaway
+annotation, prompt quality
+Type B
+Practical
+Given a new match, run the BBB
+Portal, wrangle in Colab, and
+produce an advanced
+dimension-based visual (Pitch Map,
+Bat Map, or Bowling Side Map)
+Correct tool configuration, data integrity, KPI
+accuracy, reference format adherence, brand
+compliance, output quality
+Assessment Timeline
+Date Event Outcome
+10 Aug
+2026
+Training Session 1 — Introduction, statistical
+thinking, data sourcing
+Completed
+12 Aug
+2026
+Training Session 2 — Data wrangling, KPI
+computation hands-on in Google Sheets
+Completed
+14 Aug
+2026
+Training Session 3 — AI-assisted visualization,
+prompt engineering, chart selection
+Completed
+16 Aug
+2026
+Type A practical assessment tasks assigned to all
+trainees
+Assigned
+17 Aug
+2026
+Type A assessment submissions reviewed;
+corrective feedback provided where needed
+All trainees cleared
+
+==================== PAGE 82 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 82
+Date Event Outcome
+20 Aug
+2026
+Training Session 4 — BBB Data Portal
+walkthrough, Colab wrangling, advanced KPIs
+Completed
+22 Aug
+2026
+Training Session 5 — Advanced visuals: Pitch
+Map, Bat Map, Feet Movement, Bowling Side
+Completed
+23 Aug
+2026
+Type B case study templates finalized; Type B
+assessment tasks assigned
+Assigned
+24 Aug
+2026
+Type B assessment submissions reviewed; all
+trainees cleared
+All trainees cleared
+25 Aug
+2026
+Final certification issued; KT handover report
+completed
+Certified
+Common Errors Identified & Resolved During Training
+Error Category Description Resolution
+Mixed data
+scopes
+Using career-aggregate data for
+a single-innings chart, or mixing
+formats (T20 data in a Test
+analysis)
+Reinforced scope-matching principle; added to
+QA checklist
+Missing sample
+size caveat
+Presenting KPIs from very small
+ball counts (< 10 balls) without
+flagging statistical insignificance
+Added AVERAGE(Balls Faced) thresholding as a
+mandatory step
+Default AI
+colors
+Submitting visuals with default
+tool colors instead of CricRadio
+brand palette
+Added brand color specification as a mandatory
+prompt component
+Wrong
+isCompleted
+flag
+Setting isCompleted=true when
+the target match was still in
+progress, resulting in an empty
+fixture list
+Documented in Section 3.1; added to common
+mistakes table
+Mismatched
+format
+constants
+Updating COMPETITION_ID
+without updating T20_OVERS
+and T20_BALLS_TOTAL,
+causing incorrect remaining-balls
+calculations
+Added warning box in Section 3.1; emphasized in
+training
+
+==================== PAGE 83 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 83
+4.3
+KT Sign-off & Certification Record
+This section serves as the formal record that the Knowledge Transfer program has been completed
+successfully. All trainees have been assessed, all competencies have been verified, and the training
+lead has signed off on readiness for independent work.
+Program Summary
+Field Detail
+Program Title Analytical Visualizations Training — Type A (Spreadsheet) & Type B
+(Python/Streamlit)
+Training Period 3 August 2026 — 25 August 2026 (23 calendar days)
+Training Sessions
+Delivered
+5 structured sessions + ongoing mentorship and review
+Practical
+Assessments
+2 per trainee (Type A + Type B) — all passed
+Assessment Result All trainees certified as independently competent
+Material Gaps
+Identified
+None — all gaps identified during training were resolved before final assessment
+Manual Version 3.0 — Final Edition (25 August 2026)
+Certification Statement
+All new employees and trainees who completed this program have demonstrated the ability to
+independently:
+• Collect data from the correct source platform for any given analytical question.
+• Compute all derived KPIs (Boundary Runs %, Boundary Rate, Dots %, Activity Runs %, Dots
+Rate, False Shots %, False Shot Induced Rate) correctly and with appropriate sample-size
+caveats.
+• Select the correct chart type or advanced visualization format for the question being asked.
+• Write structured AI prompts that include data, brand specifications, reference formats, and
+strict constraints.
+
+==================== PAGE 84 ====================
+CRICRADIO — ANALYTICAL VISUALIZATIONS TRAINING GUIDE MANUAL Internal Use Only | v3.0 Final
+CricRadio Data Portal Page 84
+• Produce publish-ready visual analytics — both standard (Type A) and advanced (Type B) —
+without trainer intervention.
+• Operate the BBB Data Portal, switch series configurations, wrangle data in Google Colab, and
+produce dimension-specific advanced visuals.
+Sign-off
+Role Name & Signature Date
+Training Lead
+Reviewed By
+NOTE: Living Document
+This manual remains a living asset. As new chart techniques, KPIs, data sources, or Python templates are
+adopted, update this manual and increment the version number rather than maintaining parallel copies.
+Future trainees should be onboarded using the latest version of this document.

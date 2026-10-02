@@ -1,0 +1,177 @@
+<USER_REQUEST>
+You are a senior Next.js developer, sports analytics portfolio designer, and personal branding specialist.
+
+IMPORTANT:
+I already have an existing portfolio project named `krishna-portfolio`.
+
+DO NOT create a new project.
+DO NOT create a demo.
+DO NOT rebuild the application from scratch.
+
+First inspect the COMPLETE existing project and then modify the ACTUAL existing files directly.
+
+==================================================
+OBJECTIVE
+==================================================
+
+Transform my existing portfolio into a premium professional portfolio for:
+
+KRISHNA NAND YADAV
+Cricket & Sports Data Analyst
+
+The portfolio should position me around:
+
+- Cricket Analytics
+- Sports Data Analysis
+- Player Performance Analysis
+- Match Analysis
+- Ball-by-Ball Data
+- Data Visualization
+- Sports Technology
+- Cricket Operations
+- Performance Insights
+- Analytics Dashboards
+
+The portfolio should feel like a combination of:
+
+Professional Analyst Portfolio
++
+Sports Analytics Platform
++
+Personal Brand
+
+==================================================
+PROFILE INFORMATION
+==================================================
+
+Name:
+Krishna Nand Yadav
+
+Title:
+Cricket & Sports Data Analyst
+
+Email:
+krishnanandcricketanalyst@gmail.com
+
+Phone:
+7607711590
+
+LinkedIn:
+https://www.linkedin.com/in/krishna-nand-yadav-43493b28a/
+
+GitHub:
+https://github.com/thekngroup7622-creator
+
+==================================================
+PROFILE PHOTO
+==================================================
+
+Use the uploaded/reference profile picture of Krishna Nand Yadav.
+
+Do NOT generate a different person.
+Do NOT use a stock image.
+Do NOT use a random internet image.
+
+Use the actual uploaded reference image.
+
+Store/use it through the existing project's public assets structure, preferably:
+
+public/profile/krishna-nand-yadav.jpg
+
+Use Next.js Image where appropriate.
+
+Alt text:
+
+"Krishna Nand Yadav - Cricket & Sports Data Analyst"
+
+Use the profile 
+<truncated 12636 bytes>
+information available in the existing project or explicitly provided.
+
+==================================================
+IMPLEMENTATION WORKFLOW
+==================================================
+
+STEP 1:
+Inspect the entire existing project.
+
+STEP 2:
+Find the current Hero component.
+
+STEP 3:
+Find the current Analytics data/components.
+
+STEP 4:
+Find the current visualization assets.
+
+STEP 5:
+Map the selected visuals to the appropriate analytics records.
+
+STEP 6:
+Add the uploaded profile picture.
+
+STEP 7:
+Update the homepage with exactly THREE Featured Analytics cards.
+
+STEP 8:
+Update the Analytics page with categorized galleries.
+
+STEP 9:
+Create/update analytics detail/case-study pages using the existing routing architecture.
+
+STEP 10:
+Update personal branding.
+
+STEP 11:
+Update LinkedIn, GitHub, email and phone links.
+
+STEP 12:
+Improve responsive behavior.
+
+STEP 13:
+Run:
+
+- TypeScript check
+- ESLint
+- Production build
+
+STEP 14:
+Fix all errors.
+
+STEP 15:
+Check all routes and images.
+
+==================================================
+FINAL REPORT
+==================================================
+
+After completing the implementation, report:
+
+1. Files modified
+2. Components modified
+3. New files created
+4. Profile image location
+5. Featured analytics added
+6. Analytics categories created
+7. Case-study pages created/updated
+8. Links added
+9. TypeScript status
+10. ESLint status
+11. Production build status
+12. Any remaining issue requiring my input
+
+MOST IMPORTANT:
+
+MODIFY THE EXISTING `krishna-portfolio` PROJECT DIRECTLY.
+
+DO NOT CREATE A SEPARATE DEMO PROJECT.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-02T02:11:34+05:30.
+
+The user's current state is as follows:
+Active Document: c:\Users\ajeet\OneDrive\Desktop\krishna-portfolio\.env.local (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- c:\Users\ajeet\OneDrive\Desktop\krishna-portfolio\.env.local (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
