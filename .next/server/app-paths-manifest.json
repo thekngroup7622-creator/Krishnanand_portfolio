@@ -1,3 +1,19 @@
 {
-  "/page": "app/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/admin/upload/route": "app/api/admin/upload/route.js",
+  "/admin/login/page": "app/admin/login/page.js",
+  "/admin/analytics/new/page": "app/admin/analytics/new/page.js",
+  "/admin/analytics/[id]/edit/page": "app/admin/analytics/[id]/edit/page.js",
+  "/projects/page": "app/projects/page.js",
+  "/admin/analytics/page": "app/admin/analytics/page.js",
+  "/about/page": "app/about/page.js",
+  "/analytics/page": "app/analytics/page.js",
+  "/page": "app/page.js",
+  "/projects/[slug]/page": "app/projects/[slug]/page.js",
+  "/experience/page": "app/experience/page.js",
+  "/analytics/[slug]/page": "app/analytics/[slug]/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/visualizations/page": "app/visualizations/page.js",
+  "/skills/page": "app/skills/page.js",
+  "/resume/page": "app/resume/page.js"
 }

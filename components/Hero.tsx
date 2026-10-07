@@ -11,7 +11,8 @@ import {
   Mail,
   Phone,
   Activity,
-  Award
+  Award,
+  FileText
 } from "lucide-react";
 
 const linkedin = process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/in/krishna-nand-yadav-43493b28a/";
@@ -62,6 +63,9 @@ export default function Hero() {
             </Link>
             <Link href="/contact" className="button button-outline">
               Contact Me <ArrowDownRight size={16} />
+            </Link>
+            <Link href="/resume" className="button button-outline" style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
+              <FileText size={16} /> Resume
             </Link>
           </div>
 

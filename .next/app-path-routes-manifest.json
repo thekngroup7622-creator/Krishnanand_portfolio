@@ -1,0 +1,19 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/api/admin/upload/route": "/api/admin/upload",
+  "/admin/login/page": "/admin/login",
+  "/admin/analytics/new/page": "/admin/analytics/new",
+  "/admin/analytics/[id]/edit/page": "/admin/analytics/[id]/edit",
+  "/projects/page": "/projects",
+  "/admin/analytics/page": "/admin/analytics",
+  "/about/page": "/about",
+  "/analytics/page": "/analytics",
+  "/page": "/",
+  "/projects/[slug]/page": "/projects/[slug]",
+  "/experience/page": "/experience",
+  "/analytics/[slug]/page": "/analytics/[slug]",
+  "/contact/page": "/contact",
+  "/visualizations/page": "/visualizations",
+  "/skills/page": "/skills",
+  "/resume/page": "/resume"
+}

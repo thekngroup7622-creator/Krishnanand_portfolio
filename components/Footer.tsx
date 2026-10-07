@@ -149,6 +149,13 @@ export default function Footer() {
         <span>Built around the game. Driven by data.</span>
         <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
           <Link
+            href="/resume"
+            style={{ color: "inherit", textDecoration: "none", fontSize: "12px", fontWeight: 700 }}
+            title="Official Resume"
+          >
+            Resume
+          </Link>
+          <Link
             href="/admin/analytics"
             style={{ color: "inherit", textDecoration: "none", fontSize: "11px", opacity: 0.6 }}
             title="Analytics Management Admin"

@@ -3,14 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  Download,
   Menu,
   X,
   Phone,
   Mail,
   Linkedin,
   Github,
-  ArrowUpRight
+  ArrowUpRight,
+  FileText
 } from "lucide-react";
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
@@ -22,6 +22,7 @@ const links = [
   ["Skills", "/skills"],
   ["Analytics", "/analytics"],
   ["Projects", "/projects"],
+  ["Resume", "/resume"],
   ["Contact", "/contact"]
 ];
 
@@ -29,7 +30,6 @@ const phone = process.env.NEXT_PUBLIC_CONTACT_PHONE || "7607711590";
 const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "krishnanandcricketanalyst@gmail.com";
 const linkedin = process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/in/krishna-nand-yadav-43493b28a/";
 const github = process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/thekngroup7622-creator";
-const resume = process.env.NEXT_PUBLIC_RESUME_URL || "/resume.pdf";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -157,14 +157,13 @@ export default function Navbar() {
             <span>{phone}</span>
           </a>
 
-          <a
+          <Link
             className="button button-small button-outline resume-nav"
-            href={resume}
-            download
+            href="/resume"
             style={{ fontWeight: 800 }}
           >
-            <Download size={14} /> Resume
-          </a>
+            <FileText size={14} /> Resume
+          </Link>
 
           <button
             className="mobile-menu-button"
@@ -276,14 +275,14 @@ export default function Navbar() {
               >
                 Get in Touch <ArrowUpRight size={14} />
               </Link>
-              <a
+              <Link
                 className="button button-outline"
-                href={resume}
-                download
+                href="/resume"
+                onClick={() => setOpen(false)}
                 style={{ flex: 1, display: "flex", justifyContent: "center", gap: "6px" }}
               >
-                <Download size={14} /> Resume
-              </a>
+                <FileText size={14} /> Resume
+              </Link>
             </div>
           </div>
         </motion.div>

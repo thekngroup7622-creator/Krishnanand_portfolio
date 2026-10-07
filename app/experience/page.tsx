@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Experience from "@/components/Experience";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
-import { ShieldCheck, Users, Bug, LineChart } from "lucide-react";
+import { ShieldCheck, Users, Bug, LineChart, Download, FileText } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Experience | Krishna Nand Yadav — Cricket & Sports Data Analyst",
@@ -44,6 +45,19 @@ export default function ExperiencePage() {
           <p className="page-hero-description">
             2.5+ years of proven expertise in ball-by-ball cricket data coding, live scoring operations, squad coordination, and quality control at Lifease Solutions LLP.
           </p>
+          <div style={{ display: "flex", gap: "12px", marginTop: "18px", flexWrap: "wrap" }}>
+            <Link href="/resume" className="button button-primary" style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
+              <FileText size={16} /> Official Resume
+            </Link>
+            <a
+              href="/resume.pdf"
+              download="Krishna_Nand_Yadav_Cricket_Sports_Data_Analyst_Resume.pdf"
+              className="button button-outline"
+              style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}
+            >
+              <Download size={16} /> Download PDF
+            </a>
+          </div>
         </div>
       </section>
 

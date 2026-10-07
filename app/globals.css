@@ -444,4 +444,48 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
   }
 }
 
+/* ========================================================
+   PRINT STYLES FOR RESUME
+   ======================================================== */
+@media print {
+  .site-header,
+  .site-footer,
+  .page-hero,
+  .resume-toolbar,
+  .no-print,
+  .mobile-menu-button {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 11pt !important;
+  }
+
+  .resume-container {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .resume-paper {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .section {
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+}
+
+
 

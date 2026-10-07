@@ -34,6 +34,9 @@ export default function AboutPage() {
             <Link href="/projects" className="button button-primary">
               Explore Projects <ArrowRight size={16} />
             </Link>
+            <Link href="/resume" className="button button-outline">
+              Official Resume
+            </Link>
             <Link href="/contact" className="button button-outline">
               Get in Touch
             </Link>

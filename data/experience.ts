@@ -11,27 +11,27 @@ export interface ExperienceItem {
 export const experience: ExperienceItem[] = [
   {
     company: "Lifease Solutions LLP",
-    role: "Principal Cricket Analyst",
-    period: "November 2023 – Present",
-    teamSize: "Leading 5–6 Cricket Data Analysts",
-    summary: "Leading cricket data analytics, real-time ball-by-ball match coding, data quality governance, and sports-technology product workflows. Coordinating cross-functional operations across analysts, scorers, and tech teams.",
+    role: "Cricket & Sports Data Analyst",
+    period: "2.5+ years of experience (November 2023 – Present)",
+    teamSize: "Analyst Squad (5–6 Members)",
+    summary: "Cricket and Sports Data Analyst with 2.5+ years of experience in ball-by-ball data analysis, live scoring, match coding, player and team performance analysis, sports data operations, and quality control. Experienced in transforming cricket datasets into statistical insights, performance reports, and professional visualizations.",
     tools: [
       "Power BI",
       "Tableau",
       "Python",
       "SQL",
       "Advanced Excel",
+      "Streamlit",
       "Ball-by-Ball Live Scoring Tools",
-      "Pitch Map & Wagon Wheel Systems"
+      "Pitch Maps & Wagon Wheels"
     ],
     responsibilities: [
-      "Analyze ball-by-ball cricket data, match events, scorecards, and player statistics to generate player-level and team-level performance insights.",
-      "Conduct live match scoring and real-time cricket data coding while maintaining high data accuracy, latency standards, and consistency.",
-      "Lead and coordinate approximately 5–6 analysts, managing match assignments, daily operations, productivity, and quality standards.",
-      "Conduct data quality checks, identify inconsistencies, and coordinate with development teams to investigate and resolve data-related bugs.",
-      "Develop cricket analytics dashboards, statistical reports, and visual performance summaries using Power BI, Tableau, Excel, Python, and SQL.",
-      "Analyze batting, bowling, partnerships, match phases, player matchups, shot patterns, pitch maps, and wagon wheels.",
-      "Support cricket analytics and sports technology products through structured data workflows, reporting, visualization, and operational coordination."
+      "Performed delivery-by-delivery cricket data coding and analysis, maintaining accurate ball-by-ball match records and contextual information.",
+      "Analyzed batting, bowling, partnership, phase, and player-performance metrics to identify trends and generate actionable cricket insights.",
+      "Supported live scoring and match coding operations, including scorecard verification, data annotation, and match-level quality checks.",
+      "Conducted data quality control, auditing, bug investigation, and validation of cricket datasets in coordination with development and operations teams.",
+      "Worked with analyst squads of 5–6 members to coordinate match-data workflows and maintain consistency across live scoring and analytical outputs.",
+      "Created performance reports, statistical summaries, dashboards, and professional cricket visualizations for player and match analysis."
     ]
   }
 ];

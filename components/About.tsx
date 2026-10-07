@@ -102,9 +102,14 @@ export default function About() {
                 <p style={{ fontSize: "13px" }}>
                   Years in ball-by-ball cricket data coding, live scoring operations, squad coordination, and visual dashboard delivery.
                 </p>
-                <Link href="/about" className="text-link" style={{ marginTop: "auto" }}>
-                  Full Profile & Education <ArrowUpRight size={16} />
-                </Link>
+                <div style={{ display: "flex", gap: "14px", marginTop: "auto", flexWrap: "wrap" }}>
+                  <Link href="/about" className="text-link">
+                    Full Profile & Education <ArrowUpRight size={16} />
+                  </Link>
+                  <Link href="/resume" className="text-link" style={{ color: "var(--orange)" }}>
+                    Resume <ArrowUpRight size={16} />
+                  </Link>
+                </div>
               </div>
             </Reveal>
           </div>
