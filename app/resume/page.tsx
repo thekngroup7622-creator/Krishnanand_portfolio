@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Download, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { Download, ArrowUpRight, CheckCircle2, FileText } from "lucide-react";
 import ResumeViewer from "@/components/ResumeViewer";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Official resume of Krishna Nand Yadav, Cricket & Sports Data Analyst with 2.5+ years of experience in ball-by-ball analysis, live scoring, quality control, Power BI, Python, and sports technology."
 };
 
-const resumeUrl = process.env.NEXT_PUBLIC_RESUME_URL || "/resume.pdf";
+const resumeUrl = process.env.NEXT_PUBLIC_RESUME_URL || "/resume/Krishna_Nand_Yadav_Resume.pdf";
 
 export default function ResumePage() {
   return (
@@ -34,9 +34,20 @@ export default function ResumePage() {
             <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginTop: "12px" }}>
               <a
                 href={resumeUrl}
-                download="Krishna_Nand_Yadav_Cricket_Sports_Data_Analyst_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button button-outline"
+                style={{ display: "inline-flex", alignItems: "center", gap: "6px", fontWeight: 700 }}
+                title="Open resume PDF in a new tab"
+              >
+                <FileText size={16} /> View PDF in Tab
+              </a>
+              <a
+                href={resumeUrl}
+                download="Krishna_Nand_Yadav_Resume.pdf"
                 className="button button-primary"
                 style={{ display: "inline-flex", alignItems: "center", gap: "6px", fontWeight: 800 }}
+                title="Download official PDF resume"
               >
                 <Download size={16} /> Download PDF Resume
               </a>

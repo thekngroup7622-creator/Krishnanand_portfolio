@@ -2,8 +2,6 @@ import { getAllAnalytics, getActiveCategories } from "@/lib/analytics-repository
 import AnalyticsClientView from "@/components/AnalyticsClientView";
 import type { Metadata } from "next";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
 
 export const metadata: Metadata = {
   title: "Cricket Analytics Visualizations | Krishna Nand Yadav",

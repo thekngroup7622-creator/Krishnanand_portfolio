@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, GraduationCap, Award, Phone, Mail, Linkedin, Github } from "lucide-react";
+import { ArrowRight, GraduationCap, Award, Phone, Mail, Linkedin, Github, Download, FileText } from "lucide-react";
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
@@ -16,6 +16,7 @@ const linkedin = process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.c
 const github = process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/thekngroup7622-creator";
 const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "krishnanandcricketanalyst@gmail.com";
 const phone = process.env.NEXT_PUBLIC_CONTACT_PHONE || "7607711590";
+const resume = process.env.NEXT_PUBLIC_RESUME_URL || "/resume/Krishna_Nand_Yadav_Resume.pdf";
 
 export default function AboutPage() {
   return (
@@ -34,10 +35,26 @@ export default function AboutPage() {
             <Link href="/projects" className="button button-primary">
               Explore Projects <ArrowRight size={16} />
             </Link>
-            <Link href="/resume" className="button button-outline">
-              Official Resume
-            </Link>
-            <Link href="/contact" className="button button-outline">
+            <a
+              href={resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button button-outline"
+              style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}
+              title="View Resume in new tab"
+            >
+              <FileText size={16} /> View Resume
+            </a>
+            <a
+              href={resume}
+              download="Krishna_Nand_Yadav_Resume.pdf"
+              className="button button-outline"
+              style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}
+              title="Download Resume PDF"
+            >
+              <Download size={16} /> Download Resume
+            </a>
+            <Link href="/contact" className="button button-ghost">
               Get in Touch
             </Link>
           </div>

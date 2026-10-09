@@ -11,8 +11,6 @@ import Contact from "@/components/Contact";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
 
 export default function HomePage() {
   return (

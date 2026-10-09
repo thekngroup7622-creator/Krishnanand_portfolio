@@ -103,7 +103,7 @@ export default function ResumeViewer({ resumeUrl }: ResumeViewerProps) {
           </a>
           <a
             href={resumeUrl}
-            download="Krishna_Nand_Yadav_Cricket_Sports_Data_Analyst_Resume.pdf"
+            download="Krishna_Nand_Yadav_Resume.pdf"
             className="button button-small button-primary no-print"
             style={{ display: "inline-flex", alignItems: "center", gap: "6px", fontSize: "12px", fontWeight: 800 }}
             title="Download original PDF resume"
@@ -138,11 +138,11 @@ export default function ResumeViewer({ resumeUrl }: ResumeViewerProps) {
             }}
           >
             <span style={{ fontWeight: 600, color: "var(--navy)" }}>
-              Viewing: <strong>Krishna_Nand_Yadav__Cricket_Sports_Data_Analyst_Resume.pdf</strong>
+              Viewing: <strong>Krishna_Nand_Yadav_Resume.pdf</strong>
             </span>
             <a
               href={resumeUrl}
-              download="Krishna_Nand_Yadav_Cricket_Sports_Data_Analyst_Resume.pdf"
+              download="Krishna_Nand_Yadav_Resume.pdf"
               style={{ color: "var(--orange)", fontWeight: 700, display: "inline-flex", alignItems: "center", gap: "4px" }}
             >
               Direct Download <Download size={13} />
@@ -162,7 +162,7 @@ export default function ResumeViewer({ resumeUrl }: ResumeViewerProps) {
             If the PDF preview does not display in your browser,{" "}
             <a
               href={resumeUrl}
-              download="Krishna_Nand_Yadav_Cricket_Sports_Data_Analyst_Resume.pdf"
+              download="Krishna_Nand_Yadav_Resume.pdf"
               style={{ color: "var(--navy)", fontWeight: 700, textDecoration: "underline" }}
             >
               click here to download the PDF directly
@@ -253,7 +253,7 @@ export default function ResumeViewer({ resumeUrl }: ResumeViewerProps) {
               }}
             >
               <span style={{ display: "inline-flex", alignItems: "center", gap: "5px" }}>
-                <MapPin size={14} style={{ color: "var(--orange)" }} /> Jaunpur, Uttar Pradesh, India
+                <MapPin size={14} style={{ color: "var(--orange)" }} /> Ghazipur, Uttar Pradesh, India
               </span>
               <a
                 href="https://www.linkedin.com/in/krishna-nand-yadav-43493b28a/"

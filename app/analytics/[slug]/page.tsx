@@ -15,9 +15,7 @@ import {
 } from "lucide-react";
 import { getAnalyticsBySlug, getAllAnalytics } from "@/lib/analytics-repository";
 
-export const dynamic = "force-dynamic";
-export const dynamicParams = true;
-export const revalidate = 0;
+
 
 export async function generateStaticParams() {
   const items = await getAllAnalytics(false);

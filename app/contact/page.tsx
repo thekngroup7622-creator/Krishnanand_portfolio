@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowUpRight, Download, Github, Linkedin, Mail, Phone, Clock } from "lucide-react";
+import { ArrowUpRight, Download, Github, Linkedin, Mail, Phone, Clock, FileText } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ const linkedin = process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.c
 const github = process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/thekngroup7622-creator";
 const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "krishnanandcricketanalyst@gmail.com";
 const phone = process.env.NEXT_PUBLIC_CONTACT_PHONE || "7607711590";
-const resume = process.env.NEXT_PUBLIC_RESUME_URL || "/resume.pdf";
+const resume = process.env.NEXT_PUBLIC_RESUME_URL || "/resume/Krishna_Nand_Yadav_Resume.pdf";
 
 export default function ContactPage() {
   return (
@@ -30,7 +30,23 @@ export default function ContactPage() {
             <a href={`tel:${phone}`} className="button button-primary">
               <Phone size={16} /> Call +91 {phone}
             </a>
-            <a href={resume} download className="button button-outline">
+            <a
+              href={resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button button-outline"
+              style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}
+              title="View Resume in new tab"
+            >
+              <FileText size={16} /> View Resume
+            </a>
+            <a
+              href={resume}
+              download="Krishna_Nand_Yadav_Resume.pdf"
+              className="button button-outline"
+              style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}
+              title="Download Resume PDF"
+            >
               <Download size={16} /> Download Resume
             </a>
           </div>

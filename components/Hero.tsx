@@ -12,13 +12,15 @@ import {
   Phone,
   Activity,
   Award,
-  FileText
+  FileText,
+  Download
 } from "lucide-react";
 
 const linkedin = process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/in/krishna-nand-yadav-43493b28a/";
 const github = process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/thekngroup7622-creator";
 const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "krishnanandcricketanalyst@gmail.com";
 const phone = process.env.NEXT_PUBLIC_CONTACT_PHONE || "7607711590";
+const resume = process.env.NEXT_PUBLIC_RESUME_URL || "/resume/Krishna_Nand_Yadav_Resume.pdf";
 
 export default function Hero() {
   const reduceMotion = useReducedMotion();
@@ -61,11 +63,27 @@ export default function Hero() {
             <Link href="#featured-analytics" className="button button-primary">
               View My Work <ArrowRight size={16} />
             </Link>
-            <Link href="/contact" className="button button-outline">
+            <a
+              href={resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button button-outline"
+              style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}
+              title="View Krishna Nand Yadav's Resume (opens in new tab)"
+            >
+              <FileText size={16} /> View Resume
+            </a>
+            <a
+              href={resume}
+              download="Krishna_Nand_Yadav_Resume.pdf"
+              className="button button-outline"
+              style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}
+              title="Download Krishna Nand Yadav's Resume PDF"
+            >
+              <Download size={16} /> Download Resume
+            </a>
+            <Link href="/contact" className="button button-ghost">
               Contact Me <ArrowDownRight size={16} />
-            </Link>
-            <Link href="/resume" className="button button-outline" style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
-              <FileText size={16} /> Resume
             </Link>
           </div>
 

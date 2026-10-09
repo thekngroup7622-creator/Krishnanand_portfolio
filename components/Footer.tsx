@@ -155,13 +155,14 @@ export default function Footer() {
           >
             Resume
           </Link>
-          <Link
-            href="/admin/analytics"
-            style={{ color: "inherit", textDecoration: "none", fontSize: "11px", opacity: 0.6 }}
-            title="Analytics Management Admin"
+          <a
+            href="/resume/Krishna_Nand_Yadav_Resume.pdf"
+            download="Krishna_Nand_Yadav_Resume.pdf"
+            style={{ color: "inherit", textDecoration: "none", fontSize: "12px", fontWeight: 600, opacity: 0.8 }}
+            title="Download Official Resume PDF"
           >
-            Admin
-          </Link>
+            Download PDF
+          </a>
           <Link href="#top" title="Scroll to top of page">
             Back to top ↑
           </Link>

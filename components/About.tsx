@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Activity, BarChart3, Code2, ArrowUpRight, GraduationCap, Award } from "lucide-react";
+import { Activity, BarChart3, Code2, ArrowUpRight, GraduationCap, Award, Download } from "lucide-react";
 import Reveal from "./ui/Reveal";
 import { coreSkills } from "@/data/skills";
 import { educationList, certifications } from "@/data/education";
+
+const resume = process.env.NEXT_PUBLIC_RESUME_URL || "/resume/Krishna_Nand_Yadav_Resume.pdf";
 
 const pillars = [
   {
@@ -102,13 +104,29 @@ export default function About() {
                 <p style={{ fontSize: "13px" }}>
                   Years in ball-by-ball cricket data coding, live scoring operations, squad coordination, and visual dashboard delivery.
                 </p>
-                <div style={{ display: "flex", gap: "14px", marginTop: "auto", flexWrap: "wrap" }}>
+                <div style={{ display: "flex", gap: "14px", marginTop: "auto", flexWrap: "wrap", alignItems: "center" }}>
                   <Link href="/about" className="text-link">
-                    Full Profile & Education <ArrowUpRight size={16} />
+                    Full Profile &amp; Education <ArrowUpRight size={16} />
                   </Link>
-                  <Link href="/resume" className="text-link" style={{ color: "var(--orange)" }}>
-                    Resume <ArrowUpRight size={16} />
-                  </Link>
+                  <a
+                    href={resume}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-link"
+                    style={{ color: "var(--orange)" }}
+                    title="View Resume in new tab"
+                  >
+                    View Resume <ArrowUpRight size={16} />
+                  </a>
+                  <a
+                    href={resume}
+                    download="Krishna_Nand_Yadav_Resume.pdf"
+                    className="text-link"
+                    style={{ color: "var(--navy)", fontWeight: 700 }}
+                    title="Download Official Resume PDF"
+                  >
+                    Download Resume <Download size={14} />
+                  </a>
                 </div>
               </div>
             </Reveal>
