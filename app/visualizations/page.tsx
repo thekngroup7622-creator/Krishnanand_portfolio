@@ -2,8 +2,12 @@ import type { Metadata } from "next";
 import VisualizationGallery from "@/components/VisualizationGallery";
 
 export const metadata: Metadata = {
-  title: "Visualizations | Krishna Nand Yadav — Cricket & Sports Data Analyst",
-  description: "Cricket data visualization gallery covering batting and bowling performance, pitch maps, wagon wheels, partnerships, footwork, and phase analysis."
+  title: "Cricket Visualizations & Graphics | Krishna Nand Yadav",
+  description:
+    "Cricket data visualization gallery covering batting and bowling performance, pitch maps, wagon wheels, partnerships, footwork, and phase analysis by Krishna Nand Yadav.",
+  alternates: {
+    canonical: "/visualizations"
+  }
 };
 
 export default function VisualizationsPage() {

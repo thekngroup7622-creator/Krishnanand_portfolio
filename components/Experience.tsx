@@ -12,7 +12,7 @@ export default function Experience() {
           <SectionHeading
             eyebrow="PROFESSIONAL EXPERIENCE & JOURNEY"
             title="Analysis, Leadership & Sports Data Operations"
-            description="2.5+ years of hands-on experience in real-time match coding, quality control, team coordination, and sports technology development."
+            description="3+ years of hands-on experience in real-time match coding, quality control, team coordination, and sports technology development."
           />
         </Reveal>
 

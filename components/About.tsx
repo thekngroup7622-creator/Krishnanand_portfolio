@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Activity, BarChart3, Code2, ArrowUpRight, GraduationCap, Award, Download } from "lucide-react";
+import { Activity, BarChart3, Code2, ArrowUpRight, GraduationCap, Award } from "lucide-react";
 import Reveal from "./ui/Reveal";
 import { coreSkills } from "@/data/skills";
 import { educationList, certifications } from "@/data/education";
@@ -85,13 +85,16 @@ export default function About() {
             <Reveal>
               <div>
                 <p className="eyebrow" style={{ margin: "0 0 8px" }}>
-                  PROFESSIONAL INTRODUCTION
+                  PROFESSIONAL IDENTITY &amp; JOURNEY
                 </p>
                 <h2 style={{ fontSize: "28px", color: "var(--navy)", margin: "0 0 12px", lineHeight: 1.25, fontWeight: 900 }}>
                   Cricket understanding meets modern data technology
                 </h2>
+                <p style={{ color: "var(--muted)", fontSize: "14px", lineHeight: 1.7, margin: "0 0 10px" }}>
+                  Originally from <strong>Ghazipur, Uttar Pradesh</strong> and currently based in <strong>Noida</strong>, Krishna Nand Yadav is a <strong>Cricket &amp; Sports Data Analyst</strong> and <strong>Sports Technology Entrepreneur</strong>. Starting as a competitive cricket player in Ghazipur, he translated on-field intuition into data-driven match intelligence.
+                </p>
                 <p style={{ color: "var(--muted)", fontSize: "14px", lineHeight: 1.7, margin: 0 }}>
-                  Cricket analytics professional with 2.5+ years of experience in ball-by-ball data analysis, live scoring, player and team performance analysis, sports data operations, and quality control. Skilled in transforming cricket datasets into statistical insights, performance reports, and professional visualizations. Combines cricket domain expertise with Power BI, Tableau, Excel, Python, SQL, and dashboard development to support data-driven performance analysis and sports technology solutions.
+                  As <strong>Principal Cricket Analyst at Lifease Solutions LLP</strong> (Nov 2023 – Present), he coordinates analyst squads across live match operations, video tagging, delivery-by-delivery coding, and quality control. He is associated with <strong>CricNexora</strong> (an AI-powered cricket analytics platform) and <strong>NexaPeak Digital Tech Solutions</strong>, actively engaging in international cricket analysis and sports data innovation.
                 </p>
               </div>
             </Reveal>
@@ -99,33 +102,30 @@ export default function About() {
             <Reveal delay={0.1}>
               <div className="about-aside" style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "center" }}>
                 <span className="aside-number">
-                  2.5<span>+</span>
+                  Nov 2023<span>–Present</span>
                 </span>
-                <p style={{ fontSize: "13px" }}>
-                  Years in ball-by-ball cricket data coding, live scoring operations, squad coordination, and visual dashboard delivery.
+                <p style={{ fontSize: "13px", fontWeight: 600, color: "var(--navy)", margin: "6px 0 2px" }}>
+                  Principal Cricket Analyst · Lifease Solutions LLP
                 </p>
-                <div style={{ display: "flex", gap: "14px", marginTop: "auto", flexWrap: "wrap", alignItems: "center" }}>
-                  <Link href="/about" className="text-link">
-                    Full Profile &amp; Education <ArrowUpRight size={16} />
+                <p style={{ fontSize: "12px", color: "var(--muted)" }}>
+                  Ball-by-ball coding, squad coordination (5–6 analysts), live scoring QA, and international match performance intelligence.
+                </p>
+                <div style={{ display: "flex", gap: "10px", marginTop: "auto", flexWrap: "wrap", alignItems: "center", paddingTop: "8px" }}>
+                  <Link href="/about-krishna" className="text-link" style={{ fontWeight: 800 }}>
+                    Read Full Story <ArrowUpRight size={15} />
+                  </Link>
+                  <Link href="/cricket-analyst-ghazipur" className="text-link" style={{ color: "var(--orange)", fontWeight: 700 }}>
+                    Ghazipur Roots <ArrowUpRight size={15} />
                   </Link>
                   <a
                     href={resume}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-link"
-                    style={{ color: "var(--orange)" }}
+                    style={{ color: "var(--navy)" }}
                     title="View Resume in new tab"
                   >
-                    View Resume <ArrowUpRight size={16} />
-                  </a>
-                  <a
-                    href={resume}
-                    download="Krishna_Nand_Yadav_Resume.pdf"
-                    className="text-link"
-                    style={{ color: "var(--navy)", fontWeight: 700 }}
-                    title="Download Official Resume PDF"
-                  >
-                    Download Resume <Download size={14} />
+                    Resume <ArrowUpRight size={15} />
                   </a>
                 </div>
               </div>

@@ -13,7 +13,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const project = projects.find((item) => item.slug === slug);
   if (!project) return { title: "Project not found | Krishna Nand Yadav" };
-  return { title: `${project.title} | Cricket Analytics Project`, description: project.description };
+  return {
+    title: `${project.title} | Cricket Analytics Project | Krishna Nand Yadav`,
+    description: project.description,
+    alternates: {
+      canonical: `/projects/${project.slug}`
+    }
+  };
 }
 
 export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -32,10 +38,23 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           <p className="eyebrow">{project.eyebrow}</p>
           <h1>{project.title}</h1>
           <p className="project-detail-description">{project.description}</p>
-          <span className="detail-status">
-            <i />
-            {project.status}
-          </span>
+          <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap", marginTop: "14px" }}>
+            <span className="detail-status" style={{ margin: 0 }}>
+              <i />
+              {project.status}
+            </span>
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button button-small button-primary"
+                style={{ height: "34px", padding: "0 14px" }}
+              >
+                Launch Live Website <ArrowUpRight size={14} />
+              </a>
+            )}
+          </div>
         </div>
       </section>
 

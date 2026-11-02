@@ -55,9 +55,23 @@ export default function ProjectCard({ project, index = 0 }: { project: Portfolio
           ))}
         </div>
 
-        <Link href={`/projects/${project.slug}`} className="project-open">
-          <Layers3 size={15} /> Explore project <ArrowUpRight size={15} />
-        </Link>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "12px", flexWrap: "wrap", gap: "8px" }}>
+          <Link href={`/projects/${project.slug}`} className="project-open">
+            <Layers3 size={15} /> Explore project <ArrowUpRight size={15} />
+          </Link>
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link"
+              style={{ fontSize: "11px", color: "var(--orange)", padding: "0", fontWeight: 800 }}
+              title="Visit live platform"
+            >
+              Live Website <ArrowUpRight size={13} />
+            </a>
+          )}
+        </div>
       </div>
     </article>
   );

@@ -3,8 +3,12 @@ import { ArrowUpRight, Download, Github, Linkedin, Mail, Phone, Clock, FileText 
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact | Krishna Nand Yadav — Cricket & Sports Data Analyst",
-  description: "Connect with Krishna Nand Yadav about cricket analytics, ball-by-ball analysis, live scoring operations, and sports technology."
+  title: "Contact & Collaborations | Krishna Nand Yadav — Cricket & Sports Data Analyst",
+  description:
+    "Connect with Krishna Nand Yadav for cricket analytics, international match analysis, ball-by-ball data, live scoring operations, and sports technology consulting.",
+  alternates: {
+    canonical: "/contact"
+  }
 };
 
 const linkedin = process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/in/krishna-nand-yadav-43493b28a/";

@@ -17,12 +17,13 @@ import { motion, useReducedMotion } from "framer-motion";
 
 const links = [
   ["Home", "/"],
-  ["About", "/about"],
-  ["Experience", "/experience"],
-  ["Skills", "/skills"],
+  ["About", "/about-krishna"],
+  ["Ghazipur", "/cricket-analyst-ghazipur"],
+  ["International", "/international-cricket-analysis"],
   ["Analytics", "/analytics"],
   ["Projects", "/projects"],
-  ["Resume", "/resume"],
+  ["Articles", "/articles"],
+  ["Experience", "/experience"],
   ["Contact", "/contact"]
 ];
 

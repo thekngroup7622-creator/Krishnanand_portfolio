@@ -4,9 +4,12 @@ import type { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-  title: "Cricket Analytics Visualizations | Krishna Nand Yadav",
+  title: "Cricket Analytics Case Studies & Visualizations | Krishna Nand Yadav",
   description:
-    "Explore match analysis, phase momentum, pitch length distributions, and broadcast-grade performance graphics created by Krishna Nand Yadav."
+    "Explore match analysis, phase momentum, pitch length distributions, 13-metric bowling radars, and broadcast-grade performance graphics created by Krishna Nand Yadav.",
+  alternates: {
+    canonical: "/analytics"
+  }
 };
 
 export default async function AnalyticsPage() {

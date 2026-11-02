@@ -5,6 +5,7 @@ export interface PortfolioProject {
   description: string;
   category: string;
   image: string;
+  liveUrl?: string;
   problem: string;
   objective: string;
   approach: string;
@@ -19,32 +20,38 @@ export interface PortfolioProject {
 
 export const projects: PortfolioProject[] = [
   {
-    slug: "cricvision-analytics",
-    title: "CricVision Analytics",
-    eyebrow: "CRICKET ANALYTICS PLATFORM",
-    description: "An advanced cricket analytics platform concept bringing match context, player metrics, and interactive analysis into one unified workflow.",
-    category: "Analytics Platform",
+    slug: "cricnexora",
+    title: "CricNexora",
+    eyebrow: "AI-POWERED CRICKET ANALYTICS PLATFORM",
+    description: "An AI-powered cricket analytics platform delivering live match intelligence, delivery tracking, interactive pitch maps, and performance visualization.",
+    category: "AI Analytics Platform",
     image: "/projects/cricradio.png",
+    liveUrl: "https://cricnexora.vercel.app/",
     highlight: true,
-    problem: "Cricket performance datasets are often fragmented between raw scorecards, ball-by-ball spreadsheets, and isolated video clips, making fast tactical decision-making difficult for teams and analysts.",
-    objective: "Create an integrated cricket analytics platform that centralizes ball-by-ball analysis, player & team performance insights, statistical reporting, and interactive visual dashboards.",
-    approach: "Designed a delivery-first data model with automated metrics computation (strike rate progressions, false shot %, dot ball pressure), multi-filter match centers, and executive summary exports.",
-    technology: ["Power BI", "Python", "SQL", "Streamlit", "Excel", "Data Modeling"],
+    problem: "Cricket analysts, coaches, and sports organizations often face fragmented datasets across raw scorecards and disconnected spreadsheets, preventing real-time tactical discovery.",
+    objective: "Engineer a unified AI-powered cricket analytics platform that provides instant access to ball-by-ball match feeds, interactive pitch zones, wagon wheels, and data-driven cricket insights.",
+    approach: "Designed a high-performance web architecture integrating granular ball-by-ball data models, automated metrics computation (false shot rates, phase-wise strike rates), and spatial graphics.",
+    technology: ["AI Analytics Tools", "Python", "Next.js", "SQL", "Data Modeling", "Streamlit"],
     analytics: [
+      "Live cricket analytics with delivery-level precision",
       "Ball-by-ball tracking & phase classification",
-      "Player performance progression & career trajectories",
-      "Team tactical matchups & scoring burst identification",
-      "Automated scorecard summaries & KPI benchmarking"
+      "Pitch maps with spatial landing zone heatmaps",
+      "Wagon wheels with 360-degree shot trajectory analysis",
+      "Cricket performance visualization & player metrics",
+      "Match analysis with data-driven cricket insights"
     ],
-    visualization: "Interactive Power BI & Streamlit dashboards featuring dynamic pitch maps, batting wagon wheels, and strike rate acceleration curves.",
-    outcome: "Provides analysts and coaches with immediate, contextual answers to match questions without manual data wrangling.",
+    visualization: "Interactive dashboards with dynamic pitch landing maps, wagon wheels, phase acceleration charts, and head-to-head match benchmarking.",
+    outcome: "Enables analysts, media professionals, and teams to inspect live match trends and evaluate player efficiency with verified data accuracy.",
     features: [
-      "Match Center with live delivery-by-delivery feed",
-      "Player Analytics with phase-wise filters",
-      "Team Analytics & head-to-head benchmarking",
-      "Automated statistical reporting & visual exports"
+      "Live cricket analytics",
+      "Ball-by-ball data tracking",
+      "Interactive pitch maps",
+      "360-degree wagon wheels",
+      "Cricket performance visualization",
+      "Match analysis & tactical insights",
+      "Data-driven cricket insights"
     ],
-    status: "Featured Platform Concept"
+    status: "Active Platform (Live)"
   },
   {
     slug: "cricintel-3d-vision",
@@ -93,7 +100,7 @@ export const projects: PortfolioProject[] = [
       "Pitch length scoring impact vs false shot percentage (Shafali Verma Asia Cup visual)"
     ],
     visualization: "Sleek, broadcast-ready layouts with clear typography, high contrast, branded source watermarks, and intuitive color hierarchies.",
-    outcome: "Demonstrated in live publication visuals (CricRadio Data Portal) reaching broad sports audiences with clear, trustworthy statistical storytelling.",
+    outcome: "Demonstrated in live publication visuals reaching broad sports audiences with clear, trustworthy statistical storytelling.",
     features: [
       "13-metric radar bowling performance graphics",
       "Partnership over-by-over progression graphs",
@@ -101,6 +108,34 @@ export const projects: PortfolioProject[] = [
       "Player head-to-head comparison cards"
     ],
     status: "Broadcast Performance Suite"
+  },
+  {
+    slug: "cricvision-analytics",
+    title: "CricVision Analytics",
+    eyebrow: "CRICKET ANALYTICS PLATFORM",
+    description: "An advanced cricket analytics platform concept bringing match context, player metrics, and interactive analysis into one unified workflow.",
+    category: "Analytics Platform",
+    image: "/projects/cricradio.png",
+    highlight: false,
+    problem: "Cricket performance datasets are often fragmented between raw scorecards, ball-by-ball spreadsheets, and isolated video clips, making fast tactical decision-making difficult for teams and analysts.",
+    objective: "Create an integrated cricket analytics platform that centralizes ball-by-ball analysis, player & team performance insights, statistical reporting, and interactive visual dashboards.",
+    approach: "Designed a delivery-first data model with automated metrics computation (strike rate progressions, false shot %, dot ball pressure), multi-filter match centers, and executive summary exports.",
+    technology: ["Power BI", "Python", "SQL", "Streamlit", "Excel", "Data Modeling"],
+    analytics: [
+      "Ball-by-ball tracking & phase classification",
+      "Player performance progression & career trajectories",
+      "Team tactical matchups & scoring burst identification",
+      "Automated scorecard summaries & KPI benchmarking"
+    ],
+    visualization: "Interactive Power BI & Streamlit dashboards featuring dynamic pitch maps, batting wagon wheels, and strike rate acceleration curves.",
+    outcome: "Provides analysts and coaches with immediate, contextual answers to match questions without manual data wrangling.",
+    features: [
+      "Match Center with live delivery-by-delivery feed",
+      "Player Analytics with phase-wise filters",
+      "Team Analytics & head-to-head benchmarking",
+      "Automated statistical reporting & visual exports"
+    ],
+    status: "Featured Platform Concept"
   },
   {
     slug: "ball-by-ball-cricket-analytics",

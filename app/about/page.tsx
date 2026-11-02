@@ -9,7 +9,11 @@ import { educationList, certifications } from "@/data/education";
 
 export const metadata: Metadata = {
   title: "About | Krishna Nand Yadav — Cricket & Sports Data Analyst",
-  description: "About Krishna Nand Yadav, Principal Cricket Analyst with 2.5+ years of experience in ball-by-ball cricket data, live scoring, sports data operations, and performance analysis."
+  description:
+    "About Krishna Nand Yadav, Principal Cricket Analyst with 3+ years of verified professional experience in ball-by-ball cricket data, live scoring, sports data operations, and performance analysis. Originally from Ghazipur, UP, based in Noida.",
+  alternates: {
+    canonical: "/about"
+  }
 };
 
 const linkedin = process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/in/krishna-nand-yadav-43493b28a/";
@@ -29,7 +33,7 @@ export default function AboutPage() {
             <span>Data-Led Execution.</span>
           </h1>
           <p className="page-hero-description">
-            Cricket analytics professional with 2.5+ years of experience in ball-by-ball data analysis, live scoring, player and team performance analysis, sports data operations, and quality control. Skilled in transforming cricket datasets into statistical insights, performance reports, and professional visualizations.
+            Cricket analytics professional with 3+ years of experience in ball-by-ball data analysis, live scoring, player and team performance analysis, sports data operations, and quality control. Skilled in transforming cricket datasets into statistical insights, performance reports, and professional visualizations.
           </p>
           <div className="page-hero-links">
             <Link href="/projects" className="button button-primary">
@@ -54,7 +58,7 @@ export default function AboutPage() {
             >
               <Download size={16} /> Download Resume
             </a>
-            <Link href="/contact" className="button button-ghost">
+            <Link href="/contact" className="button button-outline">
               Get in Touch
             </Link>
           </div>

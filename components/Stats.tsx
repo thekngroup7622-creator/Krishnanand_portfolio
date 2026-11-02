@@ -4,7 +4,7 @@ import Reveal from "./ui/Reveal";
 const items = [
   {
     icon: Activity,
-    title: "2.5+ Years",
+    title: "3+ Years",
     label: "Cricket Analytics Experience",
     detail: "Ball-by-ball analysis, live scoring, and player & team performance"
   },

@@ -12,8 +12,7 @@ import {
   Phone,
   Activity,
   Award,
-  FileText,
-  Download
+  FileText
 } from "lucide-react";
 
 const linkedin = process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/in/krishna-nand-yadav-43493b28a/";
@@ -38,30 +37,54 @@ export default function Hero() {
         >
           <div className="eyebrow">
             <span className="eyebrow-line" />
-            CRICKET & SPORTS DATA ANALYST
+            CRICKET & SPORTS DATA ANALYST · SPORTS TECHNOLOGY ENTREPRENEUR
           </div>
 
-          <h1>
-            Krishna Nand<br />
-            <span>Yadav</span>
+          <h1 style={{ fontSize: "clamp(34px, 4.4vw, 58px)", letterSpacing: "-1.5px", lineHeight: 1.08 }}>
+            Krishna Nand Yadav<br />
+            <span style={{ fontSize: "0.68em", display: "block", color: "#3979BC", fontWeight: 800, letterSpacing: "-0.5px", marginTop: "4px" }}>
+              Cricket & Sports Data Analyst
+            </span>
           </h1>
 
-          <p className="hero-role">
-            Cricket & Sports Data Analyst
+          <p className="hero-role" style={{ fontSize: "15px", color: "var(--navy)", fontWeight: 700, margin: "14px 0 6px", letterSpacing: "0.2px" }}>
+            Cricket Analytics | International Match Analysis | Sports Data Intelligence | AI-Powered Sports Technology
           </p>
 
-          <p className="hero-tagline" style={{ color: "var(--navy)", fontSize: "19px", fontWeight: 700, margin: "14px 0 10px", lineHeight: 1.4 }}>
-            &ldquo;Turning cricket data into actionable performance insights.&rdquo;
+          <p className="hero-tagline" style={{ color: "var(--orange)", fontSize: "17px", fontWeight: 800, margin: "6px 0 10px", lineHeight: 1.4 }}>
+            &ldquo;Transforming Cricket Data into Meaningful Performance Insights.&rdquo;
           </p>
 
-          <p className="hero-description" style={{ color: "var(--muted)", fontSize: "14px", lineHeight: 1.7, maxWidth: "520px", margin: "0 0 20px" }}>
-            Working across ball-by-ball data, player and match performance analysis, data visualization, dashboards, and sports technology.
+          <p className="hero-description" style={{ color: "var(--muted)", fontSize: "13.5px", lineHeight: 1.75, maxWidth: "540px", margin: "0 0 16px" }}>
+            Originally from <strong>Ghazipur, Uttar Pradesh</strong> and currently based in <strong>Noida, India</strong>. Principal Cricket Analyst working across ball-by-ball tracking, video tagging, live match operations, and performance intelligence using Python, SQL, Power BI, Tableau, and Streamlit. Associated with <strong>CricNexora</strong> (AI Cricket Analytics) and <strong>NexaPeak Digital Tech Solutions</strong>.
           </p>
+
+          {/* Quick Route Anchors */}
+          <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "18px", fontSize: "11px", fontWeight: 700 }}>
+            <Link href="/cricket-analyst-ghazipur" style={{ background: "rgba(105, 167, 239, 0.14)", color: "var(--navy)", padding: "3px 9px", borderRadius: "4px", border: "1px solid rgba(105, 167, 239, 0.3)" }}>
+              📍 Ghazipur Journey
+            </Link>
+            <Link href="/international-cricket-analysis" style={{ background: "rgba(242, 140, 40, 0.12)", color: "#9A4D00", padding: "3px 9px", borderRadius: "4px", border: "1px solid rgba(242, 140, 40, 0.3)" }}>
+              🏏 International Match Analysis
+            </Link>
+            <Link href="/about-krishna" style={{ background: "#F1F5F9", color: "var(--navy)", padding: "3px 9px", borderRadius: "4px" }}>
+              👤 About Krishna
+            </Link>
+            <Link href="/articles" style={{ background: "#F1F5F9", color: "var(--navy)", padding: "3px 9px", borderRadius: "4px" }}>
+              📰 Cricket Insights & Articles
+            </Link>
+          </div>
 
           {/* Action CTAs */}
-          <div className="hero-actions" style={{ display: "flex", gap: "12px", alignItems: "center", flexWrap: "wrap" }}>
-            <Link href="#featured-analytics" className="button button-primary">
-              View My Work <ArrowRight size={16} />
+          <div className="hero-actions" style={{ display: "flex", gap: "10px", alignItems: "center", flexWrap: "wrap" }}>
+            <Link href="/analytics" className="button button-primary">
+              Cricket Analytics <ArrowRight size={15} />
+            </Link>
+            <Link href="/projects" className="button button-outline">
+              Featured Projects
+            </Link>
+            <Link href="/experience" className="button button-outline">
+              Experience
             </Link>
             <a
               href={resume}
@@ -71,19 +94,10 @@ export default function Hero() {
               style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}
               title="View Krishna Nand Yadav's Resume (opens in new tab)"
             >
-              <FileText size={16} /> View Resume
+              <FileText size={15} /> Resume
             </a>
-            <a
-              href={resume}
-              download="Krishna_Nand_Yadav_Resume.pdf"
-              className="button button-outline"
-              style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}
-              title="Download Krishna Nand Yadav's Resume PDF"
-            >
-              <Download size={16} /> Download Resume
-            </a>
-            <Link href="/contact" className="button button-ghost">
-              Contact Me <ArrowDownRight size={16} />
+            <Link href="/contact" className="button button-outline">
+              Contact <ArrowDownRight size={15} />
             </Link>
           </div>
 
@@ -184,7 +198,7 @@ export default function Hero() {
                 </span>
               </div>
               <span style={{ fontSize: "10px", color: "var(--orange)", fontWeight: 700, background: "rgba(242, 140, 40, 0.1)", padding: "2px 8px", borderRadius: "12px" }}>
-                2.5+ Yrs Exp
+                3+ Yrs Exp
               </span>
             </div>
 
@@ -214,9 +228,12 @@ export default function Hero() {
               <strong style={{ fontSize: "17px", color: "var(--navy)", display: "block" }}>
                 Krishna Nand Yadav
               </strong>
-              <small style={{ color: "var(--muted)", fontSize: "12px", display: "block", marginTop: "2px" }}>
-                Cricket & Sports Data Analyst · Lifease Solutions LLP
+              <small style={{ color: "var(--navy)", fontSize: "12px", display: "block", marginTop: "2px", fontWeight: 600 }}>
+                Principal Cricket Analyst · Lifease Solutions LLP
               </small>
+              <span style={{ color: "var(--muted)", fontSize: "11px", display: "block", marginTop: "1px" }}>
+                Ghazipur, UP ➔ Noida, India · Sports Tech Entrepreneur
+              </span>
             </div>
 
             {/* Mini Highlights */}

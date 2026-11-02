@@ -237,7 +237,7 @@ export default function ResumeViewer({ resumeUrl }: ResumeViewerProps) {
                 }}
               >
                 <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#16A34A" }} />
-                2.5+ Years Experience
+                3+ Years Experience
               </div>
             </div>
 
@@ -303,7 +303,7 @@ export default function ResumeViewer({ resumeUrl }: ResumeViewerProps) {
               PROFESSIONAL SUMMARY
             </h2>
             <p style={{ fontSize: "14px", lineHeight: 1.7, margin: 0, color: "#334155" }}>
-              Cricket and Sports Data Analyst with <strong>2.5+ years of experience</strong> in ball-by-ball data
+              Cricket and Sports Data Analyst with <strong>3+ years of experience</strong> in ball-by-ball data
               analysis, live scoring, match coding, player and team performance analysis, sports data operations, and
               quality control. Experienced in transforming cricket datasets into statistical insights, performance
               reports, and professional visualizations. Skilled in Power BI, Tableau, Excel, Python, SQL, dashboard
@@ -403,7 +403,7 @@ export default function ResumeViewer({ resumeUrl }: ResumeViewerProps) {
                       borderRadius: "6px"
                     }}
                   >
-                    2.5+ years of experience
+                    3+ years of experience
                   </span>
                 </div>
               </div>

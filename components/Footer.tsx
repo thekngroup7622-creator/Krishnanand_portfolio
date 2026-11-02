@@ -120,25 +120,89 @@ export default function Footer() {
       </section>
 
       {/* ========================================================
-          2. BRAND INFO & TECHNICAL FOCUS STRIP
+          2. BRAND INFO & SITEMAP DIRECTORY STRIP
          ======================================================== */}
-      <div className="container footer-main">
-        <Link href="/" className="footer-brand" aria-label="Krishna Nand Yadav home">
-          <span className="brand-mark">KN</span>
-          <span>
-            <strong>KRISHNA NAND YADAV</strong>
-            <small>
-              Cricket & Sports Data Analyst | Performance Analysis | Sports Technology
-            </small>
-          </span>
-        </Link>
-        <p className="footer-tagline">
-          Ball-by-Ball Analysis <i aria-hidden="true" /> Live Scoring{" "}
-          <i aria-hidden="true" /> Data Quality QA <i aria-hidden="true" /> Power BI & 3D Sports Tech
-        </p>
-        <Link href="/contact" className="footer-contact-pill">
-          <span>Message Inquiry</span> <ArrowUpRight size={14} />
-        </Link>
+      <div className="container footer-main" style={{ flexDirection: "column", alignItems: "stretch", gap: "24px", padding: "32px 0 20px" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "16px" }}>
+          <Link href="/" className="footer-brand" aria-label="Krishna Nand Yadav home">
+            <span className="brand-mark">KN</span>
+            <span>
+              <strong>KRISHNA NAND YADAV</strong>
+              <small>
+                Cricket &amp; Sports Data Analyst | Sports Technology Entrepreneur
+              </small>
+            </span>
+          </Link>
+          <div style={{ fontSize: "12px", color: "var(--muted)" }}>
+            📍 Origin: <strong>Ghazipur, Uttar Pradesh</strong> · Base: <strong>Noida, India</strong>
+          </div>
+          <Link href="/contact" className="footer-contact-pill">
+            <span>Message Inquiry</span> <ArrowUpRight size={14} />
+          </Link>
+        </div>
+
+        {/* 4-Column Internal Links & Entity Graph */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "24px", paddingTop: "20px", borderTop: "1px solid rgba(255,255,255,0.08)", fontSize: "12px" }}>
+          <div>
+            <span style={{ display: "block", color: "var(--orange)", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.5px", marginBottom: "10px", fontSize: "11px" }}>
+              Identity &amp; Profile
+            </span>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "6px" }}>
+              <li><Link href="/about-krishna" style={{ opacity: 0.85 }}>About Krishna Nand Yadav</Link></li>
+              <li><Link href="/cricket-analyst-ghazipur" style={{ opacity: 0.85 }}>Cricket Analyst from Ghazipur</Link></li>
+              <li><Link href="/experience" style={{ opacity: 0.85 }}>Experience (Lifease Solutions)</Link></li>
+              <li><Link href="/resume" style={{ opacity: 0.85 }}>Professional Resume</Link></li>
+              <li><Link href="/contact" style={{ opacity: 0.85 }}>Get in Touch / Collaborations</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <span style={{ display: "block", color: "var(--orange)", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.5px", marginBottom: "10px", fontSize: "11px" }}>
+              Cricket Analytics
+            </span>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "6px" }}>
+              <li><Link href="/international-cricket-analysis" style={{ opacity: 0.85 }}>International Match Analysis</Link></li>
+              <li><Link href="/analytics" style={{ opacity: 0.85 }}>Match Analytics Case Studies</Link></li>
+              <li><Link href="/analytics/sree-charani-13-metric-bowling-performance" style={{ opacity: 0.85 }}>13-Metric Bowling Radar</Link></li>
+              <li><Link href="/analytics/shafali-verma-scoring-impact-by-length" style={{ opacity: 0.85 }}>Pitch Length Impact Analysis</Link></li>
+              <li><Link href="/visualizations" style={{ opacity: 0.85 }}>Broadcast Visualizations</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <span style={{ display: "block", color: "var(--orange)", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.5px", marginBottom: "10px", fontSize: "11px" }}>
+              Ventures &amp; Products
+            </span>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "6px" }}>
+              <li>
+                <a href="https://cricnexora.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "4px", opacity: 0.85 }}>
+                  CricNexora (AI Platform) <ArrowUpRight size={12} />
+                </a>
+              </li>
+              <li>
+                <a href="https://nexapeakdigitaltechsolutions.com/" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "4px", opacity: 0.85 }}>
+                  NexaPeak Digital Tech Solutions <ArrowUpRight size={12} />
+                </a>
+              </li>
+              <li><Link href="/projects/cricintel-3d-vision" style={{ opacity: 0.85 }}>CRICINTEL 3D Vision</Link></li>
+              <li><Link href="/projects/cricket-data-visualization" style={{ opacity: 0.85 }}>Broadcast Graphics Suite</Link></li>
+              <li><Link href="/projects" style={{ opacity: 0.85 }}>All Portfolio Projects</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <span style={{ display: "block", color: "var(--orange)", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.5px", marginBottom: "10px", fontSize: "11px" }}>
+              Articles &amp; Insights
+            </span>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "6px" }}>
+              <li><Link href="/articles" style={{ opacity: 0.85 }}>All Cricket Analytics Articles</Link></li>
+              <li><Link href="/articles/from-ghazipur-to-the-world-of-cricket-analytics" style={{ opacity: 0.85 }}>Ghazipur to Cricket Analytics</Link></li>
+              <li><Link href="/articles/the-role-of-ai-in-modern-cricket-analytics" style={{ opacity: 0.85 }}>AI in Modern Cricket Analytics</Link></li>
+              <li><Link href="/articles/how-ball-by-ball-data-improves-cricket-performance-analysis" style={{ opacity: 0.85 }}>Ball-by-Ball Performance</Link></li>
+              <li><Link href="/articles/building-cricnexora-a-cricket-analytics-technology-journey" style={{ opacity: 0.85 }}>Building CricNexora</Link></li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       {/* ========================================================

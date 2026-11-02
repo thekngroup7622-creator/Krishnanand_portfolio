@@ -6,9 +6,12 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
-  title: "Resume | Krishna Nand Yadav — Cricket & Sports Data Analyst",
+  title: "Official Resume | Krishna Nand Yadav — Cricket & Sports Data Analyst",
   description:
-    "Official resume of Krishna Nand Yadav, Cricket & Sports Data Analyst with 2.5+ years of experience in ball-by-ball analysis, live scoring, quality control, Power BI, Python, and sports technology."
+    "Official resume of Krishna Nand Yadav, Principal Cricket Analyst with 3+ years of experience in ball-by-ball analysis, live scoring, quality control, Power BI, Python, and sports technology.",
+  alternates: {
+    canonical: "/resume"
+  }
 };
 
 const resumeUrl = process.env.NEXT_PUBLIC_RESUME_URL || "/resume/Krishna_Nand_Yadav_Resume.pdf";
@@ -26,7 +29,7 @@ export default function ResumePage() {
                 Krishna Nand Yadav <span>Resume</span>
               </h1>
               <p className="page-hero-description" style={{ maxWidth: "620px" }}>
-                Cricket &amp; Sports Data Analyst with 2.5+ years of experience in ball-by-ball data coding, live
+                Cricket &amp; Sports Data Analyst with 3+ years of experience in ball-by-ball data coding, live
                 scoring operations, quality control, Power BI dashboards, and sports technology workflows.
               </p>
             </div>
@@ -93,7 +96,7 @@ export default function ResumePage() {
                 <strong style={{ fontSize: "15px", color: "var(--navy)" }}>Ball-by-Ball Precision</strong>
               </div>
               <p style={{ margin: 0, fontSize: "13px", color: "var(--muted)", lineHeight: 1.6 }}>
-                2.5+ years of live delivery-level coding, ensuring zero latency errors, verified scorecards, and
+                3+ years of live delivery-level coding, ensuring zero latency errors, verified scorecards, and
                 rich contextual match logs.
               </p>
             </div>

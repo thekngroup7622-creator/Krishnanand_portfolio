@@ -5,8 +5,12 @@ import Reveal from "@/components/ui/Reveal";
 import { ShieldCheck, Users, Bug, LineChart, Download, FileText } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Experience | Krishna Nand Yadav — Cricket & Sports Data Analyst",
-  description: "Professional experience of Krishna Nand Yadav as Principal Cricket Analyst at Lifease Solutions LLP, managing live scoring, ball-by-ball analysis, and quality control."
+  title: "Experience | Krishna Nand Yadav — Principal Cricket Analyst",
+  description:
+    "Professional experience of Krishna Nand Yadav as Principal Cricket Analyst at Lifease Solutions LLP (Nov 2023 – Present) in Noida, managing live scoring, ball-by-ball analysis, analyst squads, and quality control.",
+  alternates: {
+    canonical: "/experience"
+  }
 };
 
 const principles = [
@@ -42,7 +46,7 @@ export default function ExperiencePage() {
             Cricket Analysis meets <span>Operations.</span>
           </h1>
           <p className="page-hero-description">
-            2.5+ years of proven expertise in ball-by-ball cricket data coding, live scoring operations, squad coordination, and quality control at Lifease Solutions LLP.
+            3+ years of proven expertise in ball-by-ball cricket data coding, live scoring operations, squad coordination, and quality control at Lifease Solutions LLP.
           </p>
           <div style={{ display: "flex", gap: "12px", marginTop: "18px", flexWrap: "wrap" }}>
             <a

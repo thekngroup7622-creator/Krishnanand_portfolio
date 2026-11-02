@@ -31,8 +31,16 @@ export async function generateMetadata({
   const study = await getAnalyticsBySlug(slug, false);
   if (!study) return { title: "Analysis Not Found | Krishna Nand Yadav" };
   return {
-    title: `${study.title} | Cricket Analytics Case Study`,
-    description: study.description
+    title: `${study.title} | Cricket Analytics Case Study | Krishna Nand Yadav`,
+    description: study.description,
+    alternates: {
+      canonical: `/analytics/${study.slug}`
+    },
+    openGraph: {
+      title: `${study.title} | Cricket Analytics`,
+      description: study.description,
+      images: [study.image]
+    }
   };
 }
 
