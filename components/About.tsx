@@ -57,7 +57,7 @@ export default function About() {
     <section className="section section-tinted" id="about">
       <div className="container">
         {/* Intro Section with Profile Photo & Bio */}
-        <div style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "32px", alignItems: "center", marginBottom: "2.5rem" }}>
+        <div className="about-header-grid">
           <Reveal>
             <div
               style={{
@@ -184,7 +184,7 @@ export default function About() {
         </Reveal>
 
         {/* Academic Education & Certification Snapshot */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "1.5rem", marginTop: "2rem" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: "1.5rem", marginTop: "2rem" }}>
           <Reveal delay={0.1}>
             <div style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: "12px", padding: "1.5rem" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "1rem" }}>

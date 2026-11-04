@@ -61,7 +61,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       {/* Main Project Case Study Body */}
       <section className="section" style={{ background: "#fff" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: "40px", alignItems: "start" }}>
+          <div className="project-detail-layout-grid">
             {/* Visual & Core Outcomes */}
             <div>
               <div

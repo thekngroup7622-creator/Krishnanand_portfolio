@@ -58,7 +58,7 @@ export default function ContactPage() {
       </section>
 
       <section className="section">
-        <div className="container" style={{ display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: "40px", alignItems: "start" }}>
+        <div className="container contact-page-main-grid">
           {/* Left Column: Contact Channels */}
           <div>
             <p className="eyebrow">CHANNELS & AVAILABILITY</p>
@@ -167,7 +167,7 @@ export default function ContactPage() {
             Open to international franchises, cricket boards, analytics firms, and digital sports media.
           </p>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "20px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))", gap: "20px" }}>
             <div style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: "12px", padding: "24px" }}>
               <span style={{ fontSize: "11px", fontWeight: 800, color: "var(--orange)", textTransform: "uppercase" }}>01 · Global Scope</span>
               <h3 style={{ fontSize: "17px", color: "var(--navy)", margin: "8px 0 6px" }}>International Cricket Analytics</h3>

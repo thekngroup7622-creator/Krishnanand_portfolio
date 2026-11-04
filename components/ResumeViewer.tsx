@@ -252,36 +252,36 @@ export default function ResumeViewer({ resumeUrl }: ResumeViewerProps) {
                 color: "var(--text)"
               }}
             >
-              <span style={{ display: "inline-flex", alignItems: "center", gap: "5px" }}>
-                <MapPin size={14} style={{ color: "var(--orange)" }} /> Ghazipur, Uttar Pradesh, India
+              <span style={{ display: "inline-flex", alignItems: "center", gap: "5px", wordBreak: "break-word" }}>
+                <MapPin size={14} style={{ color: "var(--orange)", flexShrink: 0 }} /> Ghazipur, Uttar Pradesh, India
               </span>
               <a
                 href="https://www.linkedin.com/in/krishna-nand-yadav-43493b28a/"
                 target="_blank"
                 rel="noreferrer"
-                style={{ display: "inline-flex", alignItems: "center", gap: "5px", color: "var(--navy)", fontWeight: 600 }}
+                style={{ display: "inline-flex", alignItems: "center", gap: "5px", color: "var(--navy)", fontWeight: 600, wordBreak: "break-all" }}
               >
-                <Linkedin size={14} style={{ color: "#0A66C2" }} /> linkedin.com/in/krishna-nand-yadav-43493b28a
+                <Linkedin size={14} style={{ color: "#0A66C2", flexShrink: 0 }} /> linkedin.com/in/krishna-nand-yadav-43493b28a
               </a>
               <a
                 href="https://github.com/thekngroup7622-creator"
                 target="_blank"
                 rel="noreferrer"
-                style={{ display: "inline-flex", alignItems: "center", gap: "5px", color: "var(--navy)", fontWeight: 600 }}
+                style={{ display: "inline-flex", alignItems: "center", gap: "5px", color: "var(--navy)", fontWeight: 600, wordBreak: "break-all" }}
               >
-                <Github size={14} /> github.com/thekngroup7622-creator
+                <Github size={14} style={{ flexShrink: 0 }} /> github.com/thekngroup7622-creator
               </a>
               <a
                 href="mailto:krishnanandcricketanalyst@gmail.com"
-                style={{ display: "inline-flex", alignItems: "center", gap: "5px", color: "var(--navy)", fontWeight: 600 }}
+                style={{ display: "inline-flex", alignItems: "center", gap: "5px", color: "var(--navy)", fontWeight: 600, wordBreak: "break-all" }}
               >
-                <Mail size={14} style={{ color: "#2563EB" }} /> krishnanandcricketanalyst@gmail.com
+                <Mail size={14} style={{ color: "#2563EB", flexShrink: 0 }} /> krishnanandcricketanalyst@gmail.com
               </a>
               <a
                 href="tel:7607711590"
-                style={{ display: "inline-flex", alignItems: "center", gap: "5px", color: "var(--navy)", fontWeight: 600 }}
+                style={{ display: "inline-flex", alignItems: "center", gap: "5px", color: "var(--navy)", fontWeight: 600, wordBreak: "break-word" }}
               >
-                <Phone size={14} style={{ color: "var(--orange)" }} /> +91 7607711590
+                <Phone size={14} style={{ color: "var(--orange)", flexShrink: 0 }} /> +91 7607711590
               </a>
             </div>
           </header>

@@ -40,13 +40,13 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: "14px", padding: "28px", boxShadow: "0 4px 20px rgba(0,29,56,0.04)" }}>
+    <form onSubmit={handleSubmit} className="contact-form-card" style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: "14px", padding: "28px", boxShadow: "0 4px 20px rgba(0,29,56,0.04)" }}>
       <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "16px" }}>
         <MessageSquare size={18} style={{ color: "var(--navy)" }} />
         <h3 style={{ margin: 0, fontSize: "18px", color: "var(--navy)" }}>Send a Direct Message</h3>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginBottom: "14px" }}>
+      <div className="contact-form-row">
         <div>
           <label style={{ display: "block", fontSize: "11px", fontWeight: 800, color: "var(--navy)", textTransform: "uppercase", marginBottom: "6px" }}>
             Your Name *

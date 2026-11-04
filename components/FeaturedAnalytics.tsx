@@ -42,7 +42,7 @@ export default async function FeaturedAnalytics() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 270px), 1fr))",
             gap: "24px"
           }}
         >

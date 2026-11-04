@@ -180,7 +180,7 @@ export default function Navbar() {
       {/* 3. MOBILE MENU DROPDOWN */}
       {open && (
         <motion.div
-          className="mobile-nav container"
+          className="mobile-nav"
           initial={reduceMotion ? false : { opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.18 }}

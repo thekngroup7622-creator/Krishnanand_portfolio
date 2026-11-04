@@ -17,15 +17,15 @@ export default function VenturesShowcase() {
           />
         </Reveal>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "28px", marginTop: "32px" }}>
+        <div className="ventures-grid">
           {/* Venture 1: CricNexora */}
           <Reveal delay={0.08}>
             <article
+              className="venture-card"
               style={{
                 background: "linear-gradient(135deg, #F8FAFC 0%, #EAF3FD 100%)",
                 border: "1px solid #C9E1FF",
                 borderRadius: "16px",
-                padding: "32px",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
@@ -76,8 +76,8 @@ export default function VenturesShowcase() {
                 </div>
               </div>
 
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "16px", borderTop: "1px solid rgba(0, 29, 56, 0.08)" }}>
-                <div style={{ display: "flex", gap: "12px" }}>
+              <div className="venture-card-bottom" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "16px", borderTop: "1px solid rgba(0, 29, 56, 0.08)" }}>
+                <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
                   {cricnexora.metrics.map((m) => (
                     <div key={m.label} style={{ fontSize: "11px" }}>
                       <span style={{ color: "var(--muted)", display: "block" }}>{m.label}</span>
@@ -102,11 +102,11 @@ export default function VenturesShowcase() {
           {/* Venture 2: NexaPeak Digital Tech Solutions */}
           <Reveal delay={0.16}>
             <article
+              className="venture-card"
               style={{
                 background: "linear-gradient(135deg, #F8FAFC 0%, #FFF8F1 100%)",
                 border: "1px solid #FFE4C8",
                 borderRadius: "16px",
-                padding: "32px",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
@@ -157,8 +157,8 @@ export default function VenturesShowcase() {
                 </div>
               </div>
 
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "16px", borderTop: "1px solid rgba(0, 29, 56, 0.08)" }}>
-                <div style={{ display: "flex", gap: "12px" }}>
+              <div className="venture-card-bottom" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "16px", borderTop: "1px solid rgba(0, 29, 56, 0.08)" }}>
+                <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
                   {nexapeak.metrics.map((m) => (
                     <div key={m.label} style={{ fontSize: "11px" }}>
                       <span style={{ color: "var(--muted)", display: "block" }}>{m.label}</span>

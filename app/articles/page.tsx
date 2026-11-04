@@ -78,7 +78,7 @@ export default function ArticlesIndexPage() {
             />
           </Reveal>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "28px", marginTop: "32px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))", gap: "24px", marginTop: "32px" }}>
             {articles.map((article, index) => (
               <Reveal key={article.slug} delay={index * 0.06}>
                 <article

@@ -77,7 +77,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "24px", marginTop: "24px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: "24px", marginTop: "24px" }}>
             {articles.slice(0, 3).map((article, i) => (
               <Reveal key={article.slug} delay={i * 0.08}>
                 <article

@@ -96,19 +96,7 @@ export default function AboutKrishnaPage() {
         <div className="container" style={{ maxWidth: "920px" }}>
           {/* Identity Snapshot Card */}
           <Reveal>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "140px 1fr",
-                gap: "28px",
-                alignItems: "center",
-                padding: "24px",
-                background: "#F8FAFC",
-                border: "1px solid #E2E8F0",
-                borderRadius: "16px",
-                marginBottom: "40px"
-              }}
-            >
+            <div className="bio-header-grid">
               <div
                 style={{
                   position: "relative",
@@ -117,7 +105,8 @@ export default function AboutKrishnaPage() {
                   borderRadius: "14px",
                   overflow: "hidden",
                   border: "3px solid #fff",
-                  boxShadow: "0 8px 20px rgba(0,29,56,0.12)"
+                  boxShadow: "0 8px 20px rgba(0,29,56,0.12)",
+                  flexShrink: 0
                 }}
               >
                 <Image
@@ -181,7 +170,7 @@ export default function AboutKrishnaPage() {
             <p>
               Core responsibilities executed across hundreds of match hours include:
             </p>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "12px", margin: "20px 0" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: "12px", margin: "20px 0" }}>
               {experience[0].responsibilities.map((resp, idx) => (
                 <div key={idx} style={{ display: "flex", gap: "10px", alignItems: "flex-start", background: "#F8FAFC", padding: "12px", borderRadius: "8px", border: "1px solid #E2E8F0" }}>
                   <CheckCircle2 size={16} style={{ color: "var(--orange)", flexShrink: 0, marginTop: "3px" }} />
@@ -218,7 +207,7 @@ export default function AboutKrishnaPage() {
             <h3 style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 900, marginBottom: "18px" }}>
               Academic Foundation &amp; Professional Workshops
             </h3>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "16px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: "16px" }}>
               {educationList.map((edu) => (
                 <div key={edu.degree} style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: "10px", padding: "16px" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>

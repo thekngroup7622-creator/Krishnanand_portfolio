@@ -88,7 +88,7 @@ export default function InternationalCricketAnalysisPage() {
           </Reveal>
 
           {/* Metric Comparison Card */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "24px", marginTop: "28px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: "24px", marginTop: "28px" }}>
             <div style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: "14px", padding: "26px" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "14px", color: "var(--navy)" }}>
                 <Target size={22} style={{ color: "var(--orange)" }} />
@@ -156,7 +156,7 @@ export default function InternationalCricketAnalysisPage() {
                     overflow: "hidden",
                     boxShadow: "0 4px 20px rgba(0, 29, 56, 0.06)",
                     display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
                     alignItems: "stretch"
                   }}
                 >
