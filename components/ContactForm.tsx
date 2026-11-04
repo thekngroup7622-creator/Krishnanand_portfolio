@@ -8,7 +8,7 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "Cricket Analytics Consultation",
+    subject: "International Cricket Analytics Opportunities",
     message: ""
   });
 
@@ -28,7 +28,7 @@ export default function ContactForm() {
         <button
           onClick={() => {
             setSubmitted(false);
-            setFormData({ name: "", email: "", subject: "Cricket Analytics Consultation", message: "" });
+            setFormData({ name: "", email: "", subject: "International Cricket Analytics Opportunities", message: "" });
           }}
           className="button button-outline"
           style={{ fontSize: "12px", padding: "6px 14px", minHeight: "36px" }}
@@ -67,7 +67,7 @@ export default function ContactForm() {
           <input
             required
             type="email"
-            placeholder="e.g. rahul@cricketteam.com"
+            placeholder="e.g. recruiter@cricketteam.com"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #CBD5E1", fontSize: "13px" }}
@@ -77,18 +77,19 @@ export default function ContactForm() {
 
       <div style={{ marginBottom: "14px" }}>
         <label style={{ display: "block", fontSize: "11px", fontWeight: 800, color: "var(--navy)", textTransform: "uppercase", marginBottom: "6px" }}>
-          Inquiry Type / Scope
+          Inquiry Type / Engagement Area
         </label>
         <select
           value={formData.subject}
           onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
           style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #CBD5E1", fontSize: "13px", background: "#fff" }}
         >
-          <option value="Cricket Analytics Consultation">Cricket Analytics Consultation</option>
+          <option value="International Cricket Analytics Opportunities">International Cricket Analytics Opportunities</option>
+          <option value="Remote Data Analyst Position">Remote Data Analyst Position</option>
+          <option value="Contract-based Cricket Analytics Work">Contract-based Cricket Analytics Work</option>
+          <option value="Sports Technology Collaborations">Sports Technology Collaborations</option>
+          <option value="Cricket Data Projects & Dashboards">Cricket Data Projects & Dashboards</option>
           <option value="Live Match Scoring & Operations">Live Match Scoring & Operations</option>
-          <option value="Player & Team Performance Analysis">Player & Team Performance Analysis</option>
-          <option value="Sports Tech & BI Dashboard Development">Sports Tech & BI Dashboard Development</option>
-          <option value="Recruitment / Full-Time Role">Recruitment / Full-Time Role</option>
         </select>
       </div>
 

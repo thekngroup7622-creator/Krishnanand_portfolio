@@ -24,7 +24,7 @@ export const projects: PortfolioProject[] = [
     title: "CricNexora",
     eyebrow: "AI-POWERED CRICKET ANALYTICS PLATFORM",
     description: "An AI-powered cricket analytics platform delivering live match intelligence, delivery tracking, interactive pitch maps, and performance visualization.",
-    category: "AI Analytics Platform",
+    category: "Live Products",
     image: "/projects/cricradio.png",
     liveUrl: "https://cricnexora.vercel.app/",
     highlight: true,
@@ -58,7 +58,7 @@ export const projects: PortfolioProject[] = [
     title: "CRICINTEL 3D Vision",
     eyebrow: "3D CRICKET VISUALIZATION & REPLAY",
     description: "Developed a 3D cricket delivery visualization concept integrating ball-by-ball synchronization, delivery information, pitch maps, wagon wheels, shot direction, pitching line and length, and batter/bowler details.",
-    category: "Sports Technology",
+    category: "Research & Experimental Projects",
     image: "/projects/cricintel-3d-vision-logo.png",
     highlight: true,
     problem: "Traditional 2D pitch maps and static wagon wheels lack depth perspective, failing to convey delivery trajectory, release angles, bounce height, and subtle swing/seam deviation.",
@@ -79,14 +79,14 @@ export const projects: PortfolioProject[] = [
       "Spatial pitch mapping with millimeter precision zones",
       "360-degree wagon wheel with shot elevation"
     ],
-    status: "Advanced 3D Concept"
+    status: "Research & Spatial Prototype"
   },
   {
     slug: "cricket-data-visualization",
     title: "Cricket Data Visualization",
     eyebrow: "BROADCAST-STYLE PERFORMANCE GRAPHICS",
     description: "Created sports broadcast-style visualizations covering batting and bowling performance, phase-wise statistics, partnerships, pitch maps, wagon wheels, and player comparisons.",
-    category: "Data Visualization",
+    category: "Cricket Analytics Projects",
     image: "/visualizations/wagon.png",
     highlight: true,
     problem: "Standard data charts often look generic and fail to respect cricket-specific visual conventions (e.g., pitch dimensions, 360-degree wagon wheels, spider radars).",
@@ -107,14 +107,14 @@ export const projects: PortfolioProject[] = [
       "3D pitch zone scoring & false shot impact maps",
       "Player head-to-head comparison cards"
     ],
-    status: "Broadcast Performance Suite"
+    status: "Analytics & Visualization Suite"
   },
   {
     slug: "cricvision-analytics",
     title: "CricVision Analytics",
     eyebrow: "CRICKET ANALYTICS PLATFORM",
     description: "An advanced cricket analytics platform concept bringing match context, player metrics, and interactive analysis into one unified workflow.",
-    category: "Analytics Platform",
+    category: "Cricket Analytics Projects",
     image: "/projects/cricradio.png",
     highlight: false,
     problem: "Cricket performance datasets are often fragmented between raw scorecards, ball-by-ball spreadsheets, and isolated video clips, making fast tactical decision-making difficult for teams and analysts.",
@@ -135,14 +135,14 @@ export const projects: PortfolioProject[] = [
       "Team Analytics & head-to-head benchmarking",
       "Automated statistical reporting & visual exports"
     ],
-    status: "Featured Platform Concept"
+    status: "Interactive Analytics Platform"
   },
   {
     slug: "ball-by-ball-cricket-analytics",
     title: "Ball-by-Ball Cricket Analytics",
     eyebrow: "PLAYER PERFORMANCE",
     description: "A structured approach to batting, bowling, and phase-level analysis using delivery data and interpretable performance indicators.",
-    category: "Performance Analysis",
+    category: "Cricket Analytics Projects",
     image: "/visualizations/pitch_map.png",
     problem: "Traditional cricket statistics (batting average, bowling economy) fail to account for match situation, pitch conditions, and ball-by-ball pressure.",
     objective: "Formulate delivery-level metrics (false shot percentage, dot ball percentage, boundary frequency, entry point pressure) for deeper player evaluation.",
@@ -162,14 +162,14 @@ export const projects: PortfolioProject[] = [
       "Pitching length and line distribution",
       "False shot and dot-ball calculations"
     ],
-    status: "Analytics Workflow"
+    status: "Performance Framework"
   },
   {
     slug: "sports-analytics-dashboards",
     title: "Sports Analytics Dashboards",
     eyebrow: "OPERATIONAL WORKFLOWS",
     description: "Operational workflows and interactive dashboards focused on reliable live scoring, data quality control, coordination, and reporting.",
-    category: "Data Operations",
+    category: "Cricket Analytics Projects",
     image: "/visualizations/donut.png",
     problem: "Live match scoring operations require immediate error detection to avoid publishing corrupted data to downstream feeds.",
     objective: "Implement operational QA workflows, auditor checklists, and real-time dashboard monitoring for scoring teams.",
@@ -189,6 +189,6 @@ export const projects: PortfolioProject[] = [
       "Analyst coordination (5–6 squad lead)",
       "Development bug investigation & resolution"
     ],
-    status: "Professional Workflow"
+    status: "Operations & Quality Control"
   }
 ];

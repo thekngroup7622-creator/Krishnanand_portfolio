@@ -48,7 +48,7 @@ export default function Hero() {
           </h1>
 
           <p className="hero-role" style={{ fontSize: "15px", color: "var(--navy)", fontWeight: 700, margin: "14px 0 6px", letterSpacing: "0.2px" }}>
-            Cricket Analytics | International Match Analysis | Sports Data Intelligence | AI-Powered Sports Technology
+            Cricket &amp; Sports Data Analyst | Ball-by-Ball Analytics | Performance Intelligence | Sports Data Operations
           </p>
 
           <p className="hero-tagline" style={{ color: "var(--orange)", fontSize: "17px", fontWeight: 800, margin: "6px 0 10px", lineHeight: 1.4 }}>

@@ -5,7 +5,12 @@ import { Search } from "lucide-react";
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
 
-const categories = ["All", ...Array.from(new Set(projects.map(project => project.category)))];
+const categories = [
+  "All",
+  "Live Products",
+  "Cricket Analytics Projects",
+  "Research & Experimental Projects"
+];
 
 export default function ProjectsPage() {
   const [filter, setFilter] = useState("All");

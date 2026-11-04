@@ -155,6 +155,61 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Engagement Areas for International Teams & Recruiters */}
+      <section className="section" style={{ background: "#F8FAFC", borderTop: "1px solid #E2E8F0" }}>
+        <div className="container">
+          <p className="eyebrow" style={{ textAlign: "center" }}>ENGAGEMENT & OPPORTUNITIES</p>
+          <h2 style={{ fontSize: "28px", color: "var(--navy)", textAlign: "center", marginBottom: "12px" }}>
+            How We Can Collaborate
+          </h2>
+          <p style={{ color: "var(--muted)", textAlign: "center", maxWidth: "600px", margin: "0 auto 36px", fontSize: "14px" }}>
+            Open to international franchises, cricket boards, analytics firms, and digital sports media.
+          </p>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "20px" }}>
+            <div style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: "12px", padding: "24px" }}>
+              <span style={{ fontSize: "11px", fontWeight: 800, color: "var(--orange)", textTransform: "uppercase" }}>01 · Global Scope</span>
+              <h3 style={{ fontSize: "17px", color: "var(--navy)", margin: "8px 0 6px" }}>International Cricket Analytics</h3>
+              <p style={{ fontSize: "13px", color: "var(--muted)", margin: 0, lineHeight: 1.6 }}>
+                Tournament diagnostic reporting, opposition scouting, tactical match-ups, and player performance benchmarking for international boards and franchises.
+              </p>
+            </div>
+
+            <div style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: "12px", padding: "24px" }}>
+              <span style={{ fontSize: "11px", fontWeight: 800, color: "var(--orange)", textTransform: "uppercase" }}>02 · Remote Employment</span>
+              <h3 style={{ fontSize: "17px", color: "var(--navy)", margin: "8px 0 6px" }}>Remote Data Analyst Positions</h3>
+              <p style={{ fontSize: "13px", color: "var(--muted)", margin: 0, lineHeight: 1.6 }}>
+                Full-time or flexible remote data analyst roles specializing in sports data processing, Python/SQL pipeline development, and BI dashboard engineering.
+              </p>
+            </div>
+
+            <div style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: "12px", padding: "24px" }}>
+              <span style={{ fontSize: "11px", fontWeight: 800, color: "var(--orange)", textTransform: "uppercase" }}>03 · Contract & Series</span>
+              <h3 style={{ fontSize: "17px", color: "var(--navy)", margin: "8px 0 6px" }}>Contract-Based Match Work</h3>
+              <p style={{ fontSize: "13px", color: "var(--muted)", margin: 0, lineHeight: 1.6 }}>
+                Series-specific analyst assignments, live ball-by-ball tagging shifts, video QA audits, and tournament sprint deliverables.
+              </p>
+            </div>
+
+            <div style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: "12px", padding: "24px" }}>
+              <span style={{ fontSize: "11px", fontWeight: 800, color: "var(--orange)", textTransform: "uppercase" }}>04 · Innovation</span>
+              <h3 style={{ fontSize: "17px", color: "var(--navy)", margin: "8px 0 6px" }}>Sports Tech Collaborations</h3>
+              <p style={{ fontSize: "13px", color: "var(--muted)", margin: 0, lineHeight: 1.6 }}>
+                Joint product development with CricNexora, spatial 3D delivery modeling, computer vision experiments, and custom sports software solutions.
+              </p>
+            </div>
+
+            <div style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: "12px", padding: "24px" }}>
+              <span style={{ fontSize: "11px", fontWeight: 800, color: "var(--orange)", textTransform: "uppercase" }}>05 · Custom BI</span>
+              <h3 style={{ fontSize: "17px", color: "var(--navy)", margin: "8px 0 6px" }}>Cricket Data & Dashboards</h3>
+              <p style={{ fontSize: "13px", color: "var(--muted)", margin: 0, lineHeight: 1.6 }}>
+                Custom Power BI, Tableau, and Streamlit dashboards for academies, federations, broadcasters, and fantasy/sports media companies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

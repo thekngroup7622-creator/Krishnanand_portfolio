@@ -458,9 +458,7 @@ export default function ResumeViewer({ resumeUrl }: ResumeViewerProps) {
                   </Link>
                 </div>
                 <p style={{ margin: "4px 0 0", fontSize: "13px", color: "#475569", lineHeight: 1.6 }}>
-                  Partnership analytics case study covering a 255-run opening partnership in 26.2 overs. Analyzed
-                  phase-wise scoring patterns, momentum, contribution share, and partnership acceleration. Total: 255
-                  runs off 158 balls.
+                  Partnership analytics case study in Guwahati covering 255 runs in 26.2 overs (158 balls). Boundaries generated 180 runs (70.6%) with 75 rotation runs (29.4%) and 69 dots (43.7%). Contribution: Gill 145 (56.9%) vs Rohit 101 (39.6%).
                 </p>
               </div>
 
@@ -468,7 +466,7 @@ export default function ResumeViewer({ resumeUrl }: ResumeViewerProps) {
               <div style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: "10px", padding: "14px 18px" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "6px" }}>
                   <strong style={{ fontSize: "14.5px", color: "var(--navy)" }}>
-                    Sanju Samson &amp; Abhishek Sharma — 142-Run Partnership
+                    Abhishek Sharma &amp; Sanju Samson — 142-Run Partnership
                   </strong>
                   <Link
                     href="/analytics/sanju-samson-abhishek-sharma-142-partnership"
@@ -479,8 +477,7 @@ export default function ResumeViewer({ resumeUrl }: ResumeViewerProps) {
                   </Link>
                 </div>
                 <p style={{ margin: "4px 0 0", fontSize: "13px", color: "#475569", lineHeight: 1.6 }}>
-                  Analyzed India&apos;s explosive first-wicket partnership using batter side-by-side comparisons,
-                  scoring patterns, and powerplay performance. Partnership: 142 runs off 59 balls.
+                  Analyzed India&apos;s explosive opening stand in Hyderabad: 142 runs off 59 balls (112 boundary runs, 78.87%). Abhishek led with 108 off 34 balls (SR 317.65, 76.06% share) alongside Samson&apos;s 34 off 25 (23.94% share).
                 </p>
               </div>
 
@@ -499,8 +496,7 @@ export default function ResumeViewer({ resumeUrl }: ResumeViewerProps) {
                   </Link>
                 </div>
                 <p style={{ margin: "4px 0 0", fontSize: "13px", color: "#475569", lineHeight: 1.6 }}>
-                  Developed a pitch-zone batting analysis examining scoring impact by delivery length, including
-                  length-wise metrics and false-shot patterns. Innings: 68 runs off 39 balls.
+                  Delivery length analysis in Women&apos;s Asia Cup 2026 (68 runs off 39 balls, SR 174.36). Full length deliveries yielded 36 runs off 15 balls (SR 240.0) with low false shot % compared to back-of-length bowling.
                 </p>
               </div>
 
@@ -519,8 +515,7 @@ export default function ResumeViewer({ resumeUrl }: ResumeViewerProps) {
                   </Link>
                 </div>
                 <p style={{ margin: "4px 0 0", fontSize: "13px", color: "#475569", lineHeight: 1.6 }}>
-                  Created a multivariate bowling performance analysis using a 13-axis radar framework and match
-                  performance scorecards. Spell: 4 overs, 20 runs, 2 wickets.
+                  Multivariate 13-axis radar analysis of 4-0-20-2 spell in Women&apos;s Asia Cup 2026. Documented 54.17% dot ball rate (13 dots), 58.33% false shot inducement, 16.67% wicket rate, and zero extras.
                 </p>
               </div>
             </div>
@@ -545,27 +540,21 @@ export default function ResumeViewer({ resumeUrl }: ResumeViewerProps) {
 
             <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "13.5px" }}>
               <div>
-                <strong style={{ color: "var(--navy)" }}>Analytics &amp; BI: </strong>
+                <strong style={{ color: "var(--navy)" }}>Cricket Analytics: </strong>
                 <span style={{ color: "#334155" }}>
-                  Power BI, Tableau, Advanced Excel, Dashboard Development, Statistical Analysis
+                  Ball-by-ball data analysis, Player performance analysis, Match analysis, Video tagging, Live scoring operations, Cricket data quality control, Pitch mapping &amp; wagon wheels
+                </span>
+              </div>
+              <div>
+                <strong style={{ color: "var(--navy)" }}>Business Intelligence: </strong>
+                <span style={{ color: "#334155" }}>
+                  Power BI, Tableau, Advanced Excel, Data visualization, Dashboard development, 13-Metric bowling radars, Automated match reporting
                 </span>
               </div>
               <div>
                 <strong style={{ color: "var(--navy)" }}>Programming &amp; Data: </strong>
                 <span style={{ color: "#334155" }}>
-                  Python, SQL, Data Modeling, Data Cleaning, Data Extraction
-                </span>
-              </div>
-              <div>
-                <strong style={{ color: "var(--navy)" }}>Sports Technology: </strong>
-                <span style={{ color: "#334155" }}>
-                  Ball-by-Ball Data, Live Scoring, Match Coding, Automated Match Reporting, Streamlit
-                </span>
-              </div>
-              <div>
-                <strong style={{ color: "var(--navy)" }}>Visualization: </strong>
-                <span style={{ color: "#334155" }}>
-                  Performance Dashboards, Pitch Maps, Wagon Wheels, Radar Charts, Cricket Performance Graphics
+                  Python (Pandas, NumPy, Matplotlib), SQL, Streamlit, Data processing &amp; ETL, Data cleaning &amp; validation, Statistical modeling
                 </span>
               </div>
             </div>

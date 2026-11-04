@@ -11,11 +11,13 @@ import {
   Eye,
   Wrench,
   BarChart2,
-  Activity
+  Activity,
+  AlertCircle,
+  FileText,
+  Layers,
+  MapPin
 } from "lucide-react";
 import { getAnalyticsBySlug, getAllAnalytics } from "@/lib/analytics-repository";
-
-
 
 export async function generateStaticParams() {
   const items = await getAllAnalytics(false);
@@ -84,7 +86,7 @@ export default async function AnalyticsDetailPage({
               {study.analysisType}
             </span>
             {hasTags && (
-              <div style={{ display: "inline-flex", gap: "5px" }}>
+              <div style={{ display: "inline-flex", gap: "5px", flexWrap: "wrap" }}>
                 {study.tags.map((t) => (
                   <span
                     key={t}
@@ -105,7 +107,7 @@ export default async function AnalyticsDetailPage({
           <h1 style={{ fontSize: "clamp(26px, 3.5vw, 42px)", margin: "0 0 14px", lineHeight: 1.2 }}>
             {study.title}
           </h1>
-          <p className="page-hero-description" style={{ maxWidth: "700px" }}>
+          <p className="page-hero-description" style={{ maxWidth: "780px" }}>
             {study.description}
           </p>
         </div>
@@ -115,7 +117,7 @@ export default async function AnalyticsDetailPage({
       <section className="section" style={{ background: "#fff" }}>
         <div className="container">
           <div className="analytics-detail-grid">
-            {/* Left Column: Visual & Insights */}
+            {/* Left Column: Visual, Findings, & Methodology */}
             <div>
               {/* Actual Visual Image Display */}
               <div
@@ -152,17 +154,49 @@ export default async function AnalyticsDetailPage({
                     gap: "6px"
                   }}
                 >
-                  <span>VISUAL SPECIFICATION · CRICRADIO DATA PORTAL / ANALYTICS SUITE</span>
+                  <span>OFFICIAL PUBLICATION · CRICRADIO DATA PORTAL</span>
                   <span style={{ color: "var(--orange)", fontWeight: 700 }}>Created By Krishna Nand Yadav</span>
                 </div>
               </div>
 
-              {/* Key Insights Section (if available) */}
+              {/* 1. Match Context & Fixture Overview */}
+              {study.matchContext && (
+                <div style={{ marginTop: "28px", background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: "12px", padding: "20px" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "10px" }}>
+                    <MapPin size={18} style={{ color: "var(--orange)" }} />
+                    <h2 style={{ fontSize: "16px", color: "var(--navy)", margin: 0, textTransform: "uppercase", letterSpacing: "0.5px" }}>
+                      1. Match Context &amp; Fixture Background
+                    </h2>
+                  </div>
+                  <p style={{ margin: 0, fontSize: "13.5px", lineHeight: 1.65, color: "#334155" }}>
+                    {study.matchContext}
+                  </p>
+                </div>
+              )}
+
+              {/* 2. Analytical Methodology & Metric Formulations */}
+              {study.methodology && (
+                <div style={{ marginTop: "24px", background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: "12px", padding: "20px" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "10px" }}>
+                    <Layers size={18} style={{ color: "var(--navy)" }} />
+                    <h2 style={{ fontSize: "16px", color: "var(--navy)", margin: 0, textTransform: "uppercase", letterSpacing: "0.5px" }}>
+                      2. Methodology &amp; Metric Formulations
+                    </h2>
+                  </div>
+                  <p style={{ margin: 0, fontSize: "13.5px", lineHeight: 1.65, color: "#334155" }}>
+                    {study.methodology}
+                  </p>
+                </div>
+              )}
+
+              {/* 3. Key Analytical Insights */}
               {hasInsights && (
-                <div style={{ marginTop: "32px" }}>
+                <div style={{ marginTop: "28px" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "16px" }}>
                     <Eye size={20} style={{ color: "var(--navy)" }} />
-                    <h2 style={{ fontSize: "20px", color: "var(--navy)", margin: 0 }}>Key Analytical Insights</h2>
+                    <h2 style={{ fontSize: "20px", color: "var(--navy)", margin: 0 }}>
+                      3. Key Analytical Findings &amp; Tactical Takeaways
+                    </h2>
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
                     {study.keyInsights!.map((insight, idx) => (
@@ -201,17 +235,39 @@ export default async function AnalyticsDetailPage({
                   </div>
                 </div>
               )}
+
+              {/* 4. Limitations & Coordinate Measurement Type */}
+              {(study.limitations || study.coordinateType) && (
+                <div style={{ marginTop: "28px", background: "rgba(242, 140, 40, 0.05)", border: "1px solid rgba(242, 140, 40, 0.3)", borderRadius: "12px", padding: "20px" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                    <AlertCircle size={18} style={{ color: "var(--orange)" }} />
+                    <h2 style={{ fontSize: "15px", color: "var(--navy)", margin: 0, textTransform: "uppercase", letterSpacing: "0.5px" }}>
+                      4. Analytical Limitations &amp; Measurement Transparency
+                    </h2>
+                  </div>
+                  {study.coordinateType && (
+                    <p style={{ fontSize: "13px", color: "var(--navy)", fontWeight: 600, margin: "0 0 6px" }}>
+                      Coordinate Measurement Standard: <span style={{ fontWeight: 400, color: "#475467" }}>{study.coordinateType}</span>
+                    </p>
+                  )}
+                  {study.limitations && (
+                    <p style={{ margin: 0, fontSize: "13px", lineHeight: 1.6, color: "#475467" }}>
+                      {study.limitations}
+                    </p>
+                  )}
+                </div>
+              )}
             </div>
 
             {/* Right Column: Case Study Metadata & Architecture */}
             <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-              {/* Metric Focus Card (if provided) */}
+              {/* Metric Focus Card */}
               {hasMetricFocus && (
                 <div style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: "12px", padding: "20px" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "10px" }}>
                     <Activity size={18} style={{ color: "var(--orange)" }} />
                     <strong style={{ fontSize: "13px", color: "var(--navy)", textTransform: "uppercase", letterSpacing: "0.5px" }}>
-                      Metric Focus
+                      Core Metric Focus
                     </strong>
                   </div>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
@@ -235,46 +291,58 @@ export default async function AnalyticsDetailPage({
                 </div>
               )}
 
-              {/* Overview & Objective Card */}
-              {(study.objective || study.dataUsed) && (
-                <div style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: "12px", padding: "22px" }}>
-                  {study.objective && (
-                    <>
-                      <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "10px" }}>
-                        <Target size={18} style={{ color: "var(--navy)" }} />
-                        <strong style={{ fontSize: "13px", color: "var(--navy)", textTransform: "uppercase", letterSpacing: "0.5px" }}>
-                          Analysis Objective
-                        </strong>
-                      </div>
-                      <p style={{ fontSize: "13px", color: "var(--text)", lineHeight: 1.6, margin: "0 0 16px" }}>
-                        {study.objective}
-                      </p>
-                    </>
-                  )}
+              {/* Analysis Objective & Data Source Card */}
+              <div style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: "12px", padding: "22px" }}>
+                {study.objective && (
+                  <>
+                    <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                      <Target size={18} style={{ color: "var(--navy)" }} />
+                      <strong style={{ fontSize: "13px", color: "var(--navy)", textTransform: "uppercase", letterSpacing: "0.5px" }}>
+                        Analytical Objective
+                      </strong>
+                    </div>
+                    <p style={{ fontSize: "13px", color: "var(--text)", lineHeight: 1.6, margin: "0 0 16px" }}>
+                      {study.objective}
+                    </p>
+                  </>
+                )}
 
-                  {study.dataUsed && (
-                    <>
-                      <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px", paddingTop: "12px", borderTop: "1px solid #E2E8F0" }}>
-                        <Database size={16} style={{ color: "var(--navy)" }} />
-                        <strong style={{ fontSize: "12px", color: "var(--navy)", textTransform: "uppercase" }}>
-                          Data Used
-                        </strong>
-                      </div>
-                      <p style={{ fontSize: "13px", color: "var(--muted)", margin: 0, lineHeight: 1.5 }}>
-                        {study.dataUsed}
-                      </p>
-                    </>
-                  )}
-                </div>
-              )}
+                {study.dataUsed && (
+                  <>
+                    <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "6px", paddingTop: "12px", borderTop: "1px solid #E2E8F0" }}>
+                      <Database size={16} style={{ color: "var(--navy)" }} />
+                      <strong style={{ fontSize: "12px", color: "var(--navy)", textTransform: "uppercase" }}>
+                        Data Source &amp; Provider
+                      </strong>
+                    </div>
+                    <p style={{ fontSize: "13px", color: "var(--muted)", margin: "0 0 12px", lineHeight: 1.5 }}>
+                      {study.dataUsed}
+                    </p>
+                  </>
+                )}
 
-              {/* Key Metrics Card */}
+                {study.datasetDescription && (
+                  <>
+                    <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "6px", paddingTop: "10px", borderTop: "1px solid #E2E8F0" }}>
+                      <FileText size={15} style={{ color: "var(--navy)" }} />
+                      <strong style={{ fontSize: "12px", color: "var(--navy)", textTransform: "uppercase" }}>
+                        Dataset Granularity
+                      </strong>
+                    </div>
+                    <p style={{ fontSize: "12.5px", color: "var(--muted)", margin: 0, lineHeight: 1.5 }}>
+                      {study.datasetDescription}
+                    </p>
+                  </>
+                )}
+              </div>
+
+              {/* Key Metrics Card (Verified Ground Truth) */}
               {hasMetrics && (
                 <div style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: "12px", padding: "22px" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "14px" }}>
                     <BarChart2 size={18} style={{ color: "var(--orange)" }} />
                     <strong style={{ fontSize: "14px", color: "var(--navy)", textTransform: "uppercase", letterSpacing: "0.5px" }}>
-                      Key Performance Metrics
+                      Verified Performance Metrics
                     </strong>
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
@@ -308,7 +376,7 @@ export default async function AnalyticsDetailPage({
                   {study.visualizationMethod && (
                     <>
                       <strong style={{ fontSize: "12px", color: "var(--navy)", textTransform: "uppercase", display: "block", marginBottom: "6px" }}>
-                        Visualization Method
+                        Visualization Architecture
                       </strong>
                       <p style={{ fontSize: "13px", color: "var(--text)", lineHeight: 1.5, margin: "0 0 16px" }}>
                         {study.visualizationMethod}
@@ -321,7 +389,7 @@ export default async function AnalyticsDetailPage({
                       <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px", paddingTop: "12px", borderTop: "1px solid #E2E8F0" }}>
                         <Wrench size={15} style={{ color: "var(--navy)" }} />
                         <strong style={{ fontSize: "12px", color: "var(--navy)", textTransform: "uppercase" }}>
-                          Tools & Technologies
+                          Tools &amp; Technologies
                         </strong>
                       </div>
                       <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
@@ -350,13 +418,13 @@ export default async function AnalyticsDetailPage({
               {/* Inquire CTA */}
               <div style={{ background: "var(--navy)", borderRadius: "12px", padding: "20px", color: "#fff" }}>
                 <h4 style={{ margin: "0 0 6px", fontSize: "15px", color: "#fff" }}>
-                  Need Similar Match Analysis?
+                  Need Custom Cricket Analytics?
                 </h4>
                 <p style={{ margin: "0 0 14px", fontSize: "12px", color: "#CBD5E1", lineHeight: 1.5 }}>
-                  I provide bespoke ball-by-ball analysis, live match coding, and broadcast graphics for teams, tournaments, and media platforms.
+                  Available for international franchise consulting, remote analyst positions, and sports data operations.
                 </p>
                 <Link href="/contact" className="button button-white" style={{ width: "100%", justifyContent: "center", fontSize: "12px" }}>
-                  Connect with Krishna <ArrowUpRight size={14} />
+                  Contact Krishna <ArrowUpRight size={14} />
                 </Link>
               </div>
             </div>

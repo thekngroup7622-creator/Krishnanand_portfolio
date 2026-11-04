@@ -8,9 +8,14 @@ export interface AnalyticsItem {
   visualizationMethod?: string;
   image: string;
   dataUsed?: string;
+  matchContext?: string;
+  datasetDescription?: string;
+  methodology?: string;
   objective?: string;
   keyMetrics?: string[];
   keyInsights?: string[];
+  limitations?: string;
+  coordinateType?: string;
   tools?: string[];
   tags: string[];
   metricFocus: string[];

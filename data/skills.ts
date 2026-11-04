@@ -6,78 +6,64 @@ export interface SkillCategory {
 }
 
 export const coreSkills: string[] = [
-  "Ball-by-Ball Analysis & Tracking",
-  "Player & Team Performance Analysis",
+  "Ball-by-Ball Data Analysis",
+  "Player Performance Analysis",
   "Match Analysis",
-  "Batting & Bowling Analytics",
-  "Partnership Analysis",
-  "Phase-wise Performance Metrics",
-  "Live Scoring & Match Coding",
-  "Pitch Maps & Wagon Wheels",
-  "Data Quality Control & QA",
-  "Data Cleaning & Extraction",
-  "Statistical Analysis & Modeling",
-  "Automated Match Reporting",
-  "Power BI & Tableau Dashboards",
-  "Python Data Modeling",
-  "SQL Querying",
-  "Advanced Excel Analytics",
-  "Streamlit App Development",
-  "Sports Technology"
+  "Video Tagging",
+  "Live Scoring Operations",
+  "Cricket Data Quality Control",
+  "Power BI",
+  "Tableau",
+  "Advanced Excel",
+  "Data Visualization",
+  "Dashboard Development",
+  "Python",
+  "SQL",
+  "Streamlit",
+  "Data Processing"
 ];
 
 export const skillGroups: SkillCategory[] = [
   {
-    title: "ANALYTICS & BI",
-    badge: "BI & Performance Insights",
-    intro: "Power BI and Tableau dashboards, statistical reporting, and visual cricket analytics.",
+    title: "CRICKET ANALYTICS",
+    badge: "Core Domain Expertise",
+    intro: "Delivery-level match intelligence, live operational coding, video tagging, and high-standard cricket data quality control.",
+    skills: [
+      "Ball-by-ball data analysis",
+      "Player performance analysis",
+      "Match analysis",
+      "Video tagging",
+      "Live scoring operations",
+      "Cricket data quality control",
+      "Partnership analytics",
+      "Pitch mapping & wagon wheels"
+    ]
+  },
+  {
+    title: "BUSINESS INTELLIGENCE",
+    badge: "Dashboards & Storytelling",
+    intro: "Interactive business intelligence dashboards, executive reporting, and visual cricket analytics for teams, coaches, and sports organizations.",
     skills: [
       "Power BI",
       "Tableau",
       "Advanced Excel",
-      "Dashboard Development",
-      "Statistical Analysis",
-      "Phase-wise Performance Metrics",
-      "Partnership Analysis"
+      "Data visualization",
+      "Dashboard development",
+      "13-Metric bowling radars",
+      "Automated match reporting"
     ]
   },
   {
     title: "PROGRAMMING & DATA",
-    badge: "Core Data Engineering",
-    intro: "Python data modeling, SQL querying, data cleaning, extraction, and validation.",
+    badge: "Engineering & Modeling",
+    intro: "Data manipulation pipelines, database querying, statistical data modeling, and rapid analytical web applications.",
     skills: [
-      "Python",
-      "SQL",
-      "Data Modeling",
-      "Data Cleaning",
-      "Data Extraction",
-      "Statistical Modeling"
-    ]
-  },
-  {
-    title: "SPORTS TECHNOLOGY & OPERATIONS",
-    badge: "Live Operations & Tools",
-    intro: "Ball-by-ball match coding, live scoring operations, QA auditing, and sports tech apps.",
-    skills: [
-      "Ball-by-Ball Data",
-      "Live Scoring & Match Coding",
-      "Data Quality Control & QA",
-      "Automated Match Reporting",
-      "Streamlit App Development",
-      "Bug Investigation & Validation"
-    ]
-  },
-  {
-    title: "VISUALIZATION & CRICKET GRAPHICS",
-    badge: "Visual Storytelling",
-    intro: "Custom broadcast-style graphics, pitch maps, wagon wheels, and performance radars.",
-    skills: [
-      "Performance Dashboards",
-      "Pitch Maps",
-      "Wagon Wheels",
-      "Radar Charts (13-Metric)",
-      "Cricket Performance Graphics",
-      "Player & Team Comparison Cards"
+      "Python (Pandas, NumPy, Matplotlib)",
+      "SQL Querying & ETL",
+      "Streamlit",
+      "Data processing & cleaning",
+      "Statistical modeling",
+      "Data extraction & validation"
     ]
   }
 ];
