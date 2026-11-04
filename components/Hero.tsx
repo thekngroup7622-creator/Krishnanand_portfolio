@@ -55,7 +55,7 @@ export default function Hero() {
             &ldquo;Transforming Cricket Data into Meaningful Performance Insights.&rdquo;
           </p>
 
-          <p className="hero-description" style={{ color: "var(--muted)", fontSize: "13.5px", lineHeight: 1.75, maxWidth: "540px", margin: "0 0 16px" }}>
+          <p className="hero-description" style={{ color: "var(--muted)", fontSize: "13.5px", lineHeight: 1.75, margin: "0 0 16px" }}>
             Originally from <strong>Ghazipur, Uttar Pradesh</strong> and currently based in <strong>Noida, India</strong>. Principal Cricket Analyst working across ball-by-ball tracking, video tagging, live match operations, and performance intelligence using Python, SQL, Power BI, Tableau, and Streamlit. Associated with <strong>CricNexora</strong> (AI Cricket Analytics) and <strong>NexaPeak Digital Tech Solutions</strong>.
           </p>
 

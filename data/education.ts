@@ -29,7 +29,7 @@ export const educationList: EducationItem[] = [
   },
   {
     degree: "Secondary School Examination (Class X)",
-    institution: "Board of High School and Intermediate Education",
+    institution: "CBSE (Central Board of Secondary Education)",
     score: "61%",
     details: "Class X Secondary School Certificate"
   }

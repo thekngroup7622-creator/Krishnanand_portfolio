@@ -386,25 +386,51 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .resume-nav { display: inline-flex; margin-left: auto; }
   .mobile-menu-button { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid #DFE6ED; background: white; color: var(--navy); border-radius: 8px; }
   .mobile-nav { display: block; position: absolute; top: 100%; left: 0; right: 0; padding: 16px 20px 24px; width: 100%; max-width: 100vw; background: white; border-bottom: 1px solid #DFE6ED; box-shadow: 0 16px 25px rgba(0,29,56,.12); max-height: calc(100vh - 100px); overflow-y: auto; z-index: 150; box-sizing: border-box; }
-  .header-top-inner { overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .header-email-link,
+  .header-social-link,
+  .header-top-sep {
+    display: none !important;
+  }
+  .contact-orbit {
+    display: none !important;
+  }
+  .header-top-inner {
+    justify-content: space-between;
+    gap: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
   .header-top-inner::-webkit-scrollbar { display: none; }
+  .header-top-left, .header-top-right {
+    gap: 8px;
+  }
   .footer-contact-grid { grid-template-columns: 1fr; gap: 14px; }
   .hero-section { padding-top: 48px; }
   .hero-layout { grid-template-columns: 1fr !important; gap: 28px !important; }
   .hero-copy { padding-bottom: 0; }
   .hero-copy h1 { font-size: clamp(34px, 7vw, 54px); }
-  .hero-description { max-width: 640px; }
-  .hero-art { width: min(100%, 520px); margin: 0 auto; padding: 24px 0 32px; }
+  .hero-description { max-width: 100%; }
+  .hero-art { width: 100%; max-width: 520px; margin: 0 auto; padding: 24px 0 32px; }
   .dashboard-shell { transform: none; }
   .orbit-one { right: 0; }
   .orbit-two { right: 35px; }
-  .hero-bottom { margin-top: 8px; }
+  .hero-bottom {
+    margin-top: 14px;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    text-align: center;
+    font-size: 8px;
+    line-height: 1.5;
+  }
+  .hero-bottom-line { display: none; }
   .stats-strip { padding-bottom: 50px; }
   .stats-grid { grid-template-columns: repeat(2,1fr); }
   .stat-card { padding: 17px; }
   .section { padding: 60px 0; }
-  .about-intro { grid-template-columns: 1fr; gap: 26px; }
-  .about-aside { max-width: 600px; }
   .pillar-grid { gap: 11px; }
   .pillar-card { padding: 20px 17px; }
   .project-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
@@ -640,15 +666,87 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   align-items: center;
   margin-bottom: 2.5rem;
 }
-@media (max-width: 768px) {
+.about-intro {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 32px;
+  align-items: start;
+}
+.about-aside {
+  padding: 12px 0 12px 24px;
+  border-left: 3px solid var(--orange);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+.aside-timeline-badge {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.aside-date-highlight {
+  font-size: clamp(20px, 2.5vw, 26px);
+  color: var(--navy);
+  font-weight: 900;
+  letter-spacing: -0.8px;
+  white-space: nowrap;
+}
+.aside-role-tenure {
+  font-size: 11px;
+  color: var(--orange);
+  background: rgba(242, 140, 40, 0.12);
+  border: 1px solid rgba(242, 140, 40, 0.3);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.aside-role-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 4px 0 3px;
+}
+.aside-role-desc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0 0 12px;
+}
+.aside-links-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 6px;
+}
+
+@media (max-width: 960px) {
   .about-header-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
     justify-items: center;
     text-align: left;
   }
-  .about-header-grid .about-intro {
-    grid-template-columns: 1fr !important;
+  .about-intro {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .about-aside {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 18px 20px !important;
+    border-left: 4px solid var(--orange) !important;
+    background: #F8FAFC !important;
+    border-radius: 0 12px 12px 0 !important;
+    margin-top: 8px !important;
   }
 }
 

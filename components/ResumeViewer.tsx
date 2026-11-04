@@ -596,7 +596,7 @@ export default function ResumeViewer({ resumeUrl }: ResumeViewerProps) {
               </div>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <div>
-                  <strong style={{ color: "var(--navy)" }}>Secondary School Examination (Class X)</strong> — Board of High School and Intermediate Education
+                  <strong style={{ color: "var(--navy)" }}>Secondary School Examination (Class X)</strong> — CBSE (Central Board of Secondary Education)
                 </div>
                 <span style={{ fontWeight: 800, color: "#166534", background: "#DCFCE7", padding: "2px 8px", borderRadius: "4px" }}>
                   61%

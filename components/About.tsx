@@ -81,13 +81,13 @@ export default function About() {
             </div>
           </Reveal>
 
-          <div className="about-intro" style={{ margin: 0, display: "grid", gridTemplateColumns: "1.2fr 0.8fr", gap: "24px" }}>
+          <div className="about-intro">
             <Reveal>
-              <div>
+              <div className="about-bio-block">
                 <p className="eyebrow" style={{ margin: "0 0 8px" }}>
                   PROFESSIONAL IDENTITY &amp; JOURNEY
                 </p>
-                <h2 style={{ fontSize: "28px", color: "var(--navy)", margin: "0 0 12px", lineHeight: 1.25, fontWeight: 900 }}>
+                <h2 style={{ fontSize: "clamp(22px, 3vw, 28px)", color: "var(--navy)", margin: "0 0 12px", lineHeight: 1.25, fontWeight: 900 }}>
                   Cricket understanding meets modern data technology
                 </h2>
                 <p style={{ color: "var(--muted)", fontSize: "14px", lineHeight: 1.7, margin: "0 0 10px" }}>
@@ -100,17 +100,18 @@ export default function About() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="about-aside" style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                <span className="aside-number">
-                  Nov 2023<span>–Present</span>
-                </span>
-                <p style={{ fontSize: "13px", fontWeight: 600, color: "var(--navy)", margin: "6px 0 2px" }}>
+              <div className="about-aside">
+                <div className="aside-timeline-badge">
+                  <span className="aside-date-highlight">Nov 2023 – Present</span>
+                  <span className="aside-role-tenure">3+ Yrs Exp</span>
+                </div>
+                <p className="aside-role-title">
                   Principal Cricket Analyst · Lifease Solutions LLP
                 </p>
-                <p style={{ fontSize: "12px", color: "var(--muted)" }}>
+                <p className="aside-role-desc">
                   Ball-by-ball coding, squad coordination (5–6 analysts), live scoring QA, and international match performance intelligence.
                 </p>
-                <div style={{ display: "flex", gap: "10px", marginTop: "auto", flexWrap: "wrap", alignItems: "center", paddingTop: "8px" }}>
+                <div className="aside-links-row">
                   <Link href="/about-krishna" className="text-link" style={{ fontWeight: 800 }}>
                     Read Full Story <ArrowUpRight size={15} />
                   </Link>
